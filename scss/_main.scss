@@ -584,10 +584,10 @@
         margin: 0 auto;
         border : 1px solid #777;
         border-top: none;
+        padding: 30px;
+        overflow: hidden;
         .boardWrap {
           width: 100%;
-          height: 50%;
-          padding: 40px 20px 0 20px;
           .contentsTitle {
             @include sectionTitle;
             margin-bottom: 40px;
@@ -597,11 +597,14 @@
             position: relative;
             width: 100%;
             display: flex;
+            align-items: center;
+            margin-bottom: 20px;
             .boardTextArea {
               width: 70%;
+              height: 200px;
               background: #333;
-              margin-bottom: 20px;
               padding: 20px;
+              margin-right: 50px;
               p{
                 color: #ECECE3; 
                 font-size: 18px;
@@ -649,12 +652,16 @@
         }
         .boardInfo {
           display: flex;
-          align-items: center;
+          align-items: flex-start;
           justify-content: center;
-          min-height: 50%;
+          width: 100%;
+          padding-left: 150px;
+          h2 {
+            @include sectionSubTitle;
+            margin-right: 50px;
+          }
           .sectionAccodion {
             max-width: 100%;
-            margin: 0 40px;
             display: flex;
             flex-direction: column;
             .tab {
@@ -667,9 +674,9 @@
                 &:checked + label::after {
                   transform: rotate(-45deg);
                 }
-                // max height 안먹힘ㅠㅠ
-                &:checked ~ .contents {
-                  max-height: 100vh;
+
+                &:checked ~ .tabContents {
+                  max-height: 80vh;
                 }
                 &:checked ~ label h3 {
                   padding: 2px 10px;
@@ -705,7 +712,7 @@
                   font-family: $enFont;
                 }
               }
-              .contents {
+              .tabContents {
                 border-top: 1px solid #777;
                 max-height: 0;
                 transition: 1s;
@@ -715,6 +722,9 @@
                   color: #333;
                   z-index: 10;
                 }
+              }
+              &:nth-of-type(1) {
+                margin-top: 0;
               }
             }
           }
@@ -1031,14 +1041,21 @@
       }
       .boardCont {
         .inner {
-          .boardBox {
-            .boardTextArea {
-              p {
-                font-size: 16px;
+          .boardWrap {
+            .boardBox {
+              .boardTextArea {
+                p {
+                  font-size: 16px;
+                }
+                
               }
-              
+              .boardBtn {
+                width: 120px;
+                height: 120px;
+              }
             }
           }
+
         }
       }
     }
@@ -1432,6 +1449,7 @@
       .boardCont {
         .inner {
           width: 100%;
+          padding: 20px;
           .boardWrap {
             .contentsTitle {
               margin-bottom: 20px;
@@ -1447,19 +1465,27 @@
                 margin-bottom: 10px;
               }
               .boardBtn {
-                width: 50px;
-                height: 50px;
+                width: 80px;
+                height: 80px;
                 .boardBtnText {
                   font-size: 12px;
                 }
               }
             }
-            .boardInfo {
-              padding-left: 0;
-              .boardText {
-                width: 60%;
-                font-size: 12px;
-                margin-bottom: 0;
+          }
+          .boardInfo {
+            padding-left: 0;
+            .sectionAccodion {
+              margin: 0;
+              .tab {
+                label {
+                  h2 {
+                    font-size: 16px;
+                  }
+                  h3 {
+                    font-size: 16px;
+                  }
+                }
               }
             }
           }

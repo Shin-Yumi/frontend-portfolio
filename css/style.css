@@ -597,11 +597,11 @@ a {
   margin: 0 auto;
   border: 1px solid #777;
   border-top: none;
+  padding: 30px;
+  overflow: hidden;
 }
 #main .wrap .boardCont .inner .boardWrap {
   width: 100%;
-  height: 50%;
-  padding: 40px 20px 0 20px;
 }
 #main .wrap .boardCont .inner .boardWrap .contentsTitle {
   font-family: "Aboreto";
@@ -616,12 +616,15 @@ a {
   position: relative;
   width: 100%;
   display: flex;
+  align-items: center;
+  margin-bottom: 20px;
 }
 #main .wrap .boardCont .inner .boardWrap .boardBox .boardTextArea {
   width: 70%;
+  height: 200px;
   background: #333;
-  margin-bottom: 20px;
   padding: 20px;
+  margin-right: 50px;
 }
 #main .wrap .boardCont .inner .boardWrap .boardBox .boardTextArea p {
   color: #ECECE3;
@@ -665,13 +668,22 @@ a {
 }
 #main .wrap .boardCont .inner .boardInfo {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  min-height: 50%;
+  width: 100%;
+  padding-left: 150px;
+}
+#main .wrap .boardCont .inner .boardInfo h2 {
+  font-family: "Libre+Bodoni";
+  font-size: 24px;
+  letter-spacing: -0.56px;
+  line-height: 1;
+  color: #333;
+  font-weight: 300;
+  margin-right: 50px;
 }
 #main .wrap .boardCont .inner .boardInfo .sectionAccodion {
   max-width: 100%;
-  margin: 0 40px;
   display: flex;
   flex-direction: column;
 }
@@ -686,8 +698,8 @@ a {
 #main .wrap .boardCont .inner .boardInfo .sectionAccodion .tab input[type=radio]:checked + label::after {
   transform: rotate(-45deg);
 }
-#main .wrap .boardCont .inner .boardInfo .sectionAccodion .tab input[type=radio]:checked ~ .contents {
-  max-height: 100vh;
+#main .wrap .boardCont .inner .boardInfo .sectionAccodion .tab input[type=radio]:checked ~ .tabContents {
+  max-height: 80vh;
 }
 #main .wrap .boardCont .inner .boardInfo .sectionAccodion .tab input[type=radio]:checked ~ label h3 {
   padding: 2px 10px;
@@ -721,16 +733,19 @@ a {
   font-weight: 400;
   font-family: "Libre+Bodoni";
 }
-#main .wrap .boardCont .inner .boardInfo .sectionAccodion .tab .contents {
+#main .wrap .boardCont .inner .boardInfo .sectionAccodion .tab .tabContents {
   border-top: 1px solid #777;
   max-height: 0;
   transition: 1s;
 }
-#main .wrap .boardCont .inner .boardInfo .sectionAccodion .tab .contents p {
+#main .wrap .boardCont .inner .boardInfo .sectionAccodion .tab .tabContents p {
   position: relative;
   padding: 15px 0;
   color: #333;
   z-index: 10;
+}
+#main .wrap .boardCont .inner .boardInfo .sectionAccodion .tab:nth-of-type(1) {
+  margin-top: 0;
 }
 #main .wrap #footer {
   width: 100%;
@@ -1004,8 +1019,12 @@ a {
   #main .wrap .contents {
     height: 600px;
   }
-  #main .wrap .boardCont .inner .boardBox .boardTextArea p {
+  #main .wrap .boardCont .inner .boardWrap .boardBox .boardTextArea p {
     font-size: 16px;
+  }
+  #main .wrap .boardCont .inner .boardWrap .boardBox .boardBtn {
+    width: 120px;
+    height: 120px;
   }
 }
 @media screen and (max-width: 778px) {
@@ -1306,6 +1325,7 @@ a {
   }
   #main .wrap .boardCont .inner {
     width: 100%;
+    padding: 20px;
   }
   #main .wrap .boardCont .inner .boardWrap .contentsTitle {
     margin-bottom: 20px;
@@ -1322,19 +1342,23 @@ a {
     margin-bottom: 10px;
   }
   #main .wrap .boardCont .inner .boardWrap .boardBox .boardBtn {
-    width: 50px;
-    height: 50px;
+    width: 80px;
+    height: 80px;
   }
   #main .wrap .boardCont .inner .boardWrap .boardBox .boardBtn .boardBtnText {
     font-size: 12px;
   }
-  #main .wrap .boardCont .inner .boardWrap .boardInfo {
+  #main .wrap .boardCont .inner .boardInfo {
     padding-left: 0;
   }
-  #main .wrap .boardCont .inner .boardWrap .boardInfo .boardText {
-    width: 60%;
-    font-size: 12px;
-    margin-bottom: 0;
+  #main .wrap .boardCont .inner .boardInfo .sectionAccodion {
+    margin: 0;
+  }
+  #main .wrap .boardCont .inner .boardInfo .sectionAccodion .tab label h2 {
+    font-size: 16px;
+  }
+  #main .wrap .boardCont .inner .boardInfo .sectionAccodion .tab label h3 {
+    font-size: 16px;
   }
   #main .wrap #footer .inner .footerTop {
     flex-direction: column;
