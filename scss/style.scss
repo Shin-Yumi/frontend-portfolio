@@ -1,0 +1,15 @@
+@charset 'utf-8';
+
+// common style
+@import 'font.scss';
+@import 'color.scss';
+@import 'layout.scss';
+@import 'mixin.scss';
+
+// reset style
+@import 'reset.scss';
+
+// page style
+@import 'main.scss';
+@import 'sub-common.scss';
+@import 'board.scss';

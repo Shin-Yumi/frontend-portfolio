@@ -1,0 +1,703 @@
+/**
+sub section scss 작업 
+작업자: 신유미 
+2022.01.31 ~
+*/
+
+.subPage {
+  width: 100%;
+  height: auto;
+  //height: 100vh;
+  overflow-x: hidden;
+  background: #ECECE3;
+
+  .wrap {
+    width: 100%;
+    height: 100vh;
+    padding-top: 80px;
+    //header 영역
+    #header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 80px;
+      line-height: 80px;
+      background: #ECECE3;
+      z-index: 30;
+      
+      .inner {
+        width: 100%;
+        height: 100%;
+        padding: 0 20px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border: 1px solid #777;
+        background: #ECECE3;
+      
+        .logo {
+          .headerLogo {
+            a {
+              display: block;
+              font-family: $titleFont;
+              font-size: 30px;
+              letter-spacing: 0.6px;
+              line-height: 1.3;
+              color: #333;
+            }
+          }
+        }
+        #menuPC {
+          width: 100%;
+          .menuWrap {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            .menuList {
+              margin-left: 30px;
+              &:first-child {
+                margin-left: 0;
+              }
+              .menuLink {
+                font-size: 18px;
+                color: #333;
+              }
+            }
+          }
+        }
+        // 헴버거 메뉴
+        .hamMenu {
+          display: none;
+          position: absolute;
+          top: 50%;
+          right: 30px;
+          transform: translateY(-50%);
+          width: 20px;
+          height: 15px;
+          &::before {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 2px;
+            background: #000;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: top 0.5s 0s, transform 0.5s 0.5s;
+          }
+          &::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 2px;
+            background: #000;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            transition: bottom 0.5s 0s, transform 0.5s 0.5s;
+          }
+          span {
+            display: block;
+            width: 100%;
+            height: 2px;
+            background: #000;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            margin-top: -1px;
+            text-indent: -999999px;
+            transition: all 1s;
+          }
+          &.on {
+            &::before {
+              top: 50%;
+              margin-top: -1px;
+              transform: rotate(45deg);
+            }
+            &::after {
+              bottom: 50%;
+              margin-bottom: -1px;
+              transform: rotate(-45deg);
+            }
+            span {
+              transform: translateX(100%);
+              opacity: 0;
+            }
+          }
+        }
+        // mobile 메뉴
+        #menuMo {
+          position: fixed;
+          top: 0;
+          left: -100%;
+          width: 80%;
+          height: 100vh;
+          display: none;
+          transition: all .5s;
+          z-index: 40;
+          opacity: 0;
+          >.inner {
+            background-color: #333;
+            border: none;
+            padding: 30px 20px;
+            .mobileMenu {
+              width: 100%;
+              height: 100%;
+              .menuLogo {
+                @include sectionTitle($fz: 24px,$fontColor : #ECECE3);
+                padding-bottom: 30px;
+                border-bottom: 1px solid #ECECE3;
+              }
+              .mMenuWrap {
+                width: 100%;
+                .mMenuList {
+                  line-height: 20px;
+                  border-bottom: 1px solid #ECECE3;
+                  padding: 10px 0;
+                  .mMenuTitle {
+                    font-size: 16px;
+                    color: #ECECE3;
+                  }
+                  >ul {
+                    padding: 5px 0 0 20px;
+                    >li {
+                      a {
+                        font-size: 14px;
+                        color: #ECECE3;
+                      }
+                      &:hover {
+                        a {
+                          color: #9DA592;
+                        }
+                      }
+                    }
+                    
+                  }
+                }
+              }
+              .mMenuFooter {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                padding-top: 20px;
+                .mMenuFooterList {
+                  margin-left: 10px;
+                  a {
+                    display: block;
+                    i {
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      font-size: 20px;
+                      color: #ECECE3;
+                    }
+                    .notion-icon {
+                      width: 20px;
+                      height: 20px;
+                      background: url('../img/notion-icon.svg') no-repeat center;
+                      background-size: 20px !important;
+                    }
+                    .tistory-icon {
+                      width: 20px;
+                      height: 20px;
+                      background: url(../img/tistory-icon.svg) no-repeat center;
+                      background-size: 20px !important;
+                    }
+                  }
+                }
+              }
+            }
+          }
+          &.on {
+            left: 0;
+            opacity: 1;
+          }
+        }
+      }
+      
+    }
+    // contents 영역
+    .subContents {
+      padding: 0 30px;
+      border: 1px solid $borderColor;
+      border-top: none;
+      .subHeader {
+        position: relative;
+        padding: 80px 100px 0 0;
+        &::after {
+          content: '';
+          display: block;
+          clear: both;
+        }
+        .subHeaderTitle {
+          @include sectionTitle;
+        }
+        .subHeaderMenu {
+          padding-top: 40px;
+          float: right;
+          ul {
+            display: flex;
+            align-items: center;
+            li {
+              border-bottom: 1px solid #777;
+                a {
+                  display: block;
+                  @include sectionText($captionFz: 16px, $captionFontColor: #333);
+                }
+            }
+            li + li {
+              margin-left: 70px;
+            }
+          }
+        }
+      }
+      .subSection {
+        padding: 100px 0;
+        .sectionExp {
+          padding-bottom: 30px;
+          .expTitle {
+            @include sectionSubTitle($subFz: 20px, $subFontColor: #333, $fontWeight: 400);
+            padding-bottom: 10px;
+          }
+          .expCaption {
+            @include sectionText;
+          }
+        }
+        .sectionCont {
+          width: 100%;
+          height: 100%;
+          min-height: 600px;
+          border: 1px solid $borderColor;
+        }
+      }
+    }
+
+    // footer 영역
+    #footer {
+      width: 100%;
+      .inner {
+        width: 100%;
+        margin: 0 auto;
+        border-left: 1px solid #777;
+        border-right: 1px solid #777;
+        .footerTop {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 30px 20px;
+          .footerLogo {
+            .logo {
+              .logoText {   
+                display: block;      
+                        
+                span {             
+                  display: block;
+                }
+                .logoTitle {
+                  @include sectionTitle($fz: 40px);  
+                }
+                .logoSub {
+                  font-family: $titleFont;
+                  font-size: 12px;
+                  font-weight: normal;
+                  line-height: 1;
+                  letter-spacing: 1px;
+                  color: #777;
+                }
+              }
+            }
+          }
+          .footerContent {
+            display: flex;
+            align-items: flex-start;
+          }
+          .footerContTitle {
+            font-family: $titleFont;
+            font-size: 18px;
+            color: #333;
+          }
+          .footerEmail {
+            margin-right: 50px;
+            .emailText {
+              font-size: 14px;
+              color: #777;
+              margin-top: 4px;
+              margin-bottom: 20px;
+            }
+            .emailSendBox {
+              .emailForm {
+                display: flex;
+                align-items: flex-end;
+                .emailInput {
+                  width: 250px;
+                  border-top: none;
+                  border-left: none;
+                  border-right: none;
+                  border-bottom: 1px solid #333;
+                  background-color: transparent;
+                  &::placeholder {
+                    font-size: 12px;
+                    text-transform: uppercase;
+                    color: #777;
+                  }
+                }
+                .emailBtn {
+                  width: 80px;
+                  height: 30px;
+                  border: 1px solid #333;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  margin-left: 10px;
+                  .emalBtnText {
+                    display: block;
+                    font-family: $titleFont;
+                    font-size: 12px;
+                    text-transform: uppercase;
+                    color: #777;
+                  }
+                }
+              }
+
+            }
+            
+          }
+          .footerSns {
+            .snsWrap {
+              margin-top: 4px;
+              .snsList {
+                padding-bottom: 4px;
+                .snsLink {
+                  display: block;
+                  font-size: 14px;
+                  line-height: 1;
+                  letter-spacing: normal;
+                  font-weight: normal;
+                  color: #777;
+                }
+              }
+
+            }
+          }
+          
+        }
+        .footerBottom {
+          padding: 10px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          .footerLink {
+            display: inline-block;
+            margin-right: 4px;
+            font-size: 14px;
+            line-height: 1;
+            letter-spacing: normal;
+            font-weight: normal;
+            color: #777;
+          }
+          .contactEmail {
+            font-size: 14px;
+            line-height: 1;
+            letter-spacing: normal;
+            font-weight: normal;
+            color: #777;
+          }
+        }
+      }
+      
+    }
+  }
+
+}
+
+//$sLaptop : 1024px;
+@media screen and (max-width: $sLaptop) {
+  .subPage {
+    .wrap {
+      padding-top: 60px;
+      #header {
+        height: 60px;
+        line-height: 60px;
+        .inner {
+          width: 100%;
+          .logo {
+            .headerLogo {
+              a {
+                font-size: 26px;
+              }
+            }
+          }
+          #menuPC {
+            .menuWrap {
+              .menuList {
+                .menuLink {
+                  font-size: 14px;
+                }
+              }
+            }
+          }
+        }
+      }
+
+    }
+  }
+}
+//$Ltablet: 992px;
+@media screen and (max-width: $Ltablet) {
+  .subPage {
+    .wrap {
+      padding-top: 60px;
+      .subContents {
+        padding: 0 30px;
+        border: 1px solid $borderColor;
+        border-top: none;
+        .subHeader {
+          position: relative;
+          padding: 40px 50px 0 0;
+          .subHeaderTitle {
+            @include sectionTitle($fz: 30px);
+          }
+          .subHeaderMenu {
+            float: left;
+            ul {
+              display: flex;
+              align-items: center;
+              li + li {
+                margin-left: 50px;
+              }
+            }
+          }
+        }
+      }
+
+    }
+  }
+}
+//$tablet : 778px;
+@media screen and (max-width: $tablet) {
+  .subPage {
+    .wrap {
+      padding-top: 60px;
+      #header {
+        height: 60px;
+        line-height: 60px;
+        .inner {
+          width: 100%;
+          .logo {
+            .headerLogo {
+              a {
+                font-size: 26px;
+              }
+            }
+          }
+          #menuPC {
+            display: none;
+          }
+          .hamMenu {
+            display: block;
+          }
+          #menuMo {
+            display: block;
+          }
+        }
+      }
+      .subContents {
+        padding: 0 30px;
+        border: 1px solid $borderColor;
+        border-top: none;
+        .subSection {
+          padding: 50px 0;
+          .sectionExp {
+            .expTitle {
+              @include sectionSubTitle($subFz: 16px, $subFontColor: #333, $fontWeight: 400);
+              padding-bottom: 10px;
+            }
+            .expCaption {
+              @include sectionText($captionFz: 14px);
+            }
+          }
+        }
+      }
+
+      #footer {
+        .inner {
+          .footerTop {
+            padding: 20px 50px 20px 20px;
+            .footerLogo {
+              .logo {
+                .logoText {   
+                  .logoTitle {
+                    @include sectionTitle($fz: 24px);
+                  }
+                  .logoSub {
+                    font-size: 10px;
+                  }
+                }
+              }
+            }
+            .footerContTitle {
+              font-size: 14px;
+            }
+            .footerEmail {
+              margin-right: 50px;
+              .emailText {
+                font-size: 12px;
+                margin-bottom: 10px;
+              }
+              .emailSendBox {
+                .emailForm {
+                  .emailInput {
+                    width: 150px;
+                  }
+                  .emailBtn {
+                    width: 50px;
+                    height: 20px;
+                    
+                    .emalBtnText {
+                      font-size: 10px;
+                    }
+                  }
+                }
+  
+              }
+              
+            }
+            .footerSns {
+              .snsWrap {
+                .snsList { 
+                  .snsLink {
+                    font-size: 12px;
+                  }
+                }
+  
+              }
+            }
+            
+          }
+          .footerBottom {
+            .footerLink {
+              font-size: 12px;
+            }
+            .contactEmail {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+
+    }
+  }
+}
+//$mobile : 576px;
+@media screen and (max-width: $mobile) {
+  .subPage {
+    .wrap {
+      #header {
+        .inner {
+          .logo {
+            .headerLogo {
+              a {
+                font-size: 20px;
+              }
+            }
+          }
+        }
+      }
+      .subContents {
+        .subHeader {
+          .subHeaderMenu {
+            ul {
+              li {
+                  a {
+                    @include sectionText($captionFz: 14px, $captionFontColor: #333);
+                  }
+              }
+              li + li {
+                margin-left: 20px;
+              }
+            }
+          }
+        }
+        .subSection {
+          .sectionExp {
+            .expTitle {
+              @include sectionSubTitle($subFz: 16px, $fontWeight: 400);
+            }
+            .expCaption {
+              @include sectionText($captionFz: 14px);
+            }
+          }
+        }
+      }
+
+      #footer {
+        .inner {
+          .footerTop {
+            flex-direction: column;
+            align-items: flex-start;
+            .footerLogo {
+              margin-bottom: 30px;
+            }
+            .footerContTitle {
+              font-size: 12px;
+            }
+            .footerContent {
+              flex-direction: column;
+            }
+            .footerEmail {
+              margin-right: 0;
+              margin-bottom: 12px;
+              .emailText {
+                font-size: 10px;
+                margin-bottom: 10px;
+              }
+              .emailSendBox {
+                .emailForm {
+                  .emailInput {
+                    width: 150px;
+                  }
+                  .emailBtn {
+                    width: 50px;
+                    height: 20px;
+                    
+                    .emalBtnText {
+                      font-size: 10px;
+                    }
+                  }
+                }
+  
+              }
+              
+            }
+            .footerSns {
+              .snsWrap {
+                display: flex;
+                align-items: center;
+                .snsList { 
+                  padding-bottom: 0;
+                  padding-right: 5px;
+                  .snsLink {
+                    font-size: 12px;
+                  }
+                }
+  
+              }
+            }
+            
+          }
+          .footerBottom {
+            .footerLink {
+              font-size: 12px;
+            }
+            .contactEmail {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
