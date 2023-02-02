@@ -7,6 +7,324 @@
   font-weight: normal;
   font-style: normal;
 }
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  line-height: 80px;
+  background: #ECECE3;
+  z-index: 30;
+}
+#header .inner {
+  width: 100%;
+  height: 100%;
+  padding: 0 20px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #777;
+  background: #ECECE3;
+}
+#header .inner .logo .headerLogo a {
+  display: block;
+  font-family: "Aboreto";
+  font-size: 30px;
+  letter-spacing: 0.6px;
+  line-height: 1.3;
+  color: #333;
+}
+#header .inner #menuPC {
+  width: 100%;
+}
+#header .inner #menuPC .menuWrap {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+#header .inner #menuPC .menuWrap .menuList {
+  margin-left: 30px;
+}
+#header .inner #menuPC .menuWrap .menuList:first-child {
+  margin-left: 0;
+}
+#header .inner #menuPC .menuWrap .menuList .menuLink {
+  font-size: 18px;
+  color: #333;
+}
+#header .inner .hamMenu {
+  display: none;
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 15px;
+}
+#header .inner .hamMenu::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: top 0.5s 0s, transform 0.5s 0.5s;
+}
+#header .inner .hamMenu::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #000;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: bottom 0.5s 0s, transform 0.5s 0.5s;
+}
+#header .inner .hamMenu span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #000;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-top: -1px;
+  text-indent: -999999px;
+  transition: all 1s;
+}
+#header .inner .hamMenu.on::before {
+  top: 50%;
+  margin-top: -1px;
+  transform: rotate(45deg);
+}
+#header .inner .hamMenu.on::after {
+  bottom: 50%;
+  margin-bottom: -1px;
+  transform: rotate(-45deg);
+}
+#header .inner .hamMenu.on span {
+  transform: translateX(100%);
+  opacity: 0;
+}
+#header .inner #menuMo {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 80%;
+  height: 100vh;
+  display: none;
+  transition: all 0.5s;
+  z-index: 40;
+  opacity: 0;
+}
+#header .inner #menuMo > .inner {
+  background-color: #333;
+  border: none;
+  padding: 30px 20px;
+}
+#header .inner #menuMo > .inner .mobileMenu {
+  width: 100%;
+  height: 100%;
+}
+#header .inner #menuMo > .inner .mobileMenu .menuLogo {
+  font-family: "Aboreto";
+  font-size: 24px;
+  letter-spacing: -0.56px;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #ECECE3;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #ECECE3;
+}
+#header .inner #menuMo > .inner .mobileMenu .mMenuWrap {
+  width: 100%;
+}
+#header .inner #menuMo > .inner .mobileMenu .mMenuWrap .mMenuList {
+  line-height: 20px;
+  border-bottom: 1px solid #ECECE3;
+  padding: 10px 0;
+}
+#header .inner #menuMo > .inner .mobileMenu .mMenuWrap .mMenuList .mMenuTitle {
+  font-size: 16px;
+  color: #ECECE3;
+}
+#header .inner #menuMo > .inner .mobileMenu .mMenuWrap .mMenuList > ul {
+  padding: 5px 0 0 20px;
+}
+#header .inner #menuMo > .inner .mobileMenu .mMenuWrap .mMenuList > ul > li a {
+  font-size: 14px;
+  color: #ECECE3;
+}
+#header .inner #menuMo > .inner .mobileMenu .mMenuWrap .mMenuList > ul > li:hover a {
+  color: #9DA592;
+}
+#header .inner #menuMo > .inner .mobileMenu .mMenuFooter {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-top: 20px;
+}
+#header .inner #menuMo > .inner .mobileMenu .mMenuFooter .mMenuFooterList {
+  margin-left: 10px;
+}
+#header .inner #menuMo > .inner .mobileMenu .mMenuFooter .mMenuFooterList a {
+  display: block;
+}
+#header .inner #menuMo > .inner .mobileMenu .mMenuFooter .mMenuFooterList a i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  color: #ECECE3;
+}
+#header .inner #menuMo > .inner .mobileMenu .mMenuFooter .mMenuFooterList a .notion-icon {
+  width: 20px;
+  height: 20px;
+  background: url("../img/notion-icon.svg") no-repeat center;
+  background-size: 20px !important;
+}
+#header .inner #menuMo > .inner .mobileMenu .mMenuFooter .mMenuFooterList a .tistory-icon {
+  width: 20px;
+  height: 20px;
+  background: url(../img/tistory-icon.svg) no-repeat center;
+  background-size: 20px !important;
+}
+#header .inner #menuMo.on {
+  left: 0;
+  opacity: 1;
+}
+
+#footer {
+  width: 100%;
+}
+#footer .inner {
+  width: 100%;
+  margin: 0 auto;
+  border-left: 1px solid #777;
+  border-right: 1px solid #777;
+}
+#footer .inner .footerTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 20px;
+}
+#footer .inner .footerTop .footerLogo .logo .logoText {
+  display: block;
+}
+#footer .inner .footerTop .footerLogo .logo .logoText span {
+  display: block;
+}
+#footer .inner .footerTop .footerLogo .logo .logoText .logoTitle {
+  font-family: "Aboreto";
+  font-size: 40px;
+  letter-spacing: -0.56px;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #333;
+}
+#footer .inner .footerTop .footerLogo .logo .logoText .logoSub {
+  font-family: "Aboreto";
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 1;
+  letter-spacing: 1px;
+  color: #777;
+}
+#footer .inner .footerTop .footerContent {
+  display: flex;
+  align-items: flex-start;
+}
+#footer .inner .footerTop .footerContTitle {
+  font-family: "Aboreto";
+  font-size: 18px;
+  color: #333;
+}
+#footer .inner .footerTop .footerEmail {
+  margin-right: 50px;
+}
+#footer .inner .footerTop .footerEmail .emailText {
+  font-size: 14px;
+  color: #777;
+  margin-top: 4px;
+  margin-bottom: 20px;
+}
+#footer .inner .footerTop .footerEmail .emailSendBox .emailForm {
+  display: flex;
+  align-items: flex-end;
+}
+#footer .inner .footerTop .footerEmail .emailSendBox .emailForm .emailInput {
+  width: 250px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid #333;
+  background-color: transparent;
+}
+#footer .inner .footerTop .footerEmail .emailSendBox .emailForm .emailInput::placeholder {
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #777;
+}
+#footer .inner .footerTop .footerEmail .emailSendBox .emailForm .emailBtn {
+  width: 80px;
+  height: 30px;
+  border: 1px solid #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+}
+#footer .inner .footerTop .footerEmail .emailSendBox .emailForm .emailBtn .emalBtnText {
+  display: block;
+  font-family: "Aboreto";
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #777;
+}
+#footer .inner .footerTop .footerSns .snsWrap {
+  margin-top: 4px;
+}
+#footer .inner .footerTop .footerSns .snsWrap .snsList {
+  padding-bottom: 4px;
+}
+#footer .inner .footerTop .footerSns .snsWrap .snsList .snsLink {
+  display: block;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: normal;
+  font-weight: normal;
+  color: #777;
+}
+#footer .inner .footerBottom {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#footer .inner .footerBottom .footerLink {
+  display: inline-block;
+  margin-right: 4px;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: normal;
+  font-weight: normal;
+  color: #777;
+}
+#footer .inner .footerBottom .contactEmail {
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: normal;
+  font-weight: normal;
+  color: #777;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -38,198 +356,6 @@ a {
   width: 100%;
   height: 100vh;
   padding-top: 80px;
-}
-#main .wrap #header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 80px;
-  line-height: 80px;
-  background: #ECECE3;
-  z-index: 30;
-}
-#main .wrap #header .inner {
-  width: 100%;
-  height: 100%;
-  padding: 0 20px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border: 1px solid #777;
-  background: #ECECE3;
-}
-#main .wrap #header .inner .logo .headerLogo a {
-  display: block;
-  font-family: "Aboreto";
-  font-size: 30px;
-  letter-spacing: 0.6px;
-  line-height: 1.3;
-  color: #333;
-}
-#main .wrap #header .inner #menuPC {
-  width: 100%;
-}
-#main .wrap #header .inner #menuPC .menuWrap {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-}
-#main .wrap #header .inner #menuPC .menuWrap .menuList {
-  margin-left: 30px;
-}
-#main .wrap #header .inner #menuPC .menuWrap .menuList:first-child {
-  margin-left: 0;
-}
-#main .wrap #header .inner #menuPC .menuWrap .menuList .menuLink {
-  font-size: 18px;
-  color: #333;
-}
-#main .wrap #header .inner .hamMenu {
-  display: none;
-  position: absolute;
-  top: 50%;
-  right: 30px;
-  transform: translateY(-50%);
-  width: 20px;
-  height: 15px;
-}
-#main .wrap #header .inner .hamMenu::before {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 2px;
-  background: #000;
-  position: absolute;
-  top: 0;
-  left: 0;
-  transition: top 0.5s 0s, transform 0.5s 0.5s;
-}
-#main .wrap #header .inner .hamMenu::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 2px;
-  background: #000;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  transition: bottom 0.5s 0s, transform 0.5s 0.5s;
-}
-#main .wrap #header .inner .hamMenu span {
-  display: block;
-  width: 100%;
-  height: 2px;
-  background: #000;
-  position: absolute;
-  top: 50%;
-  left: 0;
-  margin-top: -1px;
-  text-indent: -999999px;
-  transition: all 1s;
-}
-#main .wrap #header .inner .hamMenu.on::before {
-  top: 50%;
-  margin-top: -1px;
-  transform: rotate(45deg);
-}
-#main .wrap #header .inner .hamMenu.on::after {
-  bottom: 50%;
-  margin-bottom: -1px;
-  transform: rotate(-45deg);
-}
-#main .wrap #header .inner .hamMenu.on span {
-  transform: translateX(100%);
-  opacity: 0;
-}
-#main .wrap #header .inner #menuMo {
-  position: fixed;
-  top: 0;
-  left: -100%;
-  width: 80%;
-  height: 100vh;
-  display: none;
-  transition: all 0.5s;
-  z-index: 40;
-  opacity: 0;
-}
-#main .wrap #header .inner #menuMo > .inner {
-  background-color: #333;
-  border: none;
-  padding: 30px 20px;
-}
-#main .wrap #header .inner #menuMo > .inner .mobileMenu {
-  width: 100%;
-  height: 100%;
-}
-#main .wrap #header .inner #menuMo > .inner .mobileMenu .menuLogo {
-  font-family: "Aboreto";
-  font-size: 24px;
-  letter-spacing: -0.56px;
-  line-height: 1;
-  text-transform: uppercase;
-  color: #ECECE3;
-  padding-bottom: 30px;
-  border-bottom: 1px solid #ECECE3;
-}
-#main .wrap #header .inner #menuMo > .inner .mobileMenu .mMenuWrap {
-  width: 100%;
-}
-#main .wrap #header .inner #menuMo > .inner .mobileMenu .mMenuWrap .mMenuList {
-  line-height: 20px;
-  border-bottom: 1px solid #ECECE3;
-  padding: 10px 0;
-}
-#main .wrap #header .inner #menuMo > .inner .mobileMenu .mMenuWrap .mMenuList .mMenuTitle {
-  font-size: 16px;
-  color: #ECECE3;
-}
-#main .wrap #header .inner #menuMo > .inner .mobileMenu .mMenuWrap .mMenuList > ul {
-  padding: 5px 0 0 20px;
-}
-#main .wrap #header .inner #menuMo > .inner .mobileMenu .mMenuWrap .mMenuList > ul > li a {
-  font-size: 14px;
-  color: #ECECE3;
-}
-#main .wrap #header .inner #menuMo > .inner .mobileMenu .mMenuWrap .mMenuList > ul > li:hover a {
-  color: #9DA592;
-}
-#main .wrap #header .inner #menuMo > .inner .mobileMenu .mMenuFooter {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  padding-top: 20px;
-}
-#main .wrap #header .inner #menuMo > .inner .mobileMenu .mMenuFooter .mMenuFooterList {
-  margin-left: 10px;
-}
-#main .wrap #header .inner #menuMo > .inner .mobileMenu .mMenuFooter .mMenuFooterList a {
-  display: block;
-}
-#main .wrap #header .inner #menuMo > .inner .mobileMenu .mMenuFooter .mMenuFooterList a i {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 20px;
-  color: #ECECE3;
-}
-#main .wrap #header .inner #menuMo > .inner .mobileMenu .mMenuFooter .mMenuFooterList a .notion-icon {
-  width: 20px;
-  height: 20px;
-  background: url("../img/notion-icon.svg") no-repeat center;
-  background-size: 20px !important;
-}
-#main .wrap #header .inner #menuMo > .inner .mobileMenu .mMenuFooter .mMenuFooterList a .tistory-icon {
-  width: 20px;
-  height: 20px;
-  background: url(../img/tistory-icon.svg) no-repeat center;
-  background-size: 20px !important;
-}
-#main .wrap #header .inner #menuMo.on {
-  left: 0;
-  opacity: 1;
 }
 #main .wrap .contents {
   position: relative;
@@ -1472,6 +1598,7 @@ sub section scss 작업
   background: #ECECE3;
 }
 .subPage .wrap {
+  position: relative;
   width: 100%;
   height: 100vh;
   padding-top: 80px;
@@ -1669,6 +1796,7 @@ sub section scss 작업
   opacity: 1;
 }
 .subPage .wrap .subContents {
+  width: 100%;
   padding: 0 30px;
   border: 1px solid #777777;
   border-top: none;
@@ -1738,7 +1866,6 @@ sub section scss 작업
   width: 100%;
   height: 100%;
   min-height: 600px;
-  border: 1px solid #777777;
 }
 .subPage .wrap #footer {
   width: 100%;
@@ -2089,291 +2216,25 @@ board scss 작업
 작업자: 신유미 
 2022.01.29 ~
 */
-#board {
-  width: 100%;
-  height: auto;
-  overflow-x: hidden;
-  background: #ECECE3;
-}
-#board .wrap {
-  width: 100%;
-  height: 100vh;
-  padding-top: 80px;
-}
-#board .wrap #header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 80px;
-  line-height: 80px;
-  background: #ECECE3;
-  z-index: 30;
-}
-#board .wrap #header .inner {
-  width: 100%;
-  height: 100%;
-  padding: 0 20px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border: 1px solid #777;
-  background: #ECECE3;
-}
-#board .wrap #header .inner .logo .headerLogo a {
-  display: block;
-  font-family: "Aboreto";
-  font-size: 30px;
-  letter-spacing: 0.6px;
-  line-height: 1.3;
-  color: #333;
-}
-#board .wrap #header .inner #menuPC {
-  width: 100%;
-}
-#board .wrap #header .inner #menuPC .menuWrap {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-}
-#board .wrap #header .inner #menuPC .menuWrap .menuList {
-  margin-left: 30px;
-}
-#board .wrap #header .inner #menuPC .menuWrap .menuList:first-child {
-  margin-left: 0;
-}
-#board .wrap #header .inner #menuPC .menuWrap .menuList .menuLink {
-  font-size: 18px;
-  color: #333;
-}
-#board .wrap #header .inner .hamMenu {
-  display: none;
-  position: absolute;
-  top: 50%;
-  right: 30px;
-  transform: translateY(-50%);
-  width: 20px;
-  height: 15px;
-}
-#board .wrap #header .inner .hamMenu::before {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 2px;
-  background: #000;
-  position: absolute;
-  top: 0;
-  left: 0;
-  transition: top 0.5s 0s, transform 0.5s 0.5s;
-}
-#board .wrap #header .inner .hamMenu::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 2px;
-  background: #000;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  transition: bottom 0.5s 0s, transform 0.5s 0.5s;
-}
-#board .wrap #header .inner .hamMenu span {
-  display: block;
-  width: 100%;
-  height: 2px;
-  background: #000;
-  position: absolute;
-  top: 50%;
-  left: 0;
-  margin-top: -1px;
-  text-indent: -999999px;
-  transition: all 1s;
-}
-#board .wrap #header .inner .hamMenu.on::before {
-  top: 50%;
-  margin-top: -1px;
-  transform: rotate(45deg);
-}
-#board .wrap #header .inner .hamMenu.on::after {
-  bottom: 50%;
-  margin-bottom: -1px;
-  transform: rotate(-45deg);
-}
-#board .wrap #header .inner .hamMenu.on span {
-  transform: translateX(100%);
-  opacity: 0;
-}
-#board .wrap #header .inner #menuMo {
-  position: fixed;
-  top: 0;
-  left: -100%;
-  width: 80%;
-  height: 100vh;
-  display: none;
-  transition: all 0.5s;
-  z-index: 40;
-  opacity: 0;
-}
-#board .wrap #header .inner #menuMo > .inner {
-  background-color: #333;
-  border: none;
-  padding: 30px 20px;
-}
-#board .wrap #header .inner #menuMo > .inner .mobileMenu {
-  width: 100%;
-  height: 100%;
-}
-#board .wrap #header .inner #menuMo > .inner .mobileMenu .menuLogo {
-  font-family: "Aboreto";
-  font-size: 24px;
-  letter-spacing: -0.56px;
-  line-height: 1;
-  text-transform: uppercase;
-  color: #ECECE3;
-  padding-bottom: 30px;
-  border-bottom: 1px solid #ECECE3;
-}
-#board .wrap #header .inner #menuMo > .inner .mobileMenu .mMenuWrap {
-  width: 100%;
-}
-#board .wrap #header .inner #menuMo > .inner .mobileMenu .mMenuWrap .mMenuList {
-  line-height: 20px;
-  border-bottom: 1px solid #ECECE3;
-  padding: 10px 0;
-}
-#board .wrap #header .inner #menuMo > .inner .mobileMenu .mMenuWrap .mMenuList .mMenuTitle {
-  font-size: 16px;
-  color: #ECECE3;
-}
-#board .wrap #header .inner #menuMo > .inner .mobileMenu .mMenuWrap .mMenuList > ul {
-  padding: 5px 0 0 20px;
-}
-#board .wrap #header .inner #menuMo > .inner .mobileMenu .mMenuWrap .mMenuList > ul > li a {
-  font-size: 14px;
-  color: #ECECE3;
-}
-#board .wrap #header .inner #menuMo > .inner .mobileMenu .mMenuWrap .mMenuList > ul > li:hover a {
-  color: #9DA592;
-}
-#board .wrap #header .inner #menuMo > .inner .mobileMenu .mMenuFooter {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  padding-top: 20px;
-}
-#board .wrap #header .inner #menuMo > .inner .mobileMenu .mMenuFooter .mMenuFooterList {
-  margin-left: 10px;
-}
-#board .wrap #header .inner #menuMo > .inner .mobileMenu .mMenuFooter .mMenuFooterList a {
-  display: block;
-}
-#board .wrap #header .inner #menuMo > .inner .mobileMenu .mMenuFooter .mMenuFooterList a i {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 20px;
-  color: #ECECE3;
-}
-#board .wrap #header .inner #menuMo > .inner .mobileMenu .mMenuFooter .mMenuFooterList a .notion-icon {
-  width: 20px;
-  height: 20px;
-  background: url("../img/notion-icon.svg") no-repeat center;
-  background-size: 20px !important;
-}
-#board .wrap #header .inner #menuMo > .inner .mobileMenu .mMenuFooter .mMenuFooterList a .tistory-icon {
-  width: 20px;
-  height: 20px;
-  background: url(../img/tistory-icon.svg) no-repeat center;
-  background-size: 20px !important;
-}
-#board .wrap #header .inner #menuMo.on {
-  left: 0;
-  opacity: 1;
-}
-#board .wrap .subContents {
-  padding: 0 30px;
-  border: 1px solid #777777;
-  border-top: none;
-}
-#board .wrap .subContents .subHeader {
-  position: relative;
-  padding: 80px 100px 0 0;
-}
-#board .wrap .subContents .subHeader::after {
-  content: "";
-  display: block;
-  clear: both;
-}
-#board .wrap .subContents .subHeader .subHeaderTitle {
-  font-family: "Aboreto";
-  font-size: 60px;
-  letter-spacing: -0.56px;
-  line-height: 1;
-  text-transform: uppercase;
-  color: #333;
-}
-#board .wrap .subContents .subHeader .subHeaderMenu {
-  padding-top: 40px;
-  float: right;
-}
-#board .wrap .subContents .subHeader .subHeaderMenu ul {
-  display: flex;
-  align-items: center;
-}
-#board .wrap .subContents .subHeader .subHeaderMenu ul li a {
-  font-family: "S-CoreDream-3Light";
-  font-size: 16px;
-  line-height: 1.3;
-  letter-spacing: -0.6px;
-  color: #333;
-  border-bottom: 1px solid #777;
-}
-#board .wrap .subContents .subHeader .subHeaderMenu ul li + li {
-  padding-left: 100px;
-}
-#board .wrap .subContents .boardSection {
-  padding: 100px 0;
-}
-#board .wrap .subContents .boardSection .sectionExp {
-  padding-bottom: 30px;
-}
-#board .wrap .subContents .boardSection .sectionExp .expTitle {
-  font-family: "Libre+Bodoni";
-  font-size: 20px;
-  letter-spacing: -0.56px;
-  line-height: 1;
-  color: #333;
-  font-weight: 400;
-  padding-bottom: 10px;
-}
-#board .wrap .subContents .boardSection .sectionExp .expCaption {
-  font-family: "S-CoreDream-3Light";
-  font-size: 14px;
-  line-height: 1.3;
-  letter-spacing: -0.6px;
-  color: #777;
-}
-#board .wrap .subContents .boardSection .sectionAccodion .tab {
+#board .sectionCont .sectionAccodion .tab {
   position: relative;
   margin-top: 20px;
   overflow: hidden;
 }
-#board .wrap .subContents .boardSection .sectionAccodion .tab input[type=radio] {
+#board .sectionCont .sectionAccodion .tab input[type=radio] {
   appearance: none;
 }
-#board .wrap .subContents .boardSection .sectionAccodion .tab input[type=radio]:checked + label::after {
-  transform: rotate(45deg);
+#board .sectionCont .sectionAccodion .tab input[type=radio]:checked + label::after {
+  transform: rotate(-45deg);
 }
-#board .wrap .subContents .boardSection .sectionAccodion .tab input[type=radio]:checked ~ .contents {
+#board .sectionCont .sectionAccodion .tab input[type=radio]:checked ~ .contents {
   max-height: 100vh;
 }
-#board .wrap .subContents .boardSection .sectionAccodion .tab input[type=radio]:checked ~ label .boardListTitle h3 {
+#board .sectionCont .sectionAccodion .tab input[type=radio]:checked ~ label .boardListTitle h3 {
   padding: 2px 10px;
   border-radius: 2px;
 }
-#board .wrap .subContents .boardSection .sectionAccodion .tab label {
+#board .sectionCont .sectionAccodion .tab label {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -2381,8 +2242,8 @@ board scss 작업
   transition: 1s;
   cursor: pointer;
 }
-#board .wrap .subContents .boardSection .sectionAccodion .tab label::after {
-  content: "+";
+#board .sectionCont .sectionAccodion .tab label::after {
+  content: "-";
   position: absolute;
   right: 0;
   font-size: 30px;
@@ -2390,11 +2251,11 @@ board scss 작업
   transition: 1s;
   color: #777;
 }
-#board .wrap .subContents .boardSection .sectionAccodion .tab label .boardListTitle {
+#board .sectionCont .sectionAccodion .tab label .boardListTitle {
   display: flex;
   align-items: center;
 }
-#board .wrap .subContents .boardSection .sectionAccodion .tab label h2 {
+#board .sectionCont .sectionAccodion .tab label h2 {
   width: 20px;
   height: 20px;
   color: #333333;
@@ -2404,156 +2265,32 @@ board scss 작업
   margin-right: 10px;
   font-family: "Libre+Bodoni";
 }
-#board .wrap .subContents .boardSection .sectionAccodion .tab label h3 {
+#board .sectionCont .sectionAccodion .tab label h3 {
   z-index: 10;
   font-size: 20px;
   font-weight: 400;
   font-family: "Libre+Bodoni";
 }
-#board .wrap .subContents .boardSection .sectionAccodion .tab label .boardListInfo {
+#board .sectionCont .sectionAccodion .tab label .boardListInfo {
   position: relative;
   display: flex;
   align-items: center;
   margin-right: 30px;
 }
-#board .wrap .subContents .boardSection .sectionAccodion .tab label .boardListInfo p {
+#board .sectionCont .sectionAccodion .tab label .boardListInfo p {
   color: #777777;
   padding-left: 40px;
 }
-#board .wrap .subContents .boardSection .sectionAccodion .tab .contents {
+#board .sectionCont .sectionAccodion .tab .contents {
   border-top: 1px solid #777;
   max-height: 0;
   transition: 1s;
 }
-#board .wrap .subContents .boardSection .sectionAccodion .tab .contents p {
+#board .sectionCont .sectionAccodion .tab .contents p {
   position: relative;
   padding: 15px 0;
   color: #333;
   z-index: 10;
-}
-#board .wrap #footer {
-  width: 100%;
-}
-#board .wrap #footer .inner {
-  width: 100%;
-  margin: 0 auto;
-  border-left: 1px solid #777;
-  border-right: 1px solid #777;
-}
-#board .wrap #footer .inner .footerTop {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 30px 20px;
-}
-#board .wrap #footer .inner .footerTop .footerLogo .logo .logoText {
-  display: block;
-}
-#board .wrap #footer .inner .footerTop .footerLogo .logo .logoText span {
-  display: block;
-}
-#board .wrap #footer .inner .footerTop .footerLogo .logo .logoText .logoTitle {
-  font-family: "Aboreto";
-  font-size: 40px;
-  letter-spacing: -0.56px;
-  line-height: 1;
-  text-transform: uppercase;
-  color: #333;
-}
-#board .wrap #footer .inner .footerTop .footerLogo .logo .logoText .logoSub {
-  font-family: "Aboreto";
-  font-size: 12px;
-  font-weight: normal;
-  line-height: 1;
-  letter-spacing: 1px;
-  color: #777;
-}
-#board .wrap #footer .inner .footerTop .footerContent {
-  display: flex;
-  align-items: flex-start;
-}
-#board .wrap #footer .inner .footerTop .footerContTitle {
-  font-family: "Aboreto";
-  font-size: 18px;
-  color: #333;
-}
-#board .wrap #footer .inner .footerTop .footerEmail {
-  margin-right: 50px;
-}
-#board .wrap #footer .inner .footerTop .footerEmail .emailText {
-  font-size: 14px;
-  color: #777;
-  margin-top: 4px;
-  margin-bottom: 20px;
-}
-#board .wrap #footer .inner .footerTop .footerEmail .emailSendBox .emailForm {
-  display: flex;
-  align-items: flex-end;
-}
-#board .wrap #footer .inner .footerTop .footerEmail .emailSendBox .emailForm .emailInput {
-  width: 250px;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  border-bottom: 1px solid #333;
-  background-color: transparent;
-}
-#board .wrap #footer .inner .footerTop .footerEmail .emailSendBox .emailForm .emailInput::placeholder {
-  font-size: 12px;
-  text-transform: uppercase;
-  color: #777;
-}
-#board .wrap #footer .inner .footerTop .footerEmail .emailSendBox .emailForm .emailBtn {
-  width: 80px;
-  height: 30px;
-  border: 1px solid #333;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: 10px;
-}
-#board .wrap #footer .inner .footerTop .footerEmail .emailSendBox .emailForm .emailBtn .emalBtnText {
-  display: block;
-  font-family: "Aboreto";
-  font-size: 12px;
-  text-transform: uppercase;
-  color: #777;
-}
-#board .wrap #footer .inner .footerTop .footerSns .snsWrap {
-  margin-top: 4px;
-}
-#board .wrap #footer .inner .footerTop .footerSns .snsWrap .snsList {
-  padding-bottom: 4px;
-}
-#board .wrap #footer .inner .footerTop .footerSns .snsWrap .snsList .snsLink {
-  display: block;
-  font-size: 14px;
-  line-height: 1;
-  letter-spacing: normal;
-  font-weight: normal;
-  color: #777;
-}
-#board .wrap #footer .inner .footerBottom {
-  padding: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-#board .wrap #footer .inner .footerBottom .footerLink {
-  display: inline-block;
-  margin-right: 4px;
-  font-size: 14px;
-  line-height: 1;
-  letter-spacing: normal;
-  font-weight: normal;
-  color: #777;
-}
-#board .wrap #footer .inner .footerBottom .contactEmail {
-  font-size: 14px;
-  line-height: 1;
-  letter-spacing: normal;
-  font-weight: normal;
-  color: #777;
 }
 
 /* 
