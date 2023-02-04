@@ -12,3 +12,14 @@ ul, ol, li {
 a {
   text-decoration: none;
 }
+
+table {
+	border-collapse: collapse;
+}
+
+.hidden {
+	position: absolute;
+	top: -99999999999999999px;
+	opacity: 0;
+}
+

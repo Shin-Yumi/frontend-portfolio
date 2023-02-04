@@ -4,84 +4,89 @@ board scss 작업
 2022.01.29 ~
 */
 
-#board {
-  .sectionCont {
-    .sectionAccodion {
-      .tab {
-        position: relative;
-        //border-bottom: 1px solid #777;
-        margin-top: 20px;
-        overflow: hidden;
-        input[type="radio"] {
-          appearance: none;
-          &:checked + label::after {
-            transform: rotate(-45deg);
-          }
-  
-          &:checked ~ .contents {
-            max-height: 100vh;
-          }
-          &:checked ~ label .boardListTitle h3 {
-            padding: 2px 10px;
-            border-radius: 2px;
-          }
-        }
-        label {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          padding-bottom: 10px;
-          transition: 1s;
-          cursor: pointer;
-          &::after {
-            content: "-";
-            position: absolute;
-            right: 0;
-            font-size: 30px;
-            font-weight: 300;
-            transition: 1s;
-            color : #777;
-          }
-          .boardListTitle {
-            display: flex;
-            align-items: center;
-          }
-          h2 {
-            width: 20px;
-            height: 20px;
-            color: $textColor;
-            font-size: 20px;
-            font-weight: 400;
-            border-radius: 5px;
-            margin-right: 10px;
-            font-family: $enFont;
-          }
-          h3 {
-            z-index: 10;
-            font-size: 20px;
-            font-weight: 400;
-            font-family: $enFont;
-          }
-          .boardListInfo {
-            position: relative;
-            display: flex;
-            align-items: center;
-            margin-right: 30px;
-            p {
-              color: $borderColor;
-              padding-left: 40px;
+.board {
+  .wrap {
+    .subContents {
+      .subSection {
+        .inner {
+          .sectionCont {
+            table {
+              width: 100%;
+              margin-bottom: 50px;
+              tr {
+                
+                border-top: 3px solid $textColor;
+                border-bottom: 3px solid $textColor;
+                &:hover {
+                  background: $hoverColor;
+                }
+                td {
+                  padding: 20px 0;
+                  text-align: center;
+                  font-size: 30px;
+                  color: $textColor;
+                  &:nth-of-type(2) {
+                    padding-left: 10px;
+                    text-align: left;
+                  }
+                  &:nth-of-type(3) {
+                    font-family: "맑은 고딕";
+                  }
+                  a {
+                    color: #333;
+                    line-height: 1.4;
+                  }
+                }
+              }
             }
-          }
-        }
-        .contents {
-          border-top: 1px solid #777;
-          max-height: 0;
-          transition: 1s;
-          p {
-            position: relative;
-            padding: 15px 0;
-            color: #333;
-            z-index: 10;
+            .pagination {
+              width: 100%;
+              text-align: center;
+              &::after {
+                content: '';
+                display: block;
+                clear: both;
+              }
+              .prev {
+                float: left;
+                display: block;
+                width: 30px;
+                height: 30px;
+                background: #555;
+                color: #eee;
+                font-size: 20px;
+                text-align: center;
+              }
+              .next {
+                float: right;
+                display: block;
+                width: 30px;
+                height: 30px;
+                background: #555;
+                color: #eee;
+                font-size: 20px;
+                text-align: center;
+              }
+              .numbers {
+                display: inline-block;
+                text-align: center;
+        
+                a {
+                  display: inline-block;
+                  width: 30px;
+                  height: 30px;
+                  border: 1px solid #888;
+                  font: 11px/30px 'arial';
+                  color: #666;
+                  margin: 0 5px;
+                  transition: 0.5s;
+                  &:hover {
+                    background: #666;
+                    color: #fff;
+                  }
+                }
+              }
+            }
           }
         }
       }
@@ -123,7 +128,6 @@ $mobile : 576px;
           }
         }
       }
-
     }
   }
 }
@@ -162,7 +166,7 @@ $mobile : 576px;
           position: relative;
           padding: 40px 50px 0 0;
           &::after {
-            content: '';
+            content: "";
             display: block;
             clear: both;
           }
@@ -176,10 +180,13 @@ $mobile : 576px;
               display: flex;
               align-items: center;
               li {
-                  a {
-                    @include sectionText($captionFz: 16px, $captionFontColor: #333);
-                    border-bottom: 1px solid #777;
-                  }
+                a {
+                  @include sectionText(
+                    $captionFz: 16px,
+                    $captionFontColor: #333
+                  );
+                  border-bottom: 1px solid #777;
+                }
               }
               li + li {
                 padding-left: 100px;
@@ -192,7 +199,11 @@ $mobile : 576px;
           .sectionExp {
             padding-bottom: 0;
             .expTitle {
-              @include sectionSubTitle($subFz: 14px, $subFontColor: #333, $fontWeight: 400);
+              @include sectionSubTitle(
+                $subFz: 14px,
+                $subFontColor: #333,
+                $fontWeight: 400
+              );
               padding-bottom: 10px;
             }
             .expCaption {
@@ -203,9 +214,7 @@ $mobile : 576px;
             .tab {
               label {
                 h2 {
-
                   font-size: 16px;
-
                 }
                 h3 {
                   font-size: 16px;
@@ -225,7 +234,7 @@ $mobile : 576px;
             padding: 20px 50px 20px 20px;
             .footerLogo {
               .logo {
-                .logoText {   
+                .logoText {
                   .logoTitle {
                     @include sectionTitle($fz: 24px);
                   }
@@ -252,27 +261,23 @@ $mobile : 576px;
                   .emailBtn {
                     width: 50px;
                     height: 20px;
-                    
+
                     .emalBtnText {
                       font-size: 10px;
                     }
                   }
                 }
-  
               }
-              
             }
             .footerSns {
               .snsWrap {
-                .snsList { 
+                .snsList {
                   .snsLink {
                     font-size: 12px;
                   }
                 }
-  
               }
             }
-            
           }
           .footerBottom {
             .footerLink {
@@ -284,7 +289,6 @@ $mobile : 576px;
           }
         }
       }
-
     }
   }
 }
@@ -332,31 +336,27 @@ $mobile : 576px;
                   .emailBtn {
                     width: 50px;
                     height: 20px;
-                    
+
                     .emalBtnText {
                       font-size: 10px;
                     }
                   }
                 }
-  
               }
-              
             }
             .footerSns {
               .snsWrap {
                 display: flex;
                 align-items: center;
-                .snsList { 
+                .snsList {
                   padding-bottom: 0;
                   padding-right: 5px;
                   .snsLink {
                     font-size: 12px;
                   }
                 }
-  
               }
             }
-            
           }
           .footerBottom {
             .footerLink {
