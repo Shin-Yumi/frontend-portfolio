@@ -1,0 +1,291 @@
+/**
+about page scss 작업 
+작업자: 신유미 
+2022.02.03 ~
+*/
+
+.about {
+  .sectionCont {
+    .aboutCont {
+      width: 100%;
+      //height: calc(100vh - 80px);
+      .inner {
+        .aboutSectionTitle {
+          text-transform: uppercase;
+          font-size: 20px;
+          font-weight: 400;
+          padding-bottom: 30px;
+          span {
+            font-family: $koFont;
+            font-size: 16px;
+            color: $textColor;
+          }
+        }
+        .aboutSectionCont {
+          width: 100%;
+          .organizationWarp {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            .organizationList {
+              position: relative;
+              width: calc(100% / 3);
+              height: 500px;
+              padding: 30px;
+              border: 1px solid $borderColor;
+              border-bottom: none;
+              margin-left: -1px;
+              .organizationBox {
+                width: 100%;
+                height: 100%;
+                .organizationTitle {
+                  @include sectionSubTitle($subFz: 18px, $subLetterS: 3px);
+                  text-transform: uppercase;
+                  margin-bottom: 10px;
+                }
+                .organizationImg {
+                  width: 100%;
+                  height: 86%;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  margin-bottom: 10px;
+                  img {
+                    width: 60%;
+                    height: 60%;
+                    object-fit: cover;
+                    filter: grayscale(0.7);
+                    transition: .5s;
+                  }
+                  &:hover {
+                    img {
+                      filter: grayscale(0.4);
+                      transform: scale(1.1);
+                    }
+                  }
+                }
+                .organizationJob {
+                  position: relative;
+                  @include sectionText($captionFz: 16px);
+                  &::after {
+                    content: '';
+                    display: block;
+                    clear: both;
+                  }
+                  span {
+                    
+                    float: right;
+                  }
+                }
+                
+              }
+              &:nth-of-type(1) .organizationBox .organizationImg {
+                background: rgba(161, 154, 151, 0.6);
+              }
+              &:nth-of-type(2) .organizationBox .organizationImg{
+                background: rgba(164, 161, 152, 0.6);
+              }
+              &:nth-of-type(3) .organizationBox .organizationImg{
+                background: rgba(160, 161, 151, 0.6);
+              }
+              &:nth-of-type(4) .organizationBox .organizationImg{
+                background: hsl(160, 5%, 64%, .6);
+              }
+              &:nth-of-type(5) .organizationBox .organizationImg{
+                background: hsl(207, 6%, 61%, .6);
+              }
+
+              &::after {
+                position: absolute;
+                bottom: 0;
+                left: 10%;
+                content: '';
+                width: 80%;
+                height: 1px;
+                background: $borderColor;
+              }
+              &:nth-last-child(-n+3) {
+                border-top: none;
+              }
+              &:nth-of-type(1),
+              &:nth-of-type(4) {
+                border-left: none;
+              }
+              &:nth-of-type(3),
+              &:nth-of-type(6) {
+                border-right: none;
+              }
+              &.intro {
+                .organizationBox {
+                  position: relative;
+                  .organizationTitle {
+                    @include sectionTitle($fz: 40px, $fontWeight: bold);
+                    margin-bottom: 40px;
+                  }
+                  .organizationSub {
+                    @include sectionSubTitle($subFz: 24px, $fontWeight: 400);
+                  }
+                  .organizationCaption {
+                    position: absolute;
+                    bottom: 0;
+                    @include sectionText;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .aboutCont + .aboutCont {
+      margin-top: 30px;
+    }
+  }
+}
+
+//$Ltablet: 992px;
+@media screen and (max-width: $Ltablet) {
+  .about {
+    .wrap {
+      .subContents {
+        .subSection {
+          .inner {
+            .sectionCont {
+              .aboutCont {
+                >.inner {
+                  .aboutSectionCont {
+                    .organizationWarp {
+                      .organizationList {
+                        width: 50%;
+                        &:nth-last-child(-n+4) {
+                          border-top: none;
+                        }
+                        &:nth-of-type(1),
+                        &:nth-of-type(4) {
+                          border-left: 1px solid $borderColor;
+                        }
+                        &:nth-of-type(3),
+                        &:nth-of-type(6) {
+                          border-left: 1px solid $borderColor;
+                        }
+                        &:nth-of-type(odd) {
+                          border-left: none;
+                        }
+                        &:nth-of-type(even) {
+                          border-right: none;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+//$tablet : 778px;
+@media screen and (max-width: $tablet) {
+  .about {
+    .wrap {
+      .subContents {
+        .subSection {
+          .inner {
+            .sectionCont {
+              .aboutCont {
+                >.inner {
+                  .aboutSectionCont {
+                    .organizationWarp {
+                      .organizationList {
+                        height: 400px;
+                        &.intro {
+                          .organizationBox {
+                            .organizationTitle {
+                              @include sectionTitle($fz: 30px, $fontWeight: bold);
+                              margin-bottom: 30px;
+                            }
+                            .organizationSub {
+                              @include sectionSubTitle($subFz: 20px, $fontWeight: 400);
+                            }
+                            .organizationCaption {
+                              position: absolute;
+                              bottom: 0;
+                              @include sectionText;
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+//$mobile : 576px;
+@media screen and (max-width: $mobile) {
+  .about {
+    .wrap {
+      .subContents {
+        .subSection {
+          .inner {
+            .sectionCont {
+              .aboutCont {
+                >.inner {
+                  .aboutSectionCont {
+                    .organizationWarp {
+                      .organizationList {
+                        width: 100%;
+                        max-height: 500px;
+                        border-left: none;
+                        border-right: none;
+                        //margin-top: -1px;
+                        margin-left: 0;
+                        &::after {
+                          display: none;
+                        }
+                        &.intro {
+                          .organizationBox {
+                            .organizationTitle {
+                              @include sectionTitle($fz: 40px, $fontWeight: bold);
+                              margin-bottom: 30px;
+                            }
+                            .organizationSub {
+                              @include sectionSubTitle($subFz: 24px, $fontWeight: 400);
+                            }
+                            .organizationCaption {
+                              position: absolute;
+                              bottom: 0;
+                              @include sectionText($captionFz: 16px);
+                            }
+                          }
+                        }
+                        &:nth-last-child(-n+4) {
+                          border-top: 1px solid $borderColor;
+                        }
+                        &:nth-of-type(4) {
+                          border-left: none;
+                        }
+                        &:nth-of-type(6) {
+                          border-left: none;
+                          border-bottom: 1px solid $borderColor;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -139,6 +139,7 @@
   line-height: 1;
   text-transform: uppercase;
   color: #ECECE3;
+  font-weight: 400;
   padding-bottom: 30px;
   border-bottom: 1px solid #ECECE3;
 }
@@ -228,6 +229,7 @@
   line-height: 1;
   text-transform: uppercase;
   color: #333;
+  font-weight: 400;
 }
 #footer .inner .footerTop .footerLogo .logo .logoText .logoSub {
   font-family: "Aboreto";
@@ -392,6 +394,7 @@ a {
   line-height: 1;
   text-transform: uppercase;
   color: #333;
+  font-weight: 400;
 }
 #main .wrap .contents .inner .contBtn {
   width: 300px;
@@ -736,6 +739,7 @@ a {
   line-height: 1;
   text-transform: uppercase;
   color: #333;
+  font-weight: 400;
   margin-bottom: 40px;
 }
 #main .wrap .boardCont .inner .boardWrap .boardBox {
@@ -873,130 +877,6 @@ a {
 #main .wrap .boardCont .inner .boardInfo .sectionAccodion .tab:nth-of-type(1) {
   margin-top: 0;
 }
-#main .wrap #footer {
-  width: 100%;
-}
-#main .wrap #footer .inner {
-  width: 100%;
-  margin: 0 auto;
-  border-left: 1px solid #777;
-  border-right: 1px solid #777;
-}
-#main .wrap #footer .inner .footerTop {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 30px 20px;
-}
-#main .wrap #footer .inner .footerTop .footerLogo .logo .logoText {
-  display: block;
-}
-#main .wrap #footer .inner .footerTop .footerLogo .logo .logoText span {
-  display: block;
-}
-#main .wrap #footer .inner .footerTop .footerLogo .logo .logoText .logoTitle {
-  font-family: "Aboreto";
-  font-size: 40px;
-  letter-spacing: -0.56px;
-  line-height: 1;
-  text-transform: uppercase;
-  color: #333;
-}
-#main .wrap #footer .inner .footerTop .footerLogo .logo .logoText .logoSub {
-  font-family: "Aboreto";
-  font-size: 12px;
-  font-weight: normal;
-  line-height: 1;
-  letter-spacing: 1px;
-  color: #777;
-}
-#main .wrap #footer .inner .footerTop .footerContent {
-  display: flex;
-  align-items: flex-start;
-}
-#main .wrap #footer .inner .footerTop .footerContTitle {
-  font-family: "Aboreto";
-  font-size: 18px;
-  color: #333;
-}
-#main .wrap #footer .inner .footerTop .footerEmail {
-  margin-right: 50px;
-}
-#main .wrap #footer .inner .footerTop .footerEmail .emailText {
-  font-size: 14px;
-  color: #777;
-  margin-top: 4px;
-  margin-bottom: 20px;
-}
-#main .wrap #footer .inner .footerTop .footerEmail .emailSendBox .emailForm {
-  display: flex;
-  align-items: flex-end;
-}
-#main .wrap #footer .inner .footerTop .footerEmail .emailSendBox .emailForm .emailInput {
-  width: 250px;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  border-bottom: 1px solid #333;
-  background-color: transparent;
-}
-#main .wrap #footer .inner .footerTop .footerEmail .emailSendBox .emailForm .emailInput::placeholder {
-  font-size: 12px;
-  text-transform: uppercase;
-  color: #777;
-}
-#main .wrap #footer .inner .footerTop .footerEmail .emailSendBox .emailForm .emailBtn {
-  width: 80px;
-  height: 30px;
-  border: 1px solid #333;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: 10px;
-}
-#main .wrap #footer .inner .footerTop .footerEmail .emailSendBox .emailForm .emailBtn .emalBtnText {
-  display: block;
-  font-family: "Aboreto";
-  font-size: 12px;
-  text-transform: uppercase;
-  color: #777;
-}
-#main .wrap #footer .inner .footerTop .footerSns .snsWrap {
-  margin-top: 4px;
-}
-#main .wrap #footer .inner .footerTop .footerSns .snsWrap .snsList {
-  padding-bottom: 4px;
-}
-#main .wrap #footer .inner .footerTop .footerSns .snsWrap .snsList .snsLink {
-  display: block;
-  font-size: 14px;
-  line-height: 1;
-  letter-spacing: normal;
-  font-weight: normal;
-  color: #777;
-}
-#main .wrap #footer .inner .footerBottom {
-  padding: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-#main .wrap #footer .inner .footerBottom .footerLink {
-  display: inline-block;
-  margin-right: 4px;
-  font-size: 14px;
-  line-height: 1;
-  letter-spacing: normal;
-  font-weight: normal;
-  color: #777;
-}
-#main .wrap #footer .inner .footerBottom .contactEmail {
-  font-size: 14px;
-  line-height: 1;
-  letter-spacing: normal;
-  font-weight: normal;
-  color: #777;
-}
 #main .topBtn {
   position: fixed;
   bottom: 20px;
@@ -1086,6 +966,7 @@ a {
     line-height: 1;
     text-transform: uppercase;
     color: #333;
+    font-weight: 400;
   }
   #main .wrap .contents .inner .contBtn {
     width: 200px;
@@ -1128,6 +1009,7 @@ a {
     line-height: 1;
     text-transform: uppercase;
     color: #333;
+    font-weight: 400;
   }
   #main .wrap .boardCont {
     height: calc(100vh - 60px);
@@ -1139,6 +1021,7 @@ a {
     line-height: 1;
     text-transform: uppercase;
     color: #333;
+    font-weight: 400;
   }
 }
 @media screen and (max-width: 992px) {
@@ -1186,6 +1069,7 @@ a {
     line-height: 1;
     text-transform: uppercase;
     color: #333;
+    font-weight: 400;
   }
   #main .wrap .contents .inner .contBtn {
     width: 200px;
@@ -1254,6 +1138,7 @@ a {
     line-height: 1;
     text-transform: uppercase;
     color: #333;
+    font-weight: 400;
   }
   #main .wrap #footer .inner .footerTop {
     padding: 20px 50px 20px 20px;
@@ -1265,6 +1150,7 @@ a {
     line-height: 1;
     text-transform: uppercase;
     color: #333;
+    font-weight: 400;
   }
   #main .wrap #footer .inner .footerTop .footerLogo .logo .logoText .logoSub {
     font-size: 10px;
@@ -1330,6 +1216,7 @@ a {
     line-height: 1;
     text-transform: uppercase;
     color: #333;
+    font-weight: 400;
   }
   #main .wrap .contents .inner .contBtn {
     width: 100%;
@@ -1587,6 +1474,15 @@ a {
   }
 }
 /**
+sub page style
+sub-common -> subpage 공통영역
+about -> about page 2depth까지 포함
+board -> board page 
+gallery -> gallery page 2depth까지 포함
+join -> join page 2depth까지 포함
+contact -> contact page 2depth까지 포함
+*/
+/**
 sub section scss 작업 
 작업자: 신유미 
 2022.01.31 ~
@@ -1595,205 +1491,13 @@ sub section scss 작업
   width: 100%;
   height: auto;
   overflow-x: hidden;
-  background: #ECECE3;
+  background: #ecece3;
 }
 .subPage .wrap {
   position: relative;
   width: 100%;
   height: 100vh;
   padding-top: 80px;
-}
-.subPage .wrap #header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 80px;
-  line-height: 80px;
-  background: #ECECE3;
-  z-index: 30;
-}
-.subPage .wrap #header .inner {
-  width: 100%;
-  height: 100%;
-  padding: 0 20px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border: 1px solid #777;
-  background: #ECECE3;
-}
-.subPage .wrap #header .inner .logo .headerLogo a {
-  display: block;
-  font-family: "Aboreto";
-  font-size: 30px;
-  letter-spacing: 0.6px;
-  line-height: 1.3;
-  color: #333;
-}
-.subPage .wrap #header .inner #menuPC {
-  width: 100%;
-}
-.subPage .wrap #header .inner #menuPC .menuWrap {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-}
-.subPage .wrap #header .inner #menuPC .menuWrap .menuList {
-  margin-left: 30px;
-}
-.subPage .wrap #header .inner #menuPC .menuWrap .menuList:first-child {
-  margin-left: 0;
-}
-.subPage .wrap #header .inner #menuPC .menuWrap .menuList .menuLink {
-  font-size: 18px;
-  color: #333;
-}
-.subPage .wrap #header .inner .hamMenu {
-  display: none;
-  position: absolute;
-  top: 50%;
-  right: 30px;
-  transform: translateY(-50%);
-  width: 20px;
-  height: 15px;
-}
-.subPage .wrap #header .inner .hamMenu::before {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 2px;
-  background: #000;
-  position: absolute;
-  top: 0;
-  left: 0;
-  transition: top 0.5s 0s, transform 0.5s 0.5s;
-}
-.subPage .wrap #header .inner .hamMenu::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 2px;
-  background: #000;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  transition: bottom 0.5s 0s, transform 0.5s 0.5s;
-}
-.subPage .wrap #header .inner .hamMenu span {
-  display: block;
-  width: 100%;
-  height: 2px;
-  background: #000;
-  position: absolute;
-  top: 50%;
-  left: 0;
-  margin-top: -1px;
-  text-indent: -999999px;
-  transition: all 1s;
-}
-.subPage .wrap #header .inner .hamMenu.on::before {
-  top: 50%;
-  margin-top: -1px;
-  transform: rotate(45deg);
-}
-.subPage .wrap #header .inner .hamMenu.on::after {
-  bottom: 50%;
-  margin-bottom: -1px;
-  transform: rotate(-45deg);
-}
-.subPage .wrap #header .inner .hamMenu.on span {
-  transform: translateX(100%);
-  opacity: 0;
-}
-.subPage .wrap #header .inner #menuMo {
-  position: fixed;
-  top: 0;
-  left: -100%;
-  width: 80%;
-  height: 100vh;
-  display: none;
-  transition: all 0.5s;
-  z-index: 40;
-  opacity: 0;
-}
-.subPage .wrap #header .inner #menuMo > .inner {
-  background-color: #333;
-  border: none;
-  padding: 30px 20px;
-}
-.subPage .wrap #header .inner #menuMo > .inner .mobileMenu {
-  width: 100%;
-  height: 100%;
-}
-.subPage .wrap #header .inner #menuMo > .inner .mobileMenu .menuLogo {
-  font-family: "Aboreto";
-  font-size: 24px;
-  letter-spacing: -0.56px;
-  line-height: 1;
-  text-transform: uppercase;
-  color: #ECECE3;
-  padding-bottom: 30px;
-  border-bottom: 1px solid #ECECE3;
-}
-.subPage .wrap #header .inner #menuMo > .inner .mobileMenu .mMenuWrap {
-  width: 100%;
-}
-.subPage .wrap #header .inner #menuMo > .inner .mobileMenu .mMenuWrap .mMenuList {
-  line-height: 20px;
-  border-bottom: 1px solid #ECECE3;
-  padding: 10px 0;
-}
-.subPage .wrap #header .inner #menuMo > .inner .mobileMenu .mMenuWrap .mMenuList .mMenuTitle {
-  font-size: 16px;
-  color: #ECECE3;
-}
-.subPage .wrap #header .inner #menuMo > .inner .mobileMenu .mMenuWrap .mMenuList > ul {
-  padding: 5px 0 0 20px;
-}
-.subPage .wrap #header .inner #menuMo > .inner .mobileMenu .mMenuWrap .mMenuList > ul > li a {
-  font-size: 14px;
-  color: #ECECE3;
-}
-.subPage .wrap #header .inner #menuMo > .inner .mobileMenu .mMenuWrap .mMenuList > ul > li:hover a {
-  color: #9DA592;
-}
-.subPage .wrap #header .inner #menuMo > .inner .mobileMenu .mMenuFooter {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  padding-top: 20px;
-}
-.subPage .wrap #header .inner #menuMo > .inner .mobileMenu .mMenuFooter .mMenuFooterList {
-  margin-left: 10px;
-}
-.subPage .wrap #header .inner #menuMo > .inner .mobileMenu .mMenuFooter .mMenuFooterList a {
-  display: block;
-}
-.subPage .wrap #header .inner #menuMo > .inner .mobileMenu .mMenuFooter .mMenuFooterList a i {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 20px;
-  color: #ECECE3;
-}
-.subPage .wrap #header .inner #menuMo > .inner .mobileMenu .mMenuFooter .mMenuFooterList a .notion-icon {
-  width: 20px;
-  height: 20px;
-  background: url("../img/notion-icon.svg") no-repeat center;
-  background-size: 20px !important;
-}
-.subPage .wrap #header .inner #menuMo > .inner .mobileMenu .mMenuFooter .mMenuFooterList a .tistory-icon {
-  width: 20px;
-  height: 20px;
-  background: url(../img/tistory-icon.svg) no-repeat center;
-  background-size: 20px !important;
-}
-.subPage .wrap #header .inner #menuMo.on {
-  left: 0;
-  opacity: 1;
 }
 .subPage .wrap .subContents {
   width: 100%;
@@ -1803,33 +1507,38 @@ sub section scss 작업
 }
 .subPage .wrap .subContents .subHeader {
   position: relative;
-  padding: 80px 100px 0 0;
 }
-.subPage .wrap .subContents .subHeader::after {
+.subPage .wrap .subContents .subHeader > .inner {
+  width: 100%;
+  max-width: 1180px;
+  padding: 80px 0 0 0;
+}
+.subPage .wrap .subContents .subHeader > .inner::after {
   content: "";
   display: block;
   clear: both;
 }
-.subPage .wrap .subContents .subHeader .subHeaderTitle {
+.subPage .wrap .subContents .subHeader > .inner .subHeaderTitle {
   font-family: "Aboreto";
   font-size: 60px;
   letter-spacing: -0.56px;
   line-height: 1;
   text-transform: uppercase;
   color: #333;
+  font-weight: 400;
 }
-.subPage .wrap .subContents .subHeader .subHeaderMenu {
+.subPage .wrap .subContents .subHeader > .inner .subHeaderMenu {
   padding-top: 40px;
   float: right;
 }
-.subPage .wrap .subContents .subHeader .subHeaderMenu ul {
+.subPage .wrap .subContents .subHeader > .inner .subHeaderMenu ul {
   display: flex;
   align-items: center;
 }
-.subPage .wrap .subContents .subHeader .subHeaderMenu ul li {
+.subPage .wrap .subContents .subHeader > .inner .subHeaderMenu ul li {
   border-bottom: 1px solid #777;
 }
-.subPage .wrap .subContents .subHeader .subHeaderMenu ul li a {
+.subPage .wrap .subContents .subHeader > .inner .subHeaderMenu ul li a {
   display: block;
   font-family: "S-CoreDream-3Light";
   font-size: 16px;
@@ -1837,159 +1546,64 @@ sub section scss 작업
   letter-spacing: -0.6px;
   color: #333;
 }
-.subPage .wrap .subContents .subHeader .subHeaderMenu ul li + li {
+.subPage .wrap .subContents .subHeader > .inner .subHeaderMenu ul li:hover {
+  border-bottom: 1px solid #9DA592;
+}
+.subPage .wrap .subContents .subHeader > .inner .subHeaderMenu ul li:hover a {
+  font-family: "S-CoreDream-3Light";
+  font-size: 16px;
+  line-height: 1.3;
+  letter-spacing: -0.6px;
+  color: #9DA592;
+}
+.subPage .wrap .subContents .subHeader > .inner .subHeaderMenu ul li.on {
+  border-bottom: 1px solid #9DA592;
+}
+.subPage .wrap .subContents .subHeader > .inner .subHeaderMenu ul li.on a {
+  font-family: "S-CoreDream-3Light";
+  font-size: 16px;
+  line-height: 1.3;
+  letter-spacing: -0.6px;
+  color: #9DA592;
+}
+.subPage .wrap .subContents .subHeader > .inner .subHeaderMenu ul li + li {
   margin-left: 70px;
 }
 .subPage .wrap .subContents .subSection {
-  padding: 100px 0;
+  padding: 80px 0;
 }
 .subPage .wrap .subContents .subSection .sectionExp {
-  padding-bottom: 30px;
+  padding-bottom: 60px;
 }
 .subPage .wrap .subContents .subSection .sectionExp .expTitle {
   font-family: "Libre+Bodoni";
   font-size: 20px;
   letter-spacing: -0.56px;
   line-height: 1;
-  color: #333;
+  color: #333333;
   font-weight: 400;
   padding-bottom: 10px;
+}
+.subPage .wrap .subContents .subSection .sectionExp .expTitle span {
+  display: inline-block;
+  margin-left: 10px;
+  font-family: "S-CoreDream-3Light";
+  font-size: 16px;
+  line-height: 1.3;
+  letter-spacing: -0.6px;
+  color: #333333;
 }
 .subPage .wrap .subContents .subSection .sectionExp .expCaption {
   font-family: "S-CoreDream-3Light";
   font-size: 14px;
   line-height: 1.3;
   letter-spacing: -0.6px;
-  color: #777;
+  color: #333;
 }
 .subPage .wrap .subContents .subSection .sectionCont {
   width: 100%;
   height: 100%;
   min-height: 600px;
-}
-.subPage .wrap #footer {
-  width: 100%;
-}
-.subPage .wrap #footer .inner {
-  width: 100%;
-  margin: 0 auto;
-  border-left: 1px solid #777;
-  border-right: 1px solid #777;
-}
-.subPage .wrap #footer .inner .footerTop {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 30px 20px;
-}
-.subPage .wrap #footer .inner .footerTop .footerLogo .logo .logoText {
-  display: block;
-}
-.subPage .wrap #footer .inner .footerTop .footerLogo .logo .logoText span {
-  display: block;
-}
-.subPage .wrap #footer .inner .footerTop .footerLogo .logo .logoText .logoTitle {
-  font-family: "Aboreto";
-  font-size: 40px;
-  letter-spacing: -0.56px;
-  line-height: 1;
-  text-transform: uppercase;
-  color: #333;
-}
-.subPage .wrap #footer .inner .footerTop .footerLogo .logo .logoText .logoSub {
-  font-family: "Aboreto";
-  font-size: 12px;
-  font-weight: normal;
-  line-height: 1;
-  letter-spacing: 1px;
-  color: #777;
-}
-.subPage .wrap #footer .inner .footerTop .footerContent {
-  display: flex;
-  align-items: flex-start;
-}
-.subPage .wrap #footer .inner .footerTop .footerContTitle {
-  font-family: "Aboreto";
-  font-size: 18px;
-  color: #333;
-}
-.subPage .wrap #footer .inner .footerTop .footerEmail {
-  margin-right: 50px;
-}
-.subPage .wrap #footer .inner .footerTop .footerEmail .emailText {
-  font-size: 14px;
-  color: #777;
-  margin-top: 4px;
-  margin-bottom: 20px;
-}
-.subPage .wrap #footer .inner .footerTop .footerEmail .emailSendBox .emailForm {
-  display: flex;
-  align-items: flex-end;
-}
-.subPage .wrap #footer .inner .footerTop .footerEmail .emailSendBox .emailForm .emailInput {
-  width: 250px;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  border-bottom: 1px solid #333;
-  background-color: transparent;
-}
-.subPage .wrap #footer .inner .footerTop .footerEmail .emailSendBox .emailForm .emailInput::placeholder {
-  font-size: 12px;
-  text-transform: uppercase;
-  color: #777;
-}
-.subPage .wrap #footer .inner .footerTop .footerEmail .emailSendBox .emailForm .emailBtn {
-  width: 80px;
-  height: 30px;
-  border: 1px solid #333;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: 10px;
-}
-.subPage .wrap #footer .inner .footerTop .footerEmail .emailSendBox .emailForm .emailBtn .emalBtnText {
-  display: block;
-  font-family: "Aboreto";
-  font-size: 12px;
-  text-transform: uppercase;
-  color: #777;
-}
-.subPage .wrap #footer .inner .footerTop .footerSns .snsWrap {
-  margin-top: 4px;
-}
-.subPage .wrap #footer .inner .footerTop .footerSns .snsWrap .snsList {
-  padding-bottom: 4px;
-}
-.subPage .wrap #footer .inner .footerTop .footerSns .snsWrap .snsList .snsLink {
-  display: block;
-  font-size: 14px;
-  line-height: 1;
-  letter-spacing: normal;
-  font-weight: normal;
-  color: #777;
-}
-.subPage .wrap #footer .inner .footerBottom {
-  padding: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.subPage .wrap #footer .inner .footerBottom .footerLink {
-  display: inline-block;
-  margin-right: 4px;
-  font-size: 14px;
-  line-height: 1;
-  letter-spacing: normal;
-  font-weight: normal;
-  color: #777;
-}
-.subPage .wrap #footer .inner .footerBottom .contactEmail {
-  font-size: 14px;
-  line-height: 1;
-  letter-spacing: normal;
-  font-weight: normal;
-  color: #777;
 }
 
 @media screen and (max-width: 1024px) {
@@ -2015,31 +1629,36 @@ sub section scss 작업
     padding-top: 60px;
   }
   .subPage .wrap .subContents {
-    padding: 0 30px;
     border: 1px solid #777777;
     border-top: none;
   }
   .subPage .wrap .subContents .subHeader {
     position: relative;
-    padding: 40px 50px 0 0;
   }
-  .subPage .wrap .subContents .subHeader .subHeaderTitle {
+  .subPage .wrap .subContents .subHeader > .inner {
+    width: 100%;
+  }
+  .subPage .wrap .subContents .subHeader > .inner .subHeaderTitle {
     font-family: "Aboreto";
     font-size: 30px;
     letter-spacing: -0.56px;
     line-height: 1;
     text-transform: uppercase;
     color: #333;
+    font-weight: 400;
   }
-  .subPage .wrap .subContents .subHeader .subHeaderMenu {
+  .subPage .wrap .subContents .subHeader > .inner .subHeaderMenu {
     float: left;
   }
-  .subPage .wrap .subContents .subHeader .subHeaderMenu ul {
+  .subPage .wrap .subContents .subHeader > .inner .subHeaderMenu ul {
     display: flex;
     align-items: center;
   }
-  .subPage .wrap .subContents .subHeader .subHeaderMenu ul li + li {
+  .subPage .wrap .subContents .subHeader > .inner .subHeaderMenu ul li + li {
     margin-left: 50px;
+  }
+  .subPage .wrap .subContents .subSection .sectionExp {
+    padding-bottom: 40px;
   }
 }
 @media screen and (max-width: 778px) {
@@ -2082,6 +1701,13 @@ sub section scss 작업
     font-weight: 400;
     padding-bottom: 10px;
   }
+  .subPage .wrap .subContents .subSection .sectionExp .expTitle span {
+    font-family: "S-CoreDream-3Light";
+    font-size: 14px;
+    line-height: 1.3;
+    letter-spacing: -0.6px;
+    color: #333333;
+  }
   .subPage .wrap .subContents .subSection .sectionExp .expCaption {
     font-family: "S-CoreDream-3Light";
     font-size: 14px;
@@ -2099,6 +1725,7 @@ sub section scss 작업
     line-height: 1;
     text-transform: uppercase;
     color: #333;
+    font-weight: 400;
   }
   .subPage .wrap #footer .inner .footerTop .footerLogo .logo .logoText .logoSub {
     font-size: 10px;
@@ -2137,14 +1764,17 @@ sub section scss 작업
   .subPage .wrap #header .inner .logo .headerLogo a {
     font-size: 20px;
   }
-  .subPage .wrap .subContents .subHeader .subHeaderMenu ul li a {
+  .subPage .wrap .subContents .subHeader > .inner .subHeaderMenu ul {
+    flex-wrap: wrap;
+  }
+  .subPage .wrap .subContents .subHeader > .inner .subHeaderMenu ul li a {
     font-family: "S-CoreDream-3Light";
     font-size: 14px;
     line-height: 1.3;
     letter-spacing: -0.6px;
     color: #333;
   }
-  .subPage .wrap .subContents .subHeader .subHeaderMenu ul li + li {
+  .subPage .wrap .subContents .subHeader > .inner .subHeaderMenu ul li + li {
     margin-left: 20px;
   }
   .subPage .wrap .subContents .subSection .sectionExp .expTitle {
@@ -2209,6 +1839,260 @@ sub section scss 작업
   }
   .subPage .wrap #footer .inner .footerBottom .contactEmail {
     font-size: 12px;
+  }
+}
+/**
+about page scss 작업 
+작업자: 신유미 
+2022.02.03 ~
+*/
+.about .sectionCont .aboutCont {
+  width: 100%;
+}
+.about .sectionCont .aboutCont .inner .aboutSectionTitle {
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 400;
+  padding-bottom: 30px;
+}
+.about .sectionCont .aboutCont .inner .aboutSectionTitle span {
+  font-family: "S-CoreDream-3Light";
+  font-size: 16px;
+  color: #333333;
+}
+.about .sectionCont .aboutCont .inner .aboutSectionCont {
+  width: 100%;
+}
+.about .sectionCont .aboutCont .inner .aboutSectionCont .organizationWarp {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.about .sectionCont .aboutCont .inner .aboutSectionCont .organizationWarp .organizationList {
+  position: relative;
+  width: 33.3333333333%;
+  height: 500px;
+  padding: 30px;
+  border: 1px solid #777777;
+  border-bottom: none;
+  margin-left: -1px;
+}
+.about .sectionCont .aboutCont .inner .aboutSectionCont .organizationWarp .organizationList .organizationBox {
+  width: 100%;
+  height: 100%;
+}
+.about .sectionCont .aboutCont .inner .aboutSectionCont .organizationWarp .organizationList .organizationBox .organizationTitle {
+  font-family: "Libre+Bodoni";
+  font-size: 18px;
+  letter-spacing: 3px;
+  line-height: 1;
+  color: #333;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.about .sectionCont .aboutCont .inner .aboutSectionCont .organizationWarp .organizationList .organizationBox .organizationImg {
+  width: 100%;
+  height: 86%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.about .sectionCont .aboutCont .inner .aboutSectionCont .organizationWarp .organizationList .organizationBox .organizationImg img {
+  width: 60%;
+  height: 60%;
+  object-fit: cover;
+  filter: grayscale(0.7);
+  transition: 0.5s;
+}
+.about .sectionCont .aboutCont .inner .aboutSectionCont .organizationWarp .organizationList .organizationBox .organizationImg:hover img {
+  filter: grayscale(0.4);
+  transform: scale(1.1);
+}
+.about .sectionCont .aboutCont .inner .aboutSectionCont .organizationWarp .organizationList .organizationBox .organizationJob {
+  position: relative;
+  font-family: "S-CoreDream-3Light";
+  font-size: 16px;
+  line-height: 1.3;
+  letter-spacing: -0.6px;
+  color: #777;
+}
+.about .sectionCont .aboutCont .inner .aboutSectionCont .organizationWarp .organizationList .organizationBox .organizationJob::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.about .sectionCont .aboutCont .inner .aboutSectionCont .organizationWarp .organizationList .organizationBox .organizationJob span {
+  float: right;
+}
+.about .sectionCont .aboutCont .inner .aboutSectionCont .organizationWarp .organizationList:nth-of-type(1) .organizationBox .organizationImg {
+  background: rgba(161, 154, 151, 0.6);
+}
+.about .sectionCont .aboutCont .inner .aboutSectionCont .organizationWarp .organizationList:nth-of-type(2) .organizationBox .organizationImg {
+  background: rgba(164, 161, 152, 0.6);
+}
+.about .sectionCont .aboutCont .inner .aboutSectionCont .organizationWarp .organizationList:nth-of-type(3) .organizationBox .organizationImg {
+  background: rgba(160, 161, 151, 0.6);
+}
+.about .sectionCont .aboutCont .inner .aboutSectionCont .organizationWarp .organizationList:nth-of-type(4) .organizationBox .organizationImg {
+  background: hsla(160deg, 5%, 64%, 0.6);
+}
+.about .sectionCont .aboutCont .inner .aboutSectionCont .organizationWarp .organizationList:nth-of-type(5) .organizationBox .organizationImg {
+  background: hsla(207deg, 6%, 61%, 0.6);
+}
+.about .sectionCont .aboutCont .inner .aboutSectionCont .organizationWarp .organizationList::after {
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  content: "";
+  width: 80%;
+  height: 1px;
+  background: #777777;
+}
+.about .sectionCont .aboutCont .inner .aboutSectionCont .organizationWarp .organizationList:nth-last-child(-n+3) {
+  border-top: none;
+}
+.about .sectionCont .aboutCont .inner .aboutSectionCont .organizationWarp .organizationList:nth-of-type(1), .about .sectionCont .aboutCont .inner .aboutSectionCont .organizationWarp .organizationList:nth-of-type(4) {
+  border-left: none;
+}
+.about .sectionCont .aboutCont .inner .aboutSectionCont .organizationWarp .organizationList:nth-of-type(3), .about .sectionCont .aboutCont .inner .aboutSectionCont .organizationWarp .organizationList:nth-of-type(6) {
+  border-right: none;
+}
+.about .sectionCont .aboutCont .inner .aboutSectionCont .organizationWarp .organizationList.intro .organizationBox {
+  position: relative;
+}
+.about .sectionCont .aboutCont .inner .aboutSectionCont .organizationWarp .organizationList.intro .organizationBox .organizationTitle {
+  font-family: "Aboreto";
+  font-size: 40px;
+  letter-spacing: -0.56px;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #333;
+  font-weight: 400;
+  margin-bottom: 40px;
+}
+.about .sectionCont .aboutCont .inner .aboutSectionCont .organizationWarp .organizationList.intro .organizationBox .organizationSub {
+  font-family: "Libre+Bodoni";
+  font-size: 24px;
+  letter-spacing: -0.56px;
+  line-height: 1;
+  color: #333;
+  font-weight: 400;
+}
+.about .sectionCont .aboutCont .inner .aboutSectionCont .organizationWarp .organizationList.intro .organizationBox .organizationCaption {
+  position: absolute;
+  bottom: 0;
+  font-family: "S-CoreDream-3Light";
+  font-size: 14px;
+  line-height: 1.3;
+  letter-spacing: -0.6px;
+  color: #777;
+}
+.about .sectionCont .aboutCont + .aboutCont {
+  margin-top: 30px;
+}
+
+@media screen and (max-width: 992px) {
+  .about .wrap .subContents .subSection .inner .sectionCont .aboutCont > .inner .aboutSectionCont .organizationWarp .organizationList {
+    width: 50%;
+  }
+  .about .wrap .subContents .subSection .inner .sectionCont .aboutCont > .inner .aboutSectionCont .organizationWarp .organizationList:nth-last-child(-n+4) {
+    border-top: none;
+  }
+  .about .wrap .subContents .subSection .inner .sectionCont .aboutCont > .inner .aboutSectionCont .organizationWarp .organizationList:nth-of-type(1), .about .wrap .subContents .subSection .inner .sectionCont .aboutCont > .inner .aboutSectionCont .organizationWarp .organizationList:nth-of-type(4) {
+    border-left: 1px solid #777777;
+  }
+  .about .wrap .subContents .subSection .inner .sectionCont .aboutCont > .inner .aboutSectionCont .organizationWarp .organizationList:nth-of-type(3), .about .wrap .subContents .subSection .inner .sectionCont .aboutCont > .inner .aboutSectionCont .organizationWarp .organizationList:nth-of-type(6) {
+    border-left: 1px solid #777777;
+  }
+  .about .wrap .subContents .subSection .inner .sectionCont .aboutCont > .inner .aboutSectionCont .organizationWarp .organizationList:nth-of-type(odd) {
+    border-left: none;
+  }
+  .about .wrap .subContents .subSection .inner .sectionCont .aboutCont > .inner .aboutSectionCont .organizationWarp .organizationList:nth-of-type(even) {
+    border-right: none;
+  }
+}
+@media screen and (max-width: 778px) {
+  .about .wrap .subContents .subSection .inner .sectionCont .aboutCont > .inner .aboutSectionCont .organizationWarp .organizationList {
+    height: 400px;
+  }
+  .about .wrap .subContents .subSection .inner .sectionCont .aboutCont > .inner .aboutSectionCont .organizationWarp .organizationList.intro .organizationBox .organizationTitle {
+    font-family: "Aboreto";
+    font-size: 30px;
+    letter-spacing: -0.56px;
+    line-height: 1;
+    text-transform: uppercase;
+    color: #333;
+    font-weight: 400;
+    margin-bottom: 30px;
+  }
+  .about .wrap .subContents .subSection .inner .sectionCont .aboutCont > .inner .aboutSectionCont .organizationWarp .organizationList.intro .organizationBox .organizationSub {
+    font-family: "Libre+Bodoni";
+    font-size: 20px;
+    letter-spacing: -0.56px;
+    line-height: 1;
+    color: #333;
+    font-weight: 400;
+  }
+  .about .wrap .subContents .subSection .inner .sectionCont .aboutCont > .inner .aboutSectionCont .organizationWarp .organizationList.intro .organizationBox .organizationCaption {
+    position: absolute;
+    bottom: 0;
+    font-family: "S-CoreDream-3Light";
+    font-size: 14px;
+    line-height: 1.3;
+    letter-spacing: -0.6px;
+    color: #777;
+  }
+}
+@media screen and (max-width: 576px) {
+  .about .wrap .subContents .subSection .inner .sectionCont .aboutCont > .inner .aboutSectionCont .organizationWarp .organizationList {
+    width: 100%;
+    max-height: 500px;
+    border-left: none;
+    border-right: none;
+    margin-left: 0;
+  }
+  .about .wrap .subContents .subSection .inner .sectionCont .aboutCont > .inner .aboutSectionCont .organizationWarp .organizationList::after {
+    display: none;
+  }
+  .about .wrap .subContents .subSection .inner .sectionCont .aboutCont > .inner .aboutSectionCont .organizationWarp .organizationList.intro .organizationBox .organizationTitle {
+    font-family: "Aboreto";
+    font-size: 40px;
+    letter-spacing: -0.56px;
+    line-height: 1;
+    text-transform: uppercase;
+    color: #333;
+    font-weight: 400;
+    margin-bottom: 30px;
+  }
+  .about .wrap .subContents .subSection .inner .sectionCont .aboutCont > .inner .aboutSectionCont .organizationWarp .organizationList.intro .organizationBox .organizationSub {
+    font-family: "Libre+Bodoni";
+    font-size: 24px;
+    letter-spacing: -0.56px;
+    line-height: 1;
+    color: #333;
+    font-weight: 400;
+  }
+  .about .wrap .subContents .subSection .inner .sectionCont .aboutCont > .inner .aboutSectionCont .organizationWarp .organizationList.intro .organizationBox .organizationCaption {
+    position: absolute;
+    bottom: 0;
+    font-family: "S-CoreDream-3Light";
+    font-size: 16px;
+    line-height: 1.3;
+    letter-spacing: -0.6px;
+    color: #777;
+  }
+  .about .wrap .subContents .subSection .inner .sectionCont .aboutCont > .inner .aboutSectionCont .organizationWarp .organizationList:nth-last-child(-n+4) {
+    border-top: 1px solid #777777;
+  }
+  .about .wrap .subContents .subSection .inner .sectionCont .aboutCont > .inner .aboutSectionCont .organizationWarp .organizationList:nth-of-type(4) {
+    border-left: none;
+  }
+  .about .wrap .subContents .subSection .inner .sectionCont .aboutCont > .inner .aboutSectionCont .organizationWarp .organizationList:nth-of-type(6) {
+    border-left: none;
+    border-bottom: 1px solid #777777;
   }
 }
 /**
@@ -2361,6 +2245,7 @@ $mobile : 576px;
     line-height: 1;
     text-transform: uppercase;
     color: #333;
+    font-weight: 400;
   }
   #board .wrap .subContents .subHeader .subHeaderMenu {
     padding-top: 40px;
@@ -2422,6 +2307,7 @@ $mobile : 576px;
     line-height: 1;
     text-transform: uppercase;
     color: #333;
+    font-weight: 400;
   }
   #board .wrap #footer .inner .footerTop .footerLogo .logo .logoText .logoSub {
     font-size: 10px;

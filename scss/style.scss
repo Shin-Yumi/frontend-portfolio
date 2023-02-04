@@ -11,5 +11,19 @@
 
 // page style
 @import 'main.scss';
+
+/**
+sub page style
+sub-common -> subpage 공통영역
+about -> about page 2depth까지 포함
+board -> board page 
+gallery -> gallery page 2depth까지 포함
+join -> join page 2depth까지 포함
+contact -> contact page 2depth까지 포함
+*/
 @import 'sub-common.scss';
+@import 'about.scss';
 @import 'board.scss';
+@import 'gallery.scss';
+@import 'join.scss';
+@import 'contact.scss';

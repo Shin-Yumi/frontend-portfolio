@@ -21,7 +21,8 @@
   $letterS: -.56px,
   $lh: 1,
   $txtTrans : uppercase,
-  $fontColor: #333
+  $fontColor: #333,
+  $fontWeight: 400,
 ) {
   font-family: $titleFont;
   font-size: $fz;
@@ -29,6 +30,7 @@
   line-height: $lh;
   text-transform:  $txtTrans;
   color: $fontColor;
+  font-weight: 400;
 }
 
 @mixin sectionSubTitle(
