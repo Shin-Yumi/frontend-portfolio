@@ -12,9 +12,10 @@ btnSubmit.addEventListener('click', (e) => {
 
 	if (!isEmail('email')) e.preventDefault();
 	if (!isCheck('gender')) e.preventDefault();
-	if (!isCheck('hobby')) e.preventDefault();
+	if (!isCheck('favorite')) e.preventDefault();
 
-	if (!isSelect('edu')) e.preventDefault();
+  if (!isSelect('birth')) e.preventDefault();
+
 	if (!isPwd('pwd1', 'pwd2', 5)) e.preventDefault();
 });
 
@@ -58,7 +59,7 @@ function isEmail(el) {
 
 		let errMessage = document.createElement('p');
 		errMessage.append('@를 포함한 전체 이메일 주소를 입력하세요.');
-		input.closest('td').append(errMessage);
+		input.closest('.joinInput').append(errMessage);
 		return false;
 	}
 }
@@ -103,7 +104,7 @@ function isSelect(el) {
 
 		let errMessage = document.createElement('p');
 		errMessage.append('항목을 선택해 주세요');
-		sel.closest('td').append(errMessage);
+		sel.closest('.joinInput').append(errMessage);
 		return false;
 	}
 }

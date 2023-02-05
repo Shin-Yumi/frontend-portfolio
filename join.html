@@ -176,6 +176,7 @@
                         <legend class="hidden">회원 가입 폼 입력 양식</legend>
                         <div class="joinWrap">
                           <ul class="joinListWrap">
+                            <!-- id -->
                             <li class="joinList">
                               <div class="joinBox">
                                 <label class="joinTitle" label for="userid"
@@ -190,6 +191,7 @@
                                 </div>
                               </div>
                             </li>
+                            <!-- password -->
                             <li class="joinList">
                               <div class="joinBox">
                                 <label class="joinTitle" label for="pwd1"
@@ -204,6 +206,7 @@
                                 </div>
                               </div>
                             </li>
+                            <!-- re-password -->
                             <li class="joinList">
                               <div class="joinBox">
                                 <label class="joinTitle" label for="pwd2"
@@ -218,6 +221,7 @@
                                 </div>
                               </div>
                             </li>
+                            <!-- name-->
                             <li class="joinList">
                               <div class="joinBox">
                                 <label class="joinTitle" label for="name"
@@ -232,11 +236,13 @@
                                 </div>
                               </div>
                             </li>
+                            <!-- birth -->
                             <li class="joinList">
                               <div class="joinBox">
                                 <p class="joinTitle">Birth</p>
                                 <div class="joinInput">
-                                  <input
+                                  <div class="birthBox">
+                                    <input
                                     class="birthList"
                                     type="text"
                                     name="year"
@@ -266,29 +272,35 @@
                                     name="date"
                                     id="date"
                                     placeholder="일" />
+                                  </div>
+                                  
                                 </div>
                               </div>
                             </li>
+                            <!-- gender -->
                             <li class="joinList">
                               <div class="joinBox">
                                 <p class="joinTitle">Gender</p>
                                 <div class="joinInput">
-                                  <div class="joinRadio">
-                                    <input
-                                      type="radio"
-                                      name="gender"
-                                      id="male"
-                                      value="male" />
-                                    <label for="male">Male</label>
+                                  <div class="radioBox">
+                                    <div class="joinRadio">
+                                      <input
+                                        type="radio"
+                                        name="gender"
+                                        id="male"
+                                        value="male" />
+                                      <label for="male">Male</label>
+                                    </div>
+                                    <div class="joinRadio">
+                                      <input
+                                        type="radio"
+                                        name="gender"
+                                        id="female"
+                                        value="female" />
+                                      <label for="female">Female</label>
+                                    </div>
                                   </div>
-                                  <div class="joinRadio">
-                                    <input
-                                      type="radio"
-                                      name="gender"
-                                      id="female"
-                                      value="female" />
-                                    <label for="female">Female</label>
-                                  </div>
+                                  
                                 </div>
                               </div>
                             </li>

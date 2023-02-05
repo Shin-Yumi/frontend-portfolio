@@ -41,19 +41,33 @@ join scss 작업
                       }
                       .joinInput {
                         width: 80%;
-                        .birthList {
-                          width: calc(100% / 3);
-                        }
-                        .joinRadio {
+                        .birthBox {
                           display: flex;
                           align-items: center;
-                          > label {
-                            margin-left: 10px;
+                          border: 0;
+                          input[type="text"] {
+                            width: calc(100% / 3);
+                          }
+                          .birthList {
+                            width: calc(100% / 3);
                           }
                         }
-                        .joinRadio + .joinRadio {
-                          margin-left: 20px;
+                        .radioBox {
+                          display: flex;
+                          align-items: center;
+                          border: 0;
+                          .joinRadio {
+                            display: flex;
+                            align-items: center;
+                            > label {
+                              margin-left: 10px;
+                            }
+                          }
+                          .joinRadio + .joinRadio {
+                            margin-left: 20px;
+                          }
                         }
+                        
                         .joinCheck {
                           padding-top: 10px;
                           > label {
@@ -173,29 +187,22 @@ join scss 작업
                             color: #fff;
                           }
                         }
-                      }
-                    }
-                    &:nth-of-type(5) {
-                      .joinBox {
-                        .joinInput {
-                          display: flex;
-                          align-items: center;
-                          border: 0;
-                          input[type="text"] {
-                            width: calc(100% / 3);
-                          }
+                        p {
+                          font:11px/1 $koFont;
+                          color: red;
+                          margin-top: 5px;
                         }
                       }
                     }
-                    &:nth-of-type(6) {
-                      .joinBox {
-                        .joinInput {
-                          display: flex;
-                          align-items: center;
-                          border: 0;
-                        }
-                      }
-                    }
+                    // &:nth-of-type(5) {
+                    //   .joinBox {
+                    //     .joinInput {
+                    //       display: flex;
+                    //       align-items: center;
+                          
+                    //     }
+                    //   }
+                    // }
                     &:last-child {
                       .joinBox {
                         .joinTitle {
@@ -303,12 +310,20 @@ join scss 작업
                         }
                         .joinInput {
                           width: 70%;
-                          .birthList {
+                          .birthBox {
                             width: 100%;
+                            display: flex;
+                            align-items: center;
+                            flex-direction: column;
+                            border: 0;
+                            .birthList {
+                              width: 100%;
+                            }
+                            .birthList + .birthList {
+                              margin-top: 10px;
+                            }
                           }
-                          .birthList + .birthList {
-                            margin-top: 10px;
-                          }
+
                           select {
                             margin: 0 10px;
                           }
@@ -327,11 +342,7 @@ join scss 작업
                               color: #fff;
                             }
                           }
-                          p {
-                            font:11px/1 $koFont;
-                            color: red;
-                            margin-top: 5px;
-                          }
+                         
                         }
                       }
                       &:nth-of-type(5) {
