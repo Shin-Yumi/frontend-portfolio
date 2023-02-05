@@ -2559,6 +2559,11 @@ join scss 작업
     background: #9DA592;
     color: #fff;
   }
+  .join .wrap .subContents .subSection .sectionCont .joinCont > .inner .joinWrap .joinListWrap .joinList .joinBox .joinInput p {
+    font: 11px/1 "S-CoreDream-3Light";
+    color: red;
+    margin-top: 5px;
+  }
   .join .wrap .subContents .subSection .sectionCont .joinCont > .inner .joinWrap .joinListWrap .joinList:nth-of-type(5) .joinBox .joinInput {
     display: flex;
     align-items: center;

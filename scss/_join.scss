@@ -327,6 +327,11 @@ join scss 작업
                               color: #fff;
                             }
                           }
+                          p {
+                            font:11px/1 $koFont;
+                            color: red;
+                            margin-top: 5px;
+                          }
                         }
                       }
                       &:nth-of-type(5) {
