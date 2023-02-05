@@ -204,25 +204,26 @@
 #footer {
   width: 100%;
 }
-#footer .inner {
+#footer > .inner {
   width: 100%;
   margin: 0 auto;
   border-left: 1px solid #777;
   border-right: 1px solid #777;
 }
-#footer .inner .footerTop {
+#footer > .inner .footerTop {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 30px 20px;
 }
-#footer .inner .footerTop .footerLogo .logo .logoText {
+#footer > .inner .footerTop .footerLogo .logo .logoText {
   display: block;
 }
-#footer .inner .footerTop .footerLogo .logo .logoText span {
+#footer > .inner .footerTop .footerLogo .logo .logoText span {
   display: block;
 }
-#footer .inner .footerTop .footerLogo .logo .logoText .logoTitle {
+#footer > .inner .footerTop .footerLogo .logo .logoText .logoTitle {
   font-family: "Aboreto";
   font-size: 40px;
   letter-spacing: -0.56px;
@@ -231,7 +232,7 @@
   color: #333;
   font-weight: 400;
 }
-#footer .inner .footerTop .footerLogo .logo .logoText .logoSub {
+#footer > .inner .footerTop .footerLogo .logo .logoText .logoSub {
   font-family: "Aboreto";
   font-size: 12px;
   font-weight: normal;
@@ -239,29 +240,29 @@
   letter-spacing: 1px;
   color: #777;
 }
-#footer .inner .footerTop .footerContent {
+#footer > .inner .footerTop .footerContent {
   display: flex;
   align-items: flex-start;
 }
-#footer .inner .footerTop .footerContTitle {
+#footer > .inner .footerTop .footerContTitle {
   font-family: "Aboreto";
   font-size: 18px;
   color: #333;
 }
-#footer .inner .footerTop .footerEmail {
+#footer > .inner .footerTop .footerEmail {
   margin-right: 50px;
 }
-#footer .inner .footerTop .footerEmail .emailText {
+#footer > .inner .footerTop .footerEmail .emailText {
   font-size: 14px;
   color: #777;
   margin-top: 4px;
   margin-bottom: 20px;
 }
-#footer .inner .footerTop .footerEmail .emailSendBox .emailForm {
+#footer > .inner .footerTop .footerEmail .emailSendBox .emailForm {
   display: flex;
   align-items: flex-end;
 }
-#footer .inner .footerTop .footerEmail .emailSendBox .emailForm .emailInput {
+#footer > .inner .footerTop .footerEmail .emailSendBox .emailForm .emailInput {
   width: 250px;
   border-top: none;
   border-left: none;
@@ -269,12 +270,12 @@
   border-bottom: 1px solid #333;
   background-color: transparent;
 }
-#footer .inner .footerTop .footerEmail .emailSendBox .emailForm .emailInput::placeholder {
+#footer > .inner .footerTop .footerEmail .emailSendBox .emailForm .emailInput::placeholder {
   font-size: 12px;
   text-transform: uppercase;
   color: #777;
 }
-#footer .inner .footerTop .footerEmail .emailSendBox .emailForm .emailBtn {
+#footer > .inner .footerTop .footerEmail .emailSendBox .emailForm .emailBtn {
   width: 80px;
   height: 30px;
   border: 1px solid #333;
@@ -283,20 +284,20 @@
   justify-content: center;
   margin-left: 10px;
 }
-#footer .inner .footerTop .footerEmail .emailSendBox .emailForm .emailBtn .emalBtnText {
+#footer > .inner .footerTop .footerEmail .emailSendBox .emailForm .emailBtn .emalBtnText {
   display: block;
   font-family: "Aboreto";
   font-size: 12px;
   text-transform: uppercase;
   color: #777;
 }
-#footer .inner .footerTop .footerSns .snsWrap {
+#footer > .inner .footerTop .footerSns .snsWrap {
   margin-top: 4px;
 }
-#footer .inner .footerTop .footerSns .snsWrap .snsList {
+#footer > .inner .footerTop .footerSns .snsWrap .snsList {
   padding-bottom: 4px;
 }
-#footer .inner .footerTop .footerSns .snsWrap .snsList .snsLink {
+#footer > .inner .footerTop .footerSns .snsWrap .snsList .snsLink {
   display: block;
   font-size: 14px;
   line-height: 1;
@@ -304,13 +305,13 @@
   font-weight: normal;
   color: #777;
 }
-#footer .inner .footerBottom {
+#footer > .inner .footerBottom {
   padding: 10px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-#footer .inner .footerBottom .footerLink {
+#footer > .inner .footerBottom .footerLink {
   display: inline-block;
   margin-right: 4px;
   font-size: 14px;
@@ -319,7 +320,7 @@
   font-weight: normal;
   color: #777;
 }
-#footer .inner .footerBottom .contactEmail {
+#footer > .inner .footerBottom .contactEmail {
   font-size: 14px;
   line-height: 1;
   letter-spacing: normal;
@@ -1510,7 +1511,6 @@ sub section scss 작업
 .subPage .wrap {
   position: relative;
   width: 100%;
-  height: 100vh;
   padding-top: 80px;
 }
 .subPage .wrap .subContents {
@@ -1652,15 +1652,6 @@ sub section scss 작업
   .subPage .wrap .subContents .subHeader > .inner {
     width: 100%;
   }
-  .subPage .wrap .subContents .subHeader > .inner .subHeaderTitle {
-    font-family: "Aboreto";
-    font-size: 30px;
-    letter-spacing: -0.56px;
-    line-height: 1;
-    text-transform: uppercase;
-    color: #333;
-    font-weight: 400;
-  }
   .subPage .wrap .subContents .subHeader > .inner .subHeaderMenu {
     float: left;
   }
@@ -1702,6 +1693,31 @@ sub section scss 작업
     padding: 0 30px;
     border: 1px solid #777777;
     border-top: none;
+  }
+  .subPage .wrap .subContents .subHeader {
+    position: relative;
+  }
+  .subPage .wrap .subContents .subHeader > .inner {
+    width: 100%;
+  }
+  .subPage .wrap .subContents .subHeader > .inner .subHeaderTitle {
+    font-family: "Aboreto";
+    font-size: 40px;
+    letter-spacing: -0.56px;
+    line-height: 1;
+    text-transform: uppercase;
+    color: #333;
+    font-weight: 400;
+  }
+  .subPage .wrap .subContents .subHeader > .inner .subHeaderMenu {
+    float: left;
+  }
+  .subPage .wrap .subContents .subHeader > .inner .subHeaderMenu ul {
+    display: flex;
+    align-items: center;
+  }
+  .subPage .wrap .subContents .subHeader > .inner .subHeaderMenu ul li + li {
+    margin-left: 50px;
   }
   .subPage .wrap .subContents .subSection {
     padding: 50px 0;
@@ -1777,6 +1793,9 @@ sub section scss 작업
 @media screen and (max-width: 576px) {
   .subPage .wrap #header .inner .logo .headerLogo a {
     font-size: 20px;
+  }
+  .subPage .wrap .subContents .subHeader > .inner {
+    padding: 50px 0 0 0;
   }
   .subPage .wrap .subContents .subHeader > .inner .subHeaderMenu ul {
     flex-wrap: wrap;
@@ -2267,72 +2286,287 @@ $mobile : 576px;
 /**
 join scss 작업 
 작업자: 신유미 
-2022.02.25 ~
+2022.02.05 ~
 */
 .join .wrap .subContents .subSection .sectionCont {
-  padding: 100px 0;
+  position: relative;
+  padding: 50px 0;
+}
+.join .wrap .subContents .subSection .sectionCont::after {
+  display: block;
+  content: "";
+  clear: both;
 }
 .join .wrap .subContents .subSection .sectionCont .joinCont {
   width: 70%;
   height: 100%;
   float: right;
 }
-.join .wrap .subContents .subSection .sectionCont .joinCont .joinWrap .joinListWrap .joinList {
-  padding: 20px 0;
+.join .wrap .subContents .subSection .sectionCont .joinCont > .inner {
+  width: 100%;
+  height: 100%;
 }
-.join .wrap .subContents .subSection .sectionCont .joinCont .joinWrap .joinListWrap .joinList .joinBox {
+.join .wrap .subContents .subSection .sectionCont .joinCont > .inner .joinWrap .joinListWrap .joinList {
+  padding: 15px 0;
+}
+.join .wrap .subContents .subSection .sectionCont .joinCont > .inner .joinWrap .joinListWrap .joinList .joinBox {
   width: 100%;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
 }
-.join .wrap .subContents .subSection .sectionCont .joinCont .joinWrap .joinListWrap .joinList .joinBox .joinTitle {
-  width: 30%;
+.join .wrap .subContents .subSection .sectionCont .joinCont > .inner .joinWrap .joinListWrap .joinList .joinBox label {
   font-family: "Libre+Bodoni";
-  font-size: 20px;
+  color: #333333;
+}
+.join .wrap .subContents .subSection .sectionCont .joinCont > .inner .joinWrap .joinListWrap .joinList .joinBox .joinTitle {
+  width: 20%;
+  font-family: "Libre+Bodoni";
+  font-size: 16px;
   letter-spacing: -0.56px;
   line-height: 1;
   color: #333;
-  font-weight: 300;
+  font-weight: 400;
 }
-.join .wrap .subContents .subSection .sectionCont .joinCont .joinWrap .joinListWrap .joinList .joinBox .joinInput {
-  width: 70%;
+.join .wrap .subContents .subSection .sectionCont .joinCont > .inner .joinWrap .joinListWrap .joinList .joinBox .joinInput {
+  width: 80%;
+}
+.join .wrap .subContents .subSection .sectionCont .joinCont > .inner .joinWrap .joinListWrap .joinList .joinBox .joinInput .birthList {
+  width: 33.3333333333%;
+}
+.join .wrap .subContents .subSection .sectionCont .joinCont > .inner .joinWrap .joinListWrap .joinList .joinBox .joinInput .joinRadio {
+  display: flex;
+  align-items: center;
+}
+.join .wrap .subContents .subSection .sectionCont .joinCont > .inner .joinWrap .joinListWrap .joinList .joinBox .joinInput .joinRadio > label {
+  margin-left: 10px;
+}
+.join .wrap .subContents .subSection .sectionCont .joinCont > .inner .joinWrap .joinListWrap .joinList .joinBox .joinInput .joinRadio + .joinRadio {
+  margin-left: 20px;
+}
+.join .wrap .subContents .subSection .sectionCont .joinCont > .inner .joinWrap .joinListWrap .joinList .joinBox .joinInput .joinCheck {
+  padding-top: 10px;
+}
+.join .wrap .subContents .subSection .sectionCont .joinCont > .inner .joinWrap .joinListWrap .joinList .joinBox .joinInput .joinCheck > label {
+  display: inline-flex;
+  align-items: center;
+}
+.join .wrap .subContents .subSection .sectionCont .joinCont > .inner .joinWrap .joinListWrap .joinList .joinBox .joinInput .joinCheck > label .checkIcon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
   border: 1px solid #777777;
+  position: relative;
+  cursor: pointer;
 }
-.join .wrap .subContents .subSection .sectionCont .joinCont .joinWrap .joinListWrap .joinList .joinBox .joinInput input {
+.join .wrap .subContents .subSection .sectionCont .joinCont > .inner .joinWrap .joinListWrap .joinList .joinBox .joinInput .joinCheck > label .checkIcon::after, .join .wrap .subContents .subSection .sectionCont .joinCont > .inner .joinWrap .joinListWrap .joinList .joinBox .joinInput .joinCheck > label .checkIcon::before {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 0;
+  background-color: #333333;
+  position: absolute;
+  transform-origin: left top;
+}
+.join .wrap .subContents .subSection .sectionCont .joinCont > .inner .joinWrap .joinListWrap .joinList .joinBox .joinInput .joinCheck > label .checkIcon::after {
+  top: 16px;
+  left: 9px;
+  transform: rotate(-135deg);
+}
+.join .wrap .subContents .subSection .sectionCont .joinCont > .inner .joinWrap .joinListWrap .joinList .joinBox .joinInput .joinCheck > label .checkIcon::before {
+  top: 9px;
+  left: 2px;
+  transform: rotate(-45deg);
+}
+.join .wrap .subContents .subSection .sectionCont .joinCont > .inner .joinWrap .joinListWrap .joinList .joinBox .joinInput .joinCheck > label .checkTxt {
+  padding-left: 20px;
+}
+.join .wrap .subContents .subSection .sectionCont .joinCont > .inner .joinWrap .joinListWrap .joinList .joinBox .joinInput .joinCheck:nth-of-type(1) {
+  padding-top: 0;
+}
+.join .wrap .subContents .subSection .sectionCont .joinCont > .inner .joinWrap .joinListWrap .joinList .joinBox .joinInput input[type=text],
+.join .wrap .subContents .subSection .sectionCont .joinCont > .inner .joinWrap .joinListWrap .joinList .joinBox .joinInput input[type=password] {
   width: 100%;
   padding: 10px;
   background: transparent;
   border: none;
+  border: 1px solid #777777;
 }
-.join .wrap .subContents .subSection .sectionCont .joinCont .joinWrap .joinListWrap .joinList .joinBox .joinInput input:focus {
+.join .wrap .subContents .subSection .sectionCont .joinCont > .inner .joinWrap .joinListWrap .joinList .joinBox .joinInput input[type=text]:focus,
+.join .wrap .subContents .subSection .sectionCont .joinCont > .inner .joinWrap .joinListWrap .joinList .joinBox .joinInput input[type=password]:focus {
   outline: none;
 }
+.join .wrap .subContents .subSection .sectionCont .joinCont > .inner .joinWrap .joinListWrap .joinList .joinBox .joinInput input[type=text]::placeholder,
+.join .wrap .subContents .subSection .sectionCont .joinCont > .inner .joinWrap .joinListWrap .joinList .joinBox .joinInput input[type=password]::placeholder {
+  color: #777777;
+}
+.join .wrap .subContents .subSection .sectionCont .joinCont > .inner .joinWrap .joinListWrap .joinList .joinBox .joinInput input[type=radio] {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 1px solid #777777;
+}
+.join .wrap .subContents .subSection .sectionCont .joinCont > .inner .joinWrap .joinListWrap .joinList .joinBox .joinInput input[type=radio]:checked {
+  background-color: #777777;
+  border: 1px solid #777777;
+}
+.join .wrap .subContents .subSection .sectionCont .joinCont > .inner .joinWrap .joinListWrap .joinList .joinBox .joinInput select {
+  margin: 0 20px;
+  padding: 10px;
+  background: transparent;
+  color: #777777;
+}
+.join .wrap .subContents .subSection .sectionCont .joinCont > .inner .joinWrap .joinListWrap .joinList .joinBox .joinInput select:focus {
+  outline: none;
+}
+.join .wrap .subContents .subSection .sectionCont .joinCont > .inner .joinWrap .joinListWrap .joinList .joinBox .joinInput input[type=checkbox] {
+  display: none;
+}
+.join .wrap .subContents .subSection .sectionCont .joinCont > .inner .joinWrap .joinListWrap .joinList .joinBox .joinInput input[type=checkbox]:checked + .checkIcon {
+  border-color: #777777;
+}
+.join .wrap .subContents .subSection .sectionCont .joinCont > .inner .joinWrap .joinListWrap .joinList .joinBox .joinInput input[type=checkbox]:checked + .checkIcon::after {
+  height: 20px;
+  transition: all 0.15s ease 0.15s;
+}
+.join .wrap .subContents .subSection .sectionCont .joinCont > .inner .joinWrap .joinListWrap .joinList .joinBox .joinInput input[type=checkbox]:checked + .checkIcon::before {
+  height: 10px;
+  transition: all 0.15s ease;
+}
+.join .wrap .subContents .subSection .sectionCont .joinCont > .inner .joinWrap .joinListWrap .joinList .joinBox .joinInput textarea {
+  resize: none;
+  width: 100%;
+  height: 150px;
+  background: transparent;
+  border: 1px solid #aaa;
+  padding: 10px;
+}
+.join .wrap .subContents .subSection .sectionCont .joinCont > .inner .joinWrap .joinListWrap .joinList .joinBox .joinInput textarea:focus:focus {
+  outline: none;
+}
+.join .wrap .subContents .subSection .sectionCont .joinCont > .inner .joinWrap .joinListWrap .joinList .joinBox .joinInput input[type=submit] {
+  width: 300px;
+  height: 50px;
+  border: 1px solid #777777;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333333;
+  cursor: pointer;
+}
+.join .wrap .subContents .subSection .sectionCont .joinCont > .inner .joinWrap .joinListWrap .joinList .joinBox .joinInput input[type=submit]:hover {
+  background: #9DA592;
+  color: #fff;
+}
+.join .wrap .subContents .subSection .sectionCont .joinCont > .inner .joinWrap .joinListWrap .joinList:nth-of-type(5) .joinBox .joinInput {
+  display: flex;
+  align-items: center;
+  border: 0;
+}
+.join .wrap .subContents .subSection .sectionCont .joinCont > .inner .joinWrap .joinListWrap .joinList:nth-of-type(5) .joinBox .joinInput input[type=text] {
+  width: 33.3333333333%;
+}
+.join .wrap .subContents .subSection .sectionCont .joinCont > .inner .joinWrap .joinListWrap .joinList:nth-of-type(6) .joinBox .joinInput {
+  display: flex;
+  align-items: center;
+  border: 0;
+}
+.join .wrap .subContents .subSection .sectionCont .joinCont > .inner .joinWrap .joinListWrap .joinList:last-child .joinBox .joinTitle {
+  opacity: 0;
+}
 
-@media screen and (max-width: 576px) {
-  .board .wrap .subContents .subSection .sectionCont .boardSectionCont table tr td a .boardText {
-    font-size: 20px;
+@media screen and (max-width: 778px) {
+  .join .wrap .subContents .subSection .sectionCont {
+    padding: 0 0 50px 0;
   }
-  .board .wrap .subContents .subSection .sectionCont .boardSectionCont table tr td a .boardArrow::after {
-    width: 500%;
+  .join .wrap .subContents .subSection .sectionCont .joinCont {
+    width: 70%;
+    height: 100%;
+    float: right;
+  }
+  .join .wrap .subContents .subSection .sectionCont .joinCont > .inner .joinWrap .joinListWrap .joinList .joinBox .joinTitle {
+    width: 30%;
+  }
+  .join .wrap .subContents .subSection .sectionCont .joinCont > .inner .joinWrap .joinListWrap .joinList .joinBox .joinInput {
+    width: 70%;
+  }
+  .join .wrap .subContents .subSection .sectionCont .joinCont > .inner .joinWrap .joinListWrap .joinList .joinBox .joinInput select {
+    margin: 0 10px;
+  }
+  .join .wrap .subContents .subSection .sectionCont .joinCont > .inner .joinWrap .joinListWrap .joinList .joinBox .joinInput input[type=submit] {
+    width: 100%;
+    height: 50px;
+    border: 1px solid #777777;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333333;
+    cursor: pointer;
+  }
+  .join .wrap .subContents .subSection .sectionCont .joinCont > .inner .joinWrap .joinListWrap .joinList .joinBox .joinInput input[type=submit]:hover {
+    background: #9DA592;
+    color: #fff;
+  }
+}
+@media screen and (max-width: 576px) {
+  .join .wrap .subContents .subSection .sectionCont {
+    padding: 0 0 50px 0;
+  }
+  .join .wrap .subContents .subSection .sectionCont .joinCont {
+    width: 100%;
+    height: 100%;
+    float: right;
   }
 }
 @media screen and (max-width: 425px) {
-  .board .wrap .subContents .subSection .sectionCont .boardSectionCont table tr td {
-    padding: 20px 0;
-  }
-  .board .wrap .subContents .subSection .sectionCont .boardSectionCont table tr td a .boardText {
-    font-size: 18px;
-  }
-  .board .wrap .subContents .subSection .sectionCont .boardSectionCont table tr td a .boardArrow::after {
-    width: 200%;
-  }
-  .board .wrap .subContents .subSection .sectionCont .boardSectionCont .pagination .numbers {
-    padding: 0 10px;
-  }
-  .board .wrap .subContents .subSection .sectionCont .boardSectionCont .pagination .numbers a {
-    width: 18px;
+  .join .wrap .subContents .subSection .sectionCont .joinCont > .inner .joinWrap .joinListWrap .joinList .joinBox .joinTitle {
+    width: 27%;
+    font-family: "Libre+Bodoni";
     font-size: 14px;
-    margin: 0 4px;
+    letter-spacing: -0.56px;
+    line-height: 1;
+    color: #333;
+    font-weight: 400;
+    margin-right: 3%;
+  }
+  .join .wrap .subContents .subSection .sectionCont .joinCont > .inner .joinWrap .joinListWrap .joinList .joinBox .joinInput {
+    width: 70%;
+  }
+  .join .wrap .subContents .subSection .sectionCont .joinCont > .inner .joinWrap .joinListWrap .joinList .joinBox .joinInput .birthList {
+    width: 100%;
+  }
+  .join .wrap .subContents .subSection .sectionCont .joinCont > .inner .joinWrap .joinListWrap .joinList .joinBox .joinInput .birthList + .birthList {
+    margin-top: 10px;
+  }
+  .join .wrap .subContents .subSection .sectionCont .joinCont > .inner .joinWrap .joinListWrap .joinList .joinBox .joinInput select {
+    margin: 0 10px;
+  }
+  .join .wrap .subContents .subSection .sectionCont .joinCont > .inner .joinWrap .joinListWrap .joinList .joinBox .joinInput input[type=submit] {
+    width: 100%;
+    height: 50px;
+    border: 1px solid #777777;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333333;
+    cursor: pointer;
+  }
+  .join .wrap .subContents .subSection .sectionCont .joinCont > .inner .joinWrap .joinListWrap .joinList .joinBox .joinInput input[type=submit]:hover {
+    background: #9DA592;
+    color: #fff;
+  }
+  .join .wrap .subContents .subSection .sectionCont .joinCont > .inner .joinWrap .joinListWrap .joinList:nth-of-type(5) .joinBox .joinInput {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border: 0;
+  }
+  .join .wrap .subContents .subSection .sectionCont .joinCont > .inner .joinWrap .joinListWrap .joinList:nth-of-type(5) .joinBox .joinInput input[type=text] {
+    width: 100%;
   }
 }
 

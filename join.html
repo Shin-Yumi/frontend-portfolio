@@ -206,15 +206,188 @@
                             <li class="joinList">
                               <div class="joinBox">
                                 <label class="joinTitle" label for="pwd2"
-                                >RePassword</label
-                              >
-                              <div class="joinInput">
-                                <input
-                                  type="password"
-                                  name="pwd2"
-                                  id="pwd2"
-                                  placeholder="비밀번호를 입력하세요." />
+                                  >RePassword</label
+                                >
+                                <div class="joinInput">
+                                  <input
+                                    type="password"
+                                    name="pwd2"
+                                    id="pwd2"
+                                    placeholder="비밀번호를 입력하세요." />
+                                </div>
                               </div>
+                            </li>
+                            <li class="joinList">
+                              <div class="joinBox">
+                                <label class="joinTitle" label for="name"
+                                  >Name</label
+                                >
+                                <div class="joinInput">
+                                  <input
+                                    type="text"
+                                    name="name"
+                                    id="name"
+                                    placeholder="이름을 입력하세요" />
+                                </div>
+                              </div>
+                            </li>
+                            <li class="joinList">
+                              <div class="joinBox">
+                                <p class="joinTitle">Birth</p>
+                                <div class="joinInput">
+                                  <input
+                                    class="birthList"
+                                    type="text"
+                                    name="year"
+                                    id="year"
+                                    placeholder="년(4자)" />
+                                  <select
+                                    name="birth"
+                                    id="birth"
+                                    class="birthList">
+                                    <option value="">선택하세요</option>
+                                    <option value="01">01</option>
+                                    <option value="02">02</option>
+                                    <option value="03">03</option>
+                                    <option value="04">04</option>
+                                    <option value="05">05</option>
+                                    <option value="06">06</option>
+                                    <option value="07">07</option>
+                                    <option value="08">08</option>
+                                    <option value="09">09</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                  </select>
+                                  <input
+                                    class="birthList"
+                                    type="text"
+                                    name="date"
+                                    id="date"
+                                    placeholder="일" />
+                                </div>
+                              </div>
+                            </li>
+                            <li class="joinList">
+                              <div class="joinBox">
+                                <p class="joinTitle">Gender</p>
+                                <div class="joinInput">
+                                  <div class="joinRadio">
+                                    <input
+                                      type="radio"
+                                      name="gender"
+                                      id="male"
+                                      value="male" />
+                                    <label for="male">Male</label>
+                                  </div>
+                                  <div class="joinRadio">
+                                    <input
+                                      type="radio"
+                                      name="gender"
+                                      id="female"
+                                      value="female" />
+                                    <label for="female">Female</label>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                            <li class="joinList">
+                              <div class="joinBox">
+                                <label class="joinTitle" label for="email"
+                                  >Email</label
+                                >
+                                <div class="joinInput">
+                                  <input
+                                    type="text"
+                                    name="email"
+                                    id="email"
+                                    placeholder="이메일을 입력하세요." />
+                                </div>
+                              </div>
+                            </li>
+                            <li class="joinList">
+                              <div class="joinBox">
+                                <p class="joinTitle">Favorite</p>
+                                <div class="joinInput">
+                                  <div class="joinCheck">
+                                    <label for="html">
+                                      <input
+                                        type="checkbox"
+                                        name="favorite"
+                                        id="html"
+                                        value="html" />
+                                      <span class="checkIcon"></span>
+                                      <span class="checkTxt">html</span>
+                                    </label>
+                                  </div>
+                                  <div class="joinCheck">
+                                    <label for="css">
+                                      <input
+                                        type="checkbox"
+                                        name="favorite"
+                                        id="css"
+                                        value="css" />
+                                      <span class="checkIcon"></span>
+                                      <span class="checkTxt">Css</span>
+                                    </label>
+                                  </div>
+                                  <div class="joinCheck">
+                                    <label for="javascript">
+                                      <input
+                                        type="checkbox"
+                                        name="favorite"
+                                        id="javascript"
+                                        value="javascript" />
+                                      <span class="checkIcon"></span>
+                                      <span class="checkTxt">Javascript</span>
+                                    </label>
+                                  </div>
+                                  <div class="joinCheck">
+                                    <label for="react">
+                                      <input
+                                        type="checkbox"
+                                        name="favorite"
+                                        id="react"
+                                        value="react" />
+                                      <span class="checkIcon"></span>
+                                      <span class="checkTxt">React</span>
+                                    </label>
+                                  </div>
+                                  <div class="joinCheck">
+                                    <label for="vue">
+                                      <input
+                                        type="checkbox"
+                                        name="favorite"
+                                        id="vue"
+                                        value="vue" />
+                                      <span class="checkIcon"></span>
+                                      <span class="checkTxt">Vue</span>
+                                    </label>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                            <li class="joinList">
+                              <div class="joinBox">
+                                <label class="joinTitle" label for="comments"
+                                  >Comments</label
+                                >
+                                <div class="joinInput">
+                                  <textarea
+                                    name="comments"
+                                    id="comments"
+                                    placeholder="남기는 말을 입력하세요"></textarea>
+                                </div>
+                              </div>
+                            </li>
+                            <li class="joinList">
+                              <div class="joinBox">
+                                <label class="joinTitle" label for="comments"
+                                  >button</label
+                                >
+                                <div class="joinInput">
+                                  <input type="submit" value="submit" />
+                                </div>
                               </div>
                             </li>
                           </ul>
