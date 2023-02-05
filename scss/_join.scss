@@ -1,0 +1,163 @@
+/**
+join scss 작업 
+작업자: 신유미 
+2022.02.25 ~
+*/
+.join {
+  .wrap {
+    .subContents {
+      .subSection {
+        .sectionCont {
+          padding: 100px 0;
+          .joinCont {
+            width: 70%;
+            height: 100%;
+            float: right;
+            //margin-left: 200px;
+            //padding-right: 20px;
+            .joinWrap {
+              .joinListWrap {
+                .joinList {
+                  padding: 20px 0;
+                  .joinBox {
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    .joinTitle {
+                      width: 30%;
+                      @include sectionSubTitle($subFz: 20px);
+                    }
+                    .joinInput {
+                      width: 70%;
+                      border: 1px solid $borderColor;
+                      input {
+                        width: 100%;
+                        padding: 10px;
+                        background: transparent;
+                        border: none;
+                        &:focus { outline: none;}
+                      }
+                    }
+                  }
+                }
+              }
+            }
+            
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $sLaptop) {
+  .join {
+    .wrap {
+      .subContents {
+        .subSection {
+          .sectionCont {
+            .joinCont {
+              
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: $tablet) {
+  .board {
+    .wrap {
+      .subContents {
+        .subSection {
+          .sectionCont {
+            .boardSectionCont {
+              table {
+                tr {
+                  td {
+                    a {
+                      
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: $mobile) {
+  .board {
+    .wrap {
+      .subContents {
+        .subSection {
+          .sectionCont {
+            .boardSectionCont {
+              table {
+                tr {
+                  td {
+                    a {
+                      .boardText {
+                        font-size: 20px;
+                      }
+                      .boardArrow {
+                        &::after {
+                          width: calc(100% * 5);
+                        }
+                      }
+                      
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: $sMobile) {
+  .board {
+    .wrap {
+      .subContents {
+        .subSection {
+          .sectionCont {
+            .boardSectionCont {
+              table {
+                tr {
+                  td {
+                    padding: 20px 0;
+                    a {
+                      .boardText {
+                        font-size: 18px;
+                      }
+                      .boardArrow {
+                        &::after {
+                          width: calc(100% * 2);
+                        }
+                      }
+                      
+                    }
+                  }
+                }
+              }
+              .pagination {
+                .numbers {
+                  padding: 0 10px;
+                  a {
+                    width: 18px;
+                    font-size: 14px;
+                    margin: 0 4px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

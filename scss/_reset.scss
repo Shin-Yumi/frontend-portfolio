@@ -17,6 +17,10 @@ table {
 	border-collapse: collapse;
 }
 
+fieldset {
+  border: none;
+}
+
 .hidden {
 	position: absolute;
 	top: -99999999999999999px;

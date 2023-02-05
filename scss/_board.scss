@@ -14,76 +14,114 @@ board scss 작업
               width: 100%;
               margin-bottom: 50px;
               tr {
-                
-                border-top: 3px solid $textColor;
-                border-bottom: 3px solid $textColor;
-                &:hover {
-                  background: $hoverColor;
-                }
+                border-top: 2px solid $borderColor;
+                border-bottom: 2px solid $borderColor;
                 td {
-                  padding: 20px 0;
+                  padding: 30px 0;
                   text-align: center;
-                  font-size: 30px;
-                  color: $textColor;
-                  &:nth-of-type(2) {
-                    padding-left: 10px;
-                    text-align: left;
-                  }
-                  &:nth-of-type(3) {
-                    font-family: "맑은 고딕";
-                  }
+                  padding-left: 10px;
                   a {
-                    color: #333;
-                    line-height: 1.4;
+                    color: $textColor;
+                    text-align: center;
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    &::after {
+                      content: "";
+                      clear: both;
+                      display: block;
+                    }
+                    .boardText {
+                      width: calc(100% - 60px);
+                      text-align: left;
+                      font-size: 24px;
+                      font-weight: bold;
+                      font-family: $titleFont;
+                      float: left;
+                      white-space: nowrap;
+                      overflow: hidden;
+                      text-overflow: ellipsis;
+                    }
+                    .boardArrow {
+                      position: relative;
+                      right: 10px;
+                      width: 20px;
+                      height: 20px;
+                      float: right;
+                      transform: rotate(135deg);
+                      &::after,
+                      &::before {
+                        position: absolute;
+                        content: "";
+                      }
+                      &::before {
+                        left: 0;
+                        top: 0;
+                        width: 50%;
+                        height: 50%;
+                        border: 2px solid $textColor;
+
+                        border-right: 0;
+                        border-bottom: 0;
+                      }
+                      &::after {
+                        left: 0;
+                        top: 0;
+                        width: calc(100% * 6);
+                        height: 2px;
+                        background: $textColor;
+                        transform-origin: 0 100%;
+                        transform: rotate(45deg);
+                      }
+                    }
                   }
                 }
               }
             }
             .pagination {
               width: 100%;
-              text-align: center;
-              &::after {
-                content: '';
-                display: block;
-                clear: both;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              .prev,
+              .next {
+                position: relative;
+                width: 10px;
+                height: 10px;
+                &::after,
+                &::before {
+                  position: absolute;
+                  content: '';
+                }
+                &::before {
+                  width: 100%;
+                  height: 100%;
+                  border: 1px solid $textColor;
+                  border-left: 0;
+                  border-bottom: 0;
+                }
               }
               .prev {
-                float: left;
-                display: block;
-                width: 30px;
-                height: 30px;
-                background: #555;
-                color: #eee;
-                font-size: 20px;
-                text-align: center;
+                &::before {
+                  transform: rotate(225deg);
+                }
               }
               .next {
-                float: right;
-                display: block;
-                width: 30px;
-                height: 30px;
-                background: #555;
-                color: #eee;
-                font-size: 20px;
-                text-align: center;
+                &::before {
+                  transform: rotate(45deg);
+                }
               }
               .numbers {
-                display: inline-block;
                 text-align: center;
-        
+                padding: 0 20px;
                 a {
-                  display: inline-block;
-                  width: 30px;
-                  height: 30px;
-                  border: 1px solid #888;
-                  font: 11px/30px 'arial';
-                  color: #666;
+                  display:inline-block;
+                  width: 20px;
+                  font-size: 16px;
+                  font-weight: 400;
+                  color: $textColor;
                   margin: 0 5px;
                   transition: 0.5s;
-                  &:hover {
-                    background: #666;
-                    color: #fff;
-                  }
                 }
               }
             }
@@ -102,26 +140,21 @@ $mobile : 576px;
 */
 
 @media screen and (max-width: $sLaptop) {
-  #board {
+  .board {
     .wrap {
-      padding-top: 60px;
-      #header {
-        height: 60px;
-        line-height: 60px;
-        .inner {
-          width: 100%;
-          .logo {
-            .headerLogo {
-              a {
-                font-size: 26px;
-              }
-            }
-          }
-          #menuPC {
-            .menuWrap {
-              .menuList {
-                .menuLink {
-                  font-size: 14px;
+      .subContents {
+        .subSection {
+          .sectionCont {
+            .boardSectionCont {
+              table {
+                tr {
+                  td {
+                    a {
+                      .boardText {
+                        font-size: 20px;
+                      }                      
+                    }
+                  }
                 }
               }
             }
@@ -132,159 +165,21 @@ $mobile : 576px;
   }
 }
 @media screen and (max-width: $tablet) {
-  #board {
+  .board {
     .wrap {
-      padding-top: 60px;
-      #header {
-        height: 60px;
-        line-height: 60px;
-        .inner {
-          width: 100%;
-          .logo {
-            .headerLogo {
-              a {
-                font-size: 26px;
-              }
-            }
-          }
-          #menuPC {
-            display: none;
-          }
-          .hamMenu {
-            display: block;
-          }
-          #menuMo {
-            display: block;
-          }
-        }
-      }
       .subContents {
-        padding: 0 30px;
-        border: 1px solid $borderColor;
-        border-top: none;
-        .subHeader {
-          position: relative;
-          padding: 40px 50px 0 0;
-          &::after {
-            content: "";
-            display: block;
-            clear: both;
-          }
-          .subHeaderTitle {
-            @include sectionTitle($fz: 30px);
-          }
-          .subHeaderMenu {
-            padding-top: 40px;
-            float: right;
-            ul {
-              display: flex;
-              align-items: center;
-              li {
-                a {
-                  @include sectionText(
-                    $captionFz: 16px,
-                    $captionFontColor: #333
-                  );
-                  border-bottom: 1px solid #777;
-                }
-              }
-              li + li {
-                padding-left: 100px;
-              }
-            }
-          }
-        }
-        .boardSection {
-          padding: 50px 0;
-          .sectionExp {
-            padding-bottom: 0;
-            .expTitle {
-              @include sectionSubTitle(
-                $subFz: 14px,
-                $subFontColor: #333,
-                $fontWeight: 400
-              );
-              padding-bottom: 10px;
-            }
-            .expCaption {
-              @include sectionText($captionFz: 12px);
-            }
-          }
-          .sectionAccodion {
-            .tab {
-              label {
-                h2 {
-                  font-size: 16px;
-                }
-                h3 {
-                  font-size: 16px;
-                }
-                .boardListInfo {
-                  display: none;
-                }
-              }
-            }
-          }
-        }
-      }
-
-      #footer {
-        .inner {
-          .footerTop {
-            padding: 20px 50px 20px 20px;
-            .footerLogo {
-              .logo {
-                .logoText {
-                  .logoTitle {
-                    @include sectionTitle($fz: 24px);
-                  }
-                  .logoSub {
-                    font-size: 10px;
-                  }
-                }
-              }
-            }
-            .footerContTitle {
-              font-size: 14px;
-            }
-            .footerEmail {
-              margin-right: 50px;
-              .emailText {
-                font-size: 12px;
-                margin-bottom: 10px;
-              }
-              .emailSendBox {
-                .emailForm {
-                  .emailInput {
-                    width: 150px;
-                  }
-                  .emailBtn {
-                    width: 50px;
-                    height: 20px;
-
-                    .emalBtnText {
-                      font-size: 10px;
+        .subSection {
+          .sectionCont {
+            .boardSectionCont {
+              table {
+                tr {
+                  td {
+                    a {
+                      
                     }
                   }
                 }
               }
-            }
-            .footerSns {
-              .snsWrap {
-                .snsList {
-                  .snsLink {
-                    font-size: 12px;
-                  }
-                }
-              }
-            }
-          }
-          .footerBottom {
-            .footerLink {
-              font-size: 12px;
-            }
-            .contactEmail {
-              font-size: 12px;
             }
           }
         }
@@ -293,77 +188,71 @@ $mobile : 576px;
   }
 }
 @media screen and (max-width: $mobile) {
-  #board {
+  .board {
     .wrap {
-      #header {
-        .inner {
-          .logo {
-            .headerLogo {
-              a {
-                font-size: 20px;
-              }
-            }
-          }
-        }
-      }
-
-      #footer {
-        .inner {
-          .footerTop {
-            flex-direction: column;
-            align-items: flex-start;
-            .footerLogo {
-              margin-bottom: 30px;
-            }
-            .footerContTitle {
-              font-size: 12px;
-            }
-            .footerContent {
-              flex-direction: column;
-            }
-            .footerEmail {
-              margin-right: 0;
-              margin-bottom: 12px;
-              .emailText {
-                font-size: 10px;
-                margin-bottom: 10px;
-              }
-              .emailSendBox {
-                .emailForm {
-                  .emailInput {
-                    width: 150px;
-                  }
-                  .emailBtn {
-                    width: 50px;
-                    height: 20px;
-
-                    .emalBtnText {
-                      font-size: 10px;
+      .subContents {
+        .subSection {
+          .sectionCont {
+            .boardSectionCont {
+              table {
+                tr {
+                  td {
+                    a {
+                      .boardText {
+                        font-size: 20px;
+                      }
+                      .boardArrow {
+                        &::after {
+                          width: calc(100% * 5);
+                        }
+                      }
+                      
                     }
                   }
                 }
               }
             }
-            .footerSns {
-              .snsWrap {
-                display: flex;
-                align-items: center;
-                .snsList {
-                  padding-bottom: 0;
-                  padding-right: 5px;
-                  .snsLink {
-                    font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: $sMobile) {
+  .board {
+    .wrap {
+      .subContents {
+        .subSection {
+          .sectionCont {
+            .boardSectionCont {
+              table {
+                tr {
+                  td {
+                    padding: 20px 0;
+                    a {
+                      .boardText {
+                        font-size: 18px;
+                      }
+                      .boardArrow {
+                        &::after {
+                          width: calc(100% * 2);
+                        }
+                      }
+                      
+                    }
                   }
                 }
               }
-            }
-          }
-          .footerBottom {
-            .footerLink {
-              font-size: 12px;
-            }
-            .contactEmail {
-              font-size: 12px;
+              .pagination {
+                .numbers {
+                  padding: 0 10px;
+                  a {
+                    width: 18px;
+                    font-size: 14px;
+                    margin: 0 4px;
+                  }
+                }
+              }
             }
           }
         }
