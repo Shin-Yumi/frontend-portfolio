@@ -339,7 +339,20 @@ sub section scss 작업
                       $captionFontColor: #333
                     );
                   }
-
+                  &:hover {
+                    a {
+                      @include sectionText($captionFz: 14px,
+                      $captionFontColor: $hoverColor
+                    );
+                    }
+                  }
+                  &.on {
+                    a {
+                      @include sectionText($captionFz: 14px,
+                      $captionFontColor: $hoverColor
+                    );
+                    }
+                  }
                 }
                 li + li {
                   margin-left: 20px;
