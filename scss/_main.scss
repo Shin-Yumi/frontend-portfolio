@@ -7,25 +7,25 @@
 #main {
   width: 100%;
   overflow-x: hidden;
-  background: #ECECE3;
+  background: #ecece3;
 
   .wrap {
     width: 100%;
     padding-top: 80px;
-    
-     //content 공통
+
+    //content 공통
     .contents {
       position: relative;
       width: 100%;
       height: calc(100vh - 80px);
-      
+
       .inner {
         width: 100%;
         height: 100%;
         margin: 0 auto;
         display: flex;
         align-items: center;
-        border : 1px solid #777;
+        border: 1px solid #777;
         border-top: none;
         &::after {
           @include line;
@@ -55,7 +55,7 @@
             }
           }
           &:hover {
-            background-color: #9DA592;
+            background-color: #9da592;
             .btnText {
               color: #fff;
             }
@@ -91,10 +91,10 @@
           background-position: center;
           background-size: cover;
           filter: grayscale(1);
-          transition: .5s;
+          transition: 0.5s;
         }
       }
-      
+
       // description 영역
       .mainDescription {
         position: relative;
@@ -107,7 +107,7 @@
             font-family: $titleFont;
             font-size: 30px;
             font-weight: 400;
-            letter-spacing: -.56px;
+            letter-spacing: -0.56px;
             line-height: 1;
             text-transform: uppercase;
             color: #333;
@@ -128,11 +128,11 @@
           width: 100%;
           height: 100%;
           margin: 0 auto;
-          
+
           .aboutFigure {
             width: 100%;
             height: 100%;
-            
+
             img {
               width: 100%;
               height: 100%;
@@ -142,7 +142,7 @@
           }
         }
       }
-      
+
       // description 영역
       .aboutDescription {
         position: relative;
@@ -161,13 +161,13 @@
           .aboutSubTitle {
             @include sectionSubTitle;
           }
-    
+
           .contentsLine {
             margin: 10px 0;
           }
-    
+
           .subTitleDesc {
-            @include sectionText($captionFontColor: #9DA592);        
+            @include sectionText($captionFontColor: #9da592);
           }
         }
 
@@ -190,7 +190,7 @@
         margin: 0 auto;
         display: flex;
         align-items: center;
-        border : 1px solid #777;
+        border: 1px solid #777;
         border-top: none;
         &::after {
           @include line($wid: 0);
@@ -208,28 +208,27 @@
             margin-top: 30px;
           }
           .contBtn {
-          width: 100%;
-          height: 50px;
-          border: 1px solid #777;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          cursor: pointer;
-          .btnText {
-            font-size: 14px;
-            color: #777;
-            span {
-              text-transform: uppercase;
-            }
-          }
-          &:hover {
-            background-color: #9DA592;
+            width: 100%;
+            height: 50px;
+            border: 1px solid #777;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
             .btnText {
-              color: #fff;
+              font-size: 14px;
+              color: #777;
+              span {
+                text-transform: uppercase;
+              }
+            }
+            &:hover {
+              background-color: #9da592;
+              .btnText {
+                color: #fff;
+              }
             }
           }
-        }
-        
         }
         .galleryTabCont {
           width: 70%;
@@ -246,7 +245,7 @@
               display: flex;
               align-items: center;
               justify-content: center;
-              transition: .5s;
+              transition: 0.5s;
               &:nth-of-type(1) {
                 border-right: 1px solid $borderColor;
               }
@@ -254,13 +253,13 @@
                 display: block;
                 font-size: 18px;
                 color: $textColor;
-              } 
+              }
               &:hover {
                 background-color: $hoverColor;
                 a {
                   color: $backgroundColor;
                 }
-              }  
+              }
               &.on {
                 background-color: $hoverColor;
                 a {
@@ -274,7 +273,8 @@
             height: 90%;
             display: flex;
             align-items: center;
-            overflow: hidden;position: relative;
+            overflow: hidden;
+            position: relative;
             .gallerySlideNav {
               position: absolute;
               top: 0;
@@ -306,7 +306,7 @@
               bottom: 0;
               width: 100%;
               height: 90%;
-              transition: all .5s;
+              transition: all 0.5s;
               opacity: 0;
               .swiper-wrapper {
                 .swiper-slide {
@@ -315,15 +315,15 @@
                     height: 100%;
                     padding: 0 20px 20px 20px;
                     display: flex;
-                      flex-direction: column;
-                      justify-content: center;
+                    flex-direction: column;
+                    justify-content: center;
                     .galleryTitle {
                       font-size: 24px;
                       font-weight: 300;
-                      color: #9DA592;
+                      color: #9da592;
                       margin-bottom: 10px;
                       text-transform: uppercase;
-                    }      
+                    }
                     .galleryImg {
                       width: 100%;
                       height: 80%;
@@ -338,15 +338,15 @@
                           filter: grayscale(0.8);
                         }
                       }
-                    } 
-          
+                    }
+
                     .galleryText {
                       display: flex;
                       align-items: center;
                       justify-content: space-between;
                       .galleryNum {
                         font-size: 16px;
-                        color:#333;
+                        color: #333;
                       }
                       .galleryInfo {
                         font-size: 16px;
@@ -354,7 +354,6 @@
                       }
                     }
                   }
-                  
                 }
               }
               &.on {
@@ -363,11 +362,9 @@
             }
           }
         }
-        
-        
       }
     }
-    // boardCont 영역 
+    // boardCont 영역
     .boardCont {
       position: relative;
       width: 100%;
@@ -376,17 +373,177 @@
         width: 100%;
         height: 100%;
         margin: 0 auto;
-        border : 1px solid #777;
+        border: 1px solid #777;
         border-top: none;
         padding: 30px;
         overflow: hidden;
         .boardWrap {
           width: 100%;
+          .boardMo {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 40px;
+          }
           .contentsTitle {
             @include sectionTitle;
-            margin-bottom: 40px;
-          } 
+          }
+          .boardMoBtn {
+            width: 100px;
+            &:hover {
+              .boarLink{
+                font-size: 14px;
+                color: #9DA592;
+                .theArrow {
+                  &.left {
+                    .shaft {
+                      width: 50px;
+                      transition-delay: 0.1s;
+                      background-color: #9DA592;
+                      &::before,
+                      &::after {
+                        width: 8px;
+                        transition-delay: 0.1s;
+                        background-color: #9DA592;
+                      }
+                      &::before {
+                        transform: rotate(40deg);
+                      }
+                      &::after {
+                        transform: rotate(-40deg);
+                      }
+                    }
+                  }
+                }
+                .linkText {
+                  text-transform: uppercase;
+                  transform: translateX(60%);
+                  line-height: 1;
+                  .theArrow {
+                    &.right {
+                      .shaft {
+                        width: 0;
+                        transform: translateX(200%);
+                        transition-delay: 0;
+                        &::before,
+                        &::after {
+                          width: 0;
+                          transition-delay: 0;
+                          transition: all 0.1s;
+                        }
+                        &::before {
+                          transform: rotate(0);
+                        }
+                        &::after {
+                          transform: rotate(0);
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
           
+          .boarLink {
+            position: relative;
+            display: inline-block;
+            font-size: 16px;
+            font-weight: normal;
+            color: #333;
+            transition: all 0.2s;
+            display: none;
+            .theArrow {
+              width: 1px;
+              transition: all 0.2s;
+              &.left {
+                position: absolute;
+                top: 60%;
+                left: 0;
+                .shaft {
+                  width: 0;
+                  background-color: #333;
+                  
+                  &::before,
+                  &::after {
+                    width: 0;
+                    background-color: #333;
+                  }
+            
+                  &::before {
+                    transform: rotate(0);
+                  }
+            
+                  &::after {
+                    transform: rotate(0);
+                  }
+                }
+              }
+              &.right {
+                .shaft {
+                  width: 1px;
+                  transition-delay: 0.2s;
+                  &::before,
+                  &::after { 
+                    width: 8px;
+                    transition-delay: 0.3s;
+                    transition: all 0.5s;
+                  }
+                  
+                  &::before {
+                    transform: rotate(40deg);
+                  }
+                  
+                  &::after {
+                    transform: rotate(-40deg);
+                  }
+                }
+              }
+              .shaft {
+                background-color: #333;
+                display: block;
+                height:1px;
+                position: relative;
+                transition: all 0.2s;
+                transition-delay: 0;
+                will-change: transform;
+                &:before,
+                &:after {
+                  background-color: #333;
+                  content: '';
+                  display: block;
+                  height: 1px;
+                  position: absolute;
+                  top: 0;
+                  right: 0;
+                  transition: all 0.2s;
+                  transition-delay: 0;
+                }
+                &:before {
+                  transform-origin: top right;
+                }
+                &:after {
+                  transform-origin: bottom right;
+                }
+              }
+            }
+            .linkText {
+              display: flex;
+              align-items: center;
+              transition: all 0.2s;
+              
+              .text {
+                width: 60px;
+                margin-right: 50px;
+              }
+              .theArrow {
+                position: relative;
+              }
+            }
+            
+          }
+          
+
           .boardBox {
             position: relative;
             width: 100%;
@@ -399,32 +556,31 @@
               background: #333;
               padding: 20px;
               margin-right: 50px;
-              p{
-                color: #ECECE3; 
+              p {
+                color: #ecece3;
                 font-size: 18px;
                 margin: 5px 0 0 5px;
                 white-space: nowrap;
                 overflow: hidden;
                 width: 100%;
-                animation: type 4s steps(60, end); 
-                &:nth-child(2){
+                animation: type 4s steps(60, end);
+                &:nth-child(2) {
                   animation: type2 8s steps(60, end);
                 }
                 &:nth-child(3) {
-                  animation: type3 12s steps(60, end)
+                  animation: type3 12s steps(60, end);
                 }
                 &:nth-child(4) {
-                  animation: type4 18s steps(60, end)
+                  animation: type4 18s steps(60, end);
                 }
-                a{
-                  color: #ECECE3;
+                a {
+                  color: #ecece3;
                   text-decoration: none;
                 }
-                span{
+                span {
                   animation: blink 1s infinite;
                 }
               }
-
             }
             .boardBtn {
               display: flex;
@@ -434,15 +590,14 @@
               height: 150px;
               border-radius: 50%;
               border: 1px solid #777;
-              background: #D9D9CE;
+              background: #d9d9ce;
               cursor: pointer;
               .boardBtnText {
                 font-size: 16px;
                 color: #333;
               }
-            } 
+            }
           }
-          
         }
         .boardInfo {
           display: flex;
@@ -488,9 +643,9 @@
                   font-size: 30px;
                   font-weight: 300;
                   transition: 1s;
-                  color : #777;
+                  color: #777;
                 }
-                
+
                 h2 {
                   color: $textColor;
                   font-size: 20px;
@@ -523,43 +678,10 @@
             }
           }
         }
-     
-  
       }
     }
   }
 }
-  // 클릭시 top으로 이동
-  .topBtn {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 50;
-    width: 50px;
-    height: 50px;
-    background: #D9D9CE;
-    border: 1px solid #777;
-    border-radius: 50%;
-    display: none;
-    a {
-      width: 100%;
-      height: 100%;
-      display: block;
-      .topShaft {
-        position: absolute;
-        top: 20px;
-        left: 15px;
-        width: 18px;
-        height: 18px;
-        border-top: 1px solid #777;
-        border-right: 1px solid #777;
-        transform: rotate(315deg);
-      }
-    }
-    &.on {
-      display: block;
-    }
-  }
 
 // cursor effect scss
 /* .custom {
@@ -592,8 +714,7 @@
   }
 } */
 
-
-// 반응형 
+// 반응형
 
 //반응형 1024px
 @media screen and (max-width: $sLaptop) {
@@ -628,7 +749,7 @@
         .inner {
           width: 100%;
           .contentsTitle {
-            @include sectionTitle($fz:40px);
+            @include sectionTitle($fz: 40px);
           }
           .contBtn {
             width: 200px;
@@ -649,10 +770,10 @@
             //bottom: 30px;
             .mainTitle {
               font-size: 24px;
-              letter-spacing: -.36px;
+              letter-spacing: -0.36px;
             }
             .mainInfo {
-              @include sectionText($captionFz:12px, $captionLetterS: -.34px);
+              @include sectionText($captionFz: 12px, $captionLetterS: -0.34px);
             }
           }
         }
@@ -661,10 +782,13 @@
         .aboutDescription {
           .subTitle {
             .aboutSubTitle {
-              @include sectionSubTitle($subFz: 20px,);
+              @include sectionSubTitle($subFz: 20px);
             }
             .subTitleDesc {
-              @include sectionText($captionFz:12px, $captionFontColor: #9DA592);        
+              @include sectionText(
+                $captionFz: 12px,
+                $captionFontColor: #9da592
+              );
             }
           }
         }
@@ -683,12 +807,11 @@
         .inner {
           .boardWrap {
             .contentsTitle {
-              @include sectionTitle($fz:40px);
+              @include sectionTitle($fz: 40px);
             }
           }
         }
       }
-
     }
   }
 }
@@ -700,6 +823,7 @@
         height: 600px;
       }
       .boardCont {
+        height: 600px;
         .inner {
           .boardWrap {
             .boardBox {
@@ -707,7 +831,6 @@
                 p {
                   font-size: 16px;
                 }
-                
               }
               .boardBtn {
                 width: 120px;
@@ -715,7 +838,6 @@
               }
             }
           }
-
         }
       }
     }
@@ -753,7 +875,7 @@
         .inner {
           width: 100%;
           .contentsTitle {
-            @include sectionTitle($fz:30px);
+            @include sectionTitle($fz: 30px);
           }
           .contBtn {
             width: 200px;
@@ -774,10 +896,10 @@
             padding: 30px 100px 30px 30px;
             .mainTitle {
               font-size: 20px;
-              letter-spacing: -.36px;
+              letter-spacing: -0.36px;
             }
             .mainInfo {
-              @include sectionText($captionFz:12px, $captionLetterS: -.34px);
+              @include sectionText($captionFz: 12px, $captionLetterS: -0.34px);
             }
           }
         }
@@ -789,7 +911,10 @@
               @include sectionSubTitle($subFz: 20px);
             }
             .subTitleDesc {
-              @include sectionText($captionFz:12px, $captionFontColor: #9DA592);        
+              @include sectionText(
+                $captionFz: 12px,
+                $captionFontColor: #9da592
+              );
             }
           }
         }
@@ -798,7 +923,7 @@
         .inner {
           .galleryTextCont {
             .contentsText {
-              @include sectionText($captionFz: 12px)
+              @include sectionText($captionFz: 12px);
             }
           }
           .galleryTabCont {
@@ -806,7 +931,7 @@
               .galleryTab {
                 a {
                   font-size: 16px;
-                } 
+                }
               }
             }
             .gallerySlideCont {
@@ -829,26 +954,23 @@
                     .listCont {
                       .galleryTitle {
                         font-size: 20px;
-                      }      
+                      }
                       .galleryImg {
                         height: 70%;
-                      } 
+                      }
                     }
-                    
                   }
                 }
               }
             }
           }
-          
-          }
-        
+        }
       }
       .boardCont {
         .inner {
           .boardWrap {
             .contentsTitle {
-              @include sectionTitle($fz:30px);
+              @include sectionTitle($fz: 30px);
             }
           }
         }
@@ -859,7 +981,7 @@
             padding: 20px 50px 20px 20px;
             .footerLogo {
               .logo {
-                .logoText {   
+                .logoText {
                   .logoTitle {
                     @include sectionTitle($fz: 24px);
                   }
@@ -886,27 +1008,23 @@
                   .emailBtn {
                     width: 50px;
                     height: 20px;
-                    
+
                     .emalBtnText {
                       font-size: 10px;
                     }
                   }
                 }
-  
               }
-              
             }
             .footerSns {
               .snsWrap {
-                .snsList { 
+                .snsList {
                   .snsLink {
                     font-size: 12px;
                   }
                 }
-  
               }
             }
-            
           }
           .footerBottom {
             .footerLink {
@@ -918,7 +1036,6 @@
           }
         }
       }
-
     }
   }
 }
@@ -926,7 +1043,7 @@
 @media screen and (max-width: $mobile) {
   #main {
     .wrap {
-       //header
+      //header
       #header {
         .inner {
           .logo {
@@ -938,9 +1055,9 @@
           }
         }
       }
-       //content 공통
+      //content 공통
       .contents {
-        height: 100%;
+        height: calc(100vh - 60px);
         .inner {
           flex-direction: column;
           &::after {
@@ -971,7 +1088,7 @@
             background-image: url(../img/mobile-main.jpeg);
           }
         }
-        
+
         // description 영역
         .mainDescription {
           position: auto;
@@ -992,28 +1109,26 @@
         }
       }
       //aboutCont 영역
-      .aboutCont {        
+      .aboutCont {
         // description 영역
-        .aboutDescription {   
+        .aboutDescription {
           .aboutTextBox {
             padding: 20px;
             .subTitle {
               display: none;
             }
-    
+
             .aboutDesc {
               @include sectionText($captionFz: 12px);
               color: #777;
               padding-bottom: 20px;
             }
-          }    
-          
+          }
         }
       }
-       //galleryCont 영역
+      //galleryCont 영역
       .galleryCont {
         .inner {
-        
           .galleryTextCont {
             width: 100%;
             height: 40%;
@@ -1027,7 +1142,7 @@
           }
           .galleryTabCont {
             width: 100%;
-            
+
             .galleryTabs {
               width: 100%;
               height: 10%;
@@ -1047,13 +1162,13 @@
                   display: block;
                   font-size: 18px;
                   color: $textColor;
-                } 
+                }
                 &:hover {
                   background-color: $hoverColor;
                   a {
                     color: $backgroundColor;
                   }
-                }  
+                }
                 &.on {
                   background-color: $hoverColor;
                   a {
@@ -1082,7 +1197,7 @@
                 bottom: 0;
                 width: 100%;
                 height: 90%;
-                transition: all .5s;
+                transition: all 0.5s;
                 opacity: 0;
                 .swiper-wrapper {
                   .swiper-slide {
@@ -1090,11 +1205,10 @@
                       .galleryTitle {
                         font-size: 14px;
                         font-weight: 300;
-                        color: #9DA592;
+                        color: #9da592;
                         margin-bottom: 10px;
-                      }      
+                      }
                     }
-                    
                   }
                 }
                 &.on {
@@ -1103,18 +1217,19 @@
               }
             }
           }
-          
-          
         }
       }
-       //boardCont 영역
+      //boardCont 영역
       .boardCont {
         .inner {
           width: 100%;
           padding: 20px;
           .boardWrap {
-            .contentsTitle {
+            .boardMo {
               margin-bottom: 20px;
+            }
+            .boarLink {
+              display: block;
             }
             .boardBox {
               align-items: flex-end;
@@ -1127,11 +1242,7 @@
                 margin-bottom: 10px;
               }
               .boardBtn {
-                width: 80px;
-                height: 80px;
-                .boardBtnText {
-                  font-size: 12px;
-                }
+                display: none;
               }
             }
           }
@@ -1183,31 +1294,27 @@
                   .emailBtn {
                     width: 50px;
                     height: 20px;
-                    
+
                     .emalBtnText {
                       font-size: 10px;
                     }
                   }
                 }
-  
               }
-              
             }
             .footerSns {
               .snsWrap {
                 display: flex;
                 align-items: center;
-                .snsList { 
+                .snsList {
                   padding-bottom: 0;
                   padding-right: 5px;
                   .snsLink {
                     font-size: 12px;
                   }
                 }
-  
               }
             }
-            
           }
           .footerBottom {
             .footerLink {
@@ -1223,7 +1330,7 @@
   }
 }
 
-// 애니메이션 
+// 애니메이션
 @keyframes rotating {
   0% {
     transform: rotate(360deg);
@@ -1233,29 +1340,51 @@
   }
 }
 
-// 
-@keyframes type{ 
-  0% { width: 0; } 
-} 
+//
+@keyframes type {
+  0% {
+    width: 0;
+  }
+}
 
-@keyframes type2{
-  0%{width: 0;}
-  50%{width: 0;}
-  100%{ width: 100; } 
-} 
+@keyframes type2 {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 0;
+  }
+  100% {
+    width: 100;
+  }
+}
 
-@keyframes type3{
-  0%{width: 0;}
-  50%{width: 0;}
-  100%{ width: 100; } 
-} 
+@keyframes type3 {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 0;
+  }
+  100% {
+    width: 100;
+  }
+}
 
-@keyframes type4{
-  0%{width: 0;}
-  50%{width: 0;}
-  100%{ width: 100; } 
-} 
+@keyframes type4 {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 0;
+  }
+  100% {
+    width: 100;
+  }
+}
 
-@keyframes blink{
-  to{opacity: .0;}
+@keyframes blink {
+  to {
+    opacity: 0;
+  }
 }

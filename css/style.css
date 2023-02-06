@@ -357,6 +357,37 @@ fieldset {
   opacity: 0;
 }
 
+.topBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 50;
+  width: 50px;
+  height: 50px;
+  background: #D9D9CE;
+  border: 1px solid #777;
+  border-radius: 50%;
+  display: none;
+}
+.topBtn a {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.topBtn a .topShaft {
+  position: absolute;
+  top: 20px;
+  left: 15px;
+  width: 18px;
+  height: 18px;
+  border-top: 1px solid #777;
+  border-right: 1px solid #777;
+  transform: rotate(315deg);
+}
+.topBtn.on {
+  display: block;
+}
+
 /**
   main page 스타일시트 입니다.
   2023. 01. 14 ~
@@ -365,7 +396,7 @@ fieldset {
 #main {
   width: 100%;
   overflow-x: hidden;
-  background: #ECECE3;
+  background: #ecece3;
 }
 #main .wrap {
   width: 100%;
@@ -425,7 +456,7 @@ fieldset {
   text-transform: uppercase;
 }
 #main .wrap .contents .inner .contBtn:hover {
-  background-color: #9DA592;
+  background-color: #9da592;
 }
 #main .wrap .contents .inner .contBtn:hover .btnText {
   color: #fff;
@@ -532,7 +563,7 @@ fieldset {
   font-size: 14px;
   line-height: 1.3;
   letter-spacing: -0.6px;
-  color: #9DA592;
+  color: #9da592;
 }
 #main .wrap .aboutCont .aboutDescription .aboutDesc {
   font-family: "S-CoreDream-3Light";
@@ -597,7 +628,7 @@ fieldset {
   text-transform: uppercase;
 }
 #main .wrap .galleryCont .inner .galleryTextCont .contBtn:hover {
-  background-color: #9DA592;
+  background-color: #9da592;
 }
 #main .wrap .galleryCont .inner .galleryTextCont .contBtn:hover .btnText {
   color: #fff;
@@ -692,7 +723,7 @@ fieldset {
 #main .wrap .galleryCont .inner .galleryTabCont .gallerySlideCont .gallerySlide .swiper-wrapper .swiper-slide .listCont .galleryTitle {
   font-size: 24px;
   font-weight: 300;
-  color: #9DA592;
+  color: #9da592;
   margin-bottom: 10px;
   text-transform: uppercase;
 }
@@ -744,6 +775,12 @@ fieldset {
 #main .wrap .boardCont .inner .boardWrap {
   width: 100%;
 }
+#main .wrap .boardCont .inner .boardWrap .boardMo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
 #main .wrap .boardCont .inner .boardWrap .contentsTitle {
   font-family: "Aboreto";
   font-size: 60px;
@@ -752,7 +789,135 @@ fieldset {
   text-transform: uppercase;
   color: #333;
   font-weight: 400;
-  margin-bottom: 40px;
+}
+#main .wrap .boardCont .inner .boardWrap .boardMoBtn {
+  width: 100px;
+}
+#main .wrap .boardCont .inner .boardWrap .boardMoBtn:hover .boarLink {
+  font-size: 14px;
+  color: #9DA592;
+}
+#main .wrap .boardCont .inner .boardWrap .boardMoBtn:hover .boarLink .theArrow.left .shaft {
+  width: 50px;
+  transition-delay: 0.1s;
+  background-color: #9DA592;
+}
+#main .wrap .boardCont .inner .boardWrap .boardMoBtn:hover .boarLink .theArrow.left .shaft::before, #main .wrap .boardCont .inner .boardWrap .boardMoBtn:hover .boarLink .theArrow.left .shaft::after {
+  width: 8px;
+  transition-delay: 0.1s;
+  background-color: #9DA592;
+}
+#main .wrap .boardCont .inner .boardWrap .boardMoBtn:hover .boarLink .theArrow.left .shaft::before {
+  transform: rotate(40deg);
+}
+#main .wrap .boardCont .inner .boardWrap .boardMoBtn:hover .boarLink .theArrow.left .shaft::after {
+  transform: rotate(-40deg);
+}
+#main .wrap .boardCont .inner .boardWrap .boardMoBtn:hover .boarLink .linkText {
+  text-transform: uppercase;
+  transform: translateX(60%);
+  line-height: 1;
+}
+#main .wrap .boardCont .inner .boardWrap .boardMoBtn:hover .boarLink .linkText .theArrow.right .shaft {
+  width: 0;
+  transform: translateX(200%);
+  transition-delay: 0;
+}
+#main .wrap .boardCont .inner .boardWrap .boardMoBtn:hover .boarLink .linkText .theArrow.right .shaft::before, #main .wrap .boardCont .inner .boardWrap .boardMoBtn:hover .boarLink .linkText .theArrow.right .shaft::after {
+  width: 0;
+  transition-delay: 0;
+  transition: all 0.1s;
+}
+#main .wrap .boardCont .inner .boardWrap .boardMoBtn:hover .boarLink .linkText .theArrow.right .shaft::before {
+  transform: rotate(0);
+}
+#main .wrap .boardCont .inner .boardWrap .boardMoBtn:hover .boarLink .linkText .theArrow.right .shaft::after {
+  transform: rotate(0);
+}
+#main .wrap .boardCont .inner .boardWrap .boarLink {
+  position: relative;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: normal;
+  color: #333;
+  transition: all 0.2s;
+  display: none;
+}
+#main .wrap .boardCont .inner .boardWrap .boarLink .theArrow {
+  width: 1px;
+  transition: all 0.2s;
+}
+#main .wrap .boardCont .inner .boardWrap .boarLink .theArrow.left {
+  position: absolute;
+  top: 60%;
+  left: 0;
+}
+#main .wrap .boardCont .inner .boardWrap .boarLink .theArrow.left .shaft {
+  width: 0;
+  background-color: #333;
+}
+#main .wrap .boardCont .inner .boardWrap .boarLink .theArrow.left .shaft::before, #main .wrap .boardCont .inner .boardWrap .boarLink .theArrow.left .shaft::after {
+  width: 0;
+  background-color: #333;
+}
+#main .wrap .boardCont .inner .boardWrap .boarLink .theArrow.left .shaft::before {
+  transform: rotate(0);
+}
+#main .wrap .boardCont .inner .boardWrap .boarLink .theArrow.left .shaft::after {
+  transform: rotate(0);
+}
+#main .wrap .boardCont .inner .boardWrap .boarLink .theArrow.right .shaft {
+  width: 1px;
+  transition-delay: 0.2s;
+}
+#main .wrap .boardCont .inner .boardWrap .boarLink .theArrow.right .shaft::before, #main .wrap .boardCont .inner .boardWrap .boarLink .theArrow.right .shaft::after {
+  width: 8px;
+  transition-delay: 0.3s;
+  transition: all 0.5s;
+}
+#main .wrap .boardCont .inner .boardWrap .boarLink .theArrow.right .shaft::before {
+  transform: rotate(40deg);
+}
+#main .wrap .boardCont .inner .boardWrap .boarLink .theArrow.right .shaft::after {
+  transform: rotate(-40deg);
+}
+#main .wrap .boardCont .inner .boardWrap .boarLink .theArrow .shaft {
+  background-color: #333;
+  display: block;
+  height: 1px;
+  position: relative;
+  transition: all 0.2s;
+  transition-delay: 0;
+  will-change: transform;
+}
+#main .wrap .boardCont .inner .boardWrap .boarLink .theArrow .shaft:before, #main .wrap .boardCont .inner .boardWrap .boarLink .theArrow .shaft:after {
+  background-color: #333;
+  content: "";
+  display: block;
+  height: 1px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transition: all 0.2s;
+  transition-delay: 0;
+}
+#main .wrap .boardCont .inner .boardWrap .boarLink .theArrow .shaft:before {
+  transform-origin: top right;
+}
+#main .wrap .boardCont .inner .boardWrap .boarLink .theArrow .shaft:after {
+  transform-origin: bottom right;
+}
+#main .wrap .boardCont .inner .boardWrap .boarLink .linkText {
+  display: flex;
+  align-items: center;
+  transition: all 0.2s;
+}
+#main .wrap .boardCont .inner .boardWrap .boarLink .linkText .text {
+  width: 60px;
+  margin-right: 50px;
+}
+#main .wrap .boardCont .inner .boardWrap .boarLink .linkText .theArrow {
+  position: relative;
 }
 #main .wrap .boardCont .inner .boardWrap .boardBox {
   position: relative;
@@ -769,7 +934,7 @@ fieldset {
   margin-right: 50px;
 }
 #main .wrap .boardCont .inner .boardWrap .boardBox .boardTextArea p {
-  color: #ECECE3;
+  color: #ecece3;
   font-size: 18px;
   margin: 5px 0 0 5px;
   white-space: nowrap;
@@ -787,7 +952,7 @@ fieldset {
   animation: type4 18s steps(60, end);
 }
 #main .wrap .boardCont .inner .boardWrap .boardBox .boardTextArea p a {
-  color: #ECECE3;
+  color: #ecece3;
   text-decoration: none;
 }
 #main .wrap .boardCont .inner .boardWrap .boardBox .boardTextArea p span {
@@ -801,7 +966,7 @@ fieldset {
   height: 150px;
   border-radius: 50%;
   border: 1px solid #777;
-  background: #D9D9CE;
+  background: #d9d9ce;
   cursor: pointer;
 }
 #main .wrap .boardCont .inner .boardWrap .boardBox .boardBtn .boardBtnText {
@@ -888,37 +1053,6 @@ fieldset {
 }
 #main .wrap .boardCont .inner .boardInfo .sectionAccodion .tab:nth-of-type(1) {
   margin-top: 0;
-}
-
-.topBtn {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 50;
-  width: 50px;
-  height: 50px;
-  background: #D9D9CE;
-  border: 1px solid #777;
-  border-radius: 50%;
-  display: none;
-}
-.topBtn a {
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-.topBtn a .topShaft {
-  position: absolute;
-  top: 20px;
-  left: 15px;
-  width: 18px;
-  height: 18px;
-  border-top: 1px solid #777;
-  border-right: 1px solid #777;
-  transform: rotate(315deg);
-}
-.topBtn.on {
-  display: block;
 }
 
 /* .custom {
@@ -1014,7 +1148,7 @@ fieldset {
     font-size: 12px;
     line-height: 1.3;
     letter-spacing: -0.6px;
-    color: #9DA592;
+    color: #9da592;
   }
   #main .wrap .galleryCont .inner .galleryTabCont .contentsTitle {
     font-family: "Aboreto";
@@ -1040,6 +1174,9 @@ fieldset {
 }
 @media screen and (max-width: 992px) {
   #main .wrap .contents {
+    height: 600px;
+  }
+  #main .wrap .boardCont {
     height: 600px;
   }
   #main .wrap .boardCont .inner .boardWrap .boardBox .boardTextArea p {
@@ -1121,7 +1258,7 @@ fieldset {
     font-size: 12px;
     line-height: 1.3;
     letter-spacing: -0.6px;
-    color: #9DA592;
+    color: #9da592;
   }
   #main .wrap .galleryCont .inner .galleryTextCont .contentsText {
     font-family: "S-CoreDream-3Light";
@@ -1204,7 +1341,7 @@ fieldset {
     font-size: 20px;
   }
   #main .wrap .contents {
-    height: 100%;
+    height: calc(100vh - 60px);
   }
   #main .wrap .contents .inner {
     flex-direction: column;
@@ -1344,7 +1481,7 @@ fieldset {
   #main .wrap .galleryCont .inner .galleryTabCont .gallerySlideCont .gallerySlide .swiper-wrapper .swiper-slide .listCont .galleryTitle {
     font-size: 14px;
     font-weight: 300;
-    color: #9DA592;
+    color: #9da592;
     margin-bottom: 10px;
   }
   #main .wrap .galleryCont .inner .galleryTabCont .gallerySlideCont .gallerySlide.on {
@@ -1354,8 +1491,11 @@ fieldset {
     width: 100%;
     padding: 20px;
   }
-  #main .wrap .boardCont .inner .boardWrap .contentsTitle {
+  #main .wrap .boardCont .inner .boardWrap .boardMo {
     margin-bottom: 20px;
+  }
+  #main .wrap .boardCont .inner .boardWrap .boarLink {
+    display: block;
   }
   #main .wrap .boardCont .inner .boardWrap .boardBox {
     align-items: flex-end;
@@ -1369,11 +1509,7 @@ fieldset {
     margin-bottom: 10px;
   }
   #main .wrap .boardCont .inner .boardWrap .boardBox .boardBtn {
-    width: 80px;
-    height: 80px;
-  }
-  #main .wrap .boardCont .inner .boardWrap .boardBox .boardBtn .boardBtnText {
-    font-size: 12px;
+    display: none;
   }
   #main .wrap .boardCont .inner .boardInfo {
     padding-left: 0;
