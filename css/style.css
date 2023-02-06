@@ -364,14 +364,11 @@ fieldset {
 */
 #main {
   width: 100%;
-  height: 100vh;
   overflow-x: hidden;
-  overflow-y: auto;
   background: #ECECE3;
 }
 #main .wrap {
   width: 100%;
-  height: 100vh;
   padding-top: 80px;
 }
 #main .wrap .contents {
@@ -454,7 +451,7 @@ fieldset {
 #main .wrap .mainCont .visualCont .visualImg {
   width: 100%;
   height: 100%;
-  background-image: url(../img/main.jpeg);
+  background-image: url(../img/main-dummy.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -892,7 +889,8 @@ fieldset {
 #main .wrap .boardCont .inner .boardInfo .sectionAccodion .tab:nth-of-type(1) {
   margin-top: 0;
 }
-#main .topBtn {
+
+.topBtn {
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -902,13 +900,14 @@ fieldset {
   background: #D9D9CE;
   border: 1px solid #777;
   border-radius: 50%;
+  display: none;
 }
-#main .topBtn a {
+.topBtn a {
   width: 100%;
   height: 100%;
   display: block;
 }
-#main .topBtn a .topShaft {
+.topBtn a .topShaft {
   position: absolute;
   top: 20px;
   left: 15px;
@@ -918,7 +917,7 @@ fieldset {
   border-right: 1px solid #777;
   transform: rotate(315deg);
 }
-#main .topBtn:hover {
+.topBtn.on {
   display: block;
 }
 
