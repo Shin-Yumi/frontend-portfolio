@@ -795,17 +795,17 @@ fieldset {
 }
 #main .wrap .boardCont .inner .boardWrap .boardMoBtn:hover .boarLink {
   font-size: 14px;
-  color: #9DA592;
+  color: #9da592;
 }
 #main .wrap .boardCont .inner .boardWrap .boardMoBtn:hover .boarLink .theArrow.left .shaft {
   width: 50px;
   transition-delay: 0.1s;
-  background-color: #9DA592;
+  background-color: #9da592;
 }
 #main .wrap .boardCont .inner .boardWrap .boardMoBtn:hover .boarLink .theArrow.left .shaft::before, #main .wrap .boardCont .inner .boardWrap .boardMoBtn:hover .boarLink .theArrow.left .shaft::after {
   width: 8px;
   transition-delay: 0.1s;
-  background-color: #9DA592;
+  background-color: #9da592;
 }
 #main .wrap .boardCont .inner .boardWrap .boardMoBtn:hover .boarLink .theArrow.left .shaft::before {
   transform: rotate(40deg);
@@ -959,9 +959,6 @@ fieldset {
   animation: blink 1s infinite;
 }
 #main .wrap .boardCont .inner .boardWrap .boardBox .boardBtn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 150px;
   height: 150px;
   border-radius: 50%;
@@ -970,6 +967,11 @@ fieldset {
   cursor: pointer;
 }
 #main .wrap .boardCont .inner .boardWrap .boardBox .boardBtn .boardBtnText {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
   font-size: 16px;
   color: #333;
 }
@@ -2028,30 +2030,128 @@ about page scss 작업
 작업자: 신유미 
 2022.02.03 ~
 */
-.about .sectionCont .aboutCont {
+.about .sectionCont #project .inner {
+  padding-left: 100px;
+}
+.about .sectionCont #project .inner .projectWrap .projectLists {
+  border-top: 1px solid #777777;
+}
+.about .sectionCont #project .inner .projectWrap .projectLists .projectList {
+  border-bottom: 1px solid #777777;
+}
+.about .sectionCont #project .inner .projectWrap .projectLists .projectList .projectBox {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  display: flex;
+  padding: 30px 0 30px 30px;
+}
+.about .sectionCont #project .inner .projectWrap .projectLists .projectList .projectBox .projectNum {
+  position: absolute;
+  top: 50%;
+  left: 150px;
+  z-index: 4;
+  transform: translateY(-50%);
+  font-family: "Aboreto";
+  font-size: 60px;
+  letter-spacing: -0.56px;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #D9D9CE;
+  font-weight: 400;
+}
+.about .sectionCont #project .inner .projectWrap .projectLists .projectList .projectBox .projectExp {
+  width: 25%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.about .sectionCont #project .inner .projectWrap .projectLists .projectList .projectBox .projectExp .projectTitle {
+  font-family: "Libre+Bodoni";
+  font-size: 24px;
+  letter-spacing: 1px;
+  line-height: 1;
+  color: #777777;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.about .sectionCont #project .inner .projectWrap .projectLists .projectList .projectBox .projectExp .projectDate {
+  position: relative;
+  font-family: "Libre+Bodoni";
+  font-size: 20px;
+  letter-spacing: -0.56px;
+  line-height: 1;
+  color: #9DA592;
+  font-weight: 300;
+}
+.about .sectionCont #project .inner .projectWrap .projectLists .projectList .projectBox .projectExp .projectDate span {
+  position: absolute;
+  top: 10px;
+  left: 60px;
+  display: inline-block;
+  font-size: 18px;
+}
+.about .sectionCont #project .inner .projectWrap .projectLists .projectList .projectBox .projectImg {
+  width: 60%;
+  height: 100%;
+}
+.about .sectionCont #project .inner .projectWrap .projectLists .projectList .projectBox .projectImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(0.9);
+}
+.about .sectionCont #project .inner .projectWrap .projectLists .projectList .projectBox .projectBtn {
+  width: 15%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+.about .sectionCont #project .inner .projectWrap .projectLists .projectList .projectBox .projectBtn .projectLink {
+  display: inline-block;
+  color: #333333;
+}
+.about .sectionCont #project .inner .projectWrap .projectLists .projectList .projectBox .projectBtn .projectLink .btnLine {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+}
+.about .sectionCont #project .inner .projectWrap .projectLists .projectList .projectBox .projectBtn .projectLink .btnLine::before {
+  position: absolute;
+  top: 5px;
+  margin-top: -50%;
+  width: 100%;
+  height: 1px;
+  background: #777777;
+  content: "";
+}
+.about .sectionCont #organization {
   width: 100%;
 }
-.about .sectionCont .aboutCont .inner .aboutSectionTitle {
+.about .sectionCont #organization .inner .aboutSectionTitle {
   text-transform: uppercase;
   font-size: 20px;
   font-weight: 400;
   padding-bottom: 30px;
 }
-.about .sectionCont .aboutCont .inner .aboutSectionTitle span {
+.about .sectionCont #organization .inner .aboutSectionTitle span {
   font-family: "S-CoreDream-3Light";
   font-size: 16px;
   color: #333333;
 }
-.about .sectionCont .aboutCont .inner .aboutSectionCont {
+.about .sectionCont #organization .inner .aboutSectionCont {
   width: 100%;
 }
-.about .sectionCont .aboutCont .inner .aboutSectionCont .organizationWarp {
+.about .sectionCont #organization .inner .aboutSectionCont .organizationWarp {
   width: 100%;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
 }
-.about .sectionCont .aboutCont .inner .aboutSectionCont .organizationWarp .organizationList {
+.about .sectionCont #organization .inner .aboutSectionCont .organizationWarp .organizationList {
   position: relative;
   width: 33.3333333333%;
   height: 500px;
@@ -2060,11 +2160,11 @@ about page scss 작업
   border-bottom: none;
   margin-left: -1px;
 }
-.about .sectionCont .aboutCont .inner .aboutSectionCont .organizationWarp .organizationList .organizationBox {
+.about .sectionCont #organization .inner .aboutSectionCont .organizationWarp .organizationList .organizationBox {
   width: 100%;
   height: 100%;
 }
-.about .sectionCont .aboutCont .inner .aboutSectionCont .organizationWarp .organizationList .organizationBox .organizationTitle {
+.about .sectionCont #organization .inner .aboutSectionCont .organizationWarp .organizationList .organizationBox .organizationTitle {
   font-family: "Libre+Bodoni";
   font-size: 18px;
   letter-spacing: 3px;
@@ -2074,26 +2174,26 @@ about page scss 작업
   text-transform: uppercase;
   margin-bottom: 10px;
 }
-.about .sectionCont .aboutCont .inner .aboutSectionCont .organizationWarp .organizationList .organizationBox .organizationImg {
+.about .sectionCont #organization .inner .aboutSectionCont .organizationWarp .organizationList .organizationBox .organizationImg {
   width: 100%;
-  height: 86%;
+  height: 400px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 10px;
 }
-.about .sectionCont .aboutCont .inner .aboutSectionCont .organizationWarp .organizationList .organizationBox .organizationImg img {
+.about .sectionCont #organization .inner .aboutSectionCont .organizationWarp .organizationList .organizationBox .organizationImg img {
   width: 60%;
   height: 60%;
   object-fit: cover;
   filter: grayscale(0.7);
   transition: 0.5s;
 }
-.about .sectionCont .aboutCont .inner .aboutSectionCont .organizationWarp .organizationList .organizationBox .organizationImg:hover img {
+.about .sectionCont #organization .inner .aboutSectionCont .organizationWarp .organizationList .organizationBox .organizationImg:hover img {
   filter: grayscale(0.4);
   transform: scale(1.1);
 }
-.about .sectionCont .aboutCont .inner .aboutSectionCont .organizationWarp .organizationList .organizationBox .organizationJob {
+.about .sectionCont #organization .inner .aboutSectionCont .organizationWarp .organizationList .organizationBox .organizationJob {
   position: relative;
   font-family: "S-CoreDream-3Light";
   font-size: 16px;
@@ -2101,30 +2201,30 @@ about page scss 작업
   letter-spacing: -0.6px;
   color: #777;
 }
-.about .sectionCont .aboutCont .inner .aboutSectionCont .organizationWarp .organizationList .organizationBox .organizationJob::after {
+.about .sectionCont #organization .inner .aboutSectionCont .organizationWarp .organizationList .organizationBox .organizationJob::after {
   content: "";
   display: block;
   clear: both;
 }
-.about .sectionCont .aboutCont .inner .aboutSectionCont .organizationWarp .organizationList .organizationBox .organizationJob span {
+.about .sectionCont #organization .inner .aboutSectionCont .organizationWarp .organizationList .organizationBox .organizationJob span {
   float: right;
 }
-.about .sectionCont .aboutCont .inner .aboutSectionCont .organizationWarp .organizationList:nth-of-type(1) .organizationBox .organizationImg {
+.about .sectionCont #organization .inner .aboutSectionCont .organizationWarp .organizationList:nth-of-type(1) .organizationBox .organizationImg {
   background: rgba(161, 154, 151, 0.6);
 }
-.about .sectionCont .aboutCont .inner .aboutSectionCont .organizationWarp .organizationList:nth-of-type(2) .organizationBox .organizationImg {
+.about .sectionCont #organization .inner .aboutSectionCont .organizationWarp .organizationList:nth-of-type(2) .organizationBox .organizationImg {
   background: rgba(164, 161, 152, 0.6);
 }
-.about .sectionCont .aboutCont .inner .aboutSectionCont .organizationWarp .organizationList:nth-of-type(3) .organizationBox .organizationImg {
+.about .sectionCont #organization .inner .aboutSectionCont .organizationWarp .organizationList:nth-of-type(3) .organizationBox .organizationImg {
   background: rgba(160, 161, 151, 0.6);
 }
-.about .sectionCont .aboutCont .inner .aboutSectionCont .organizationWarp .organizationList:nth-of-type(4) .organizationBox .organizationImg {
+.about .sectionCont #organization .inner .aboutSectionCont .organizationWarp .organizationList:nth-of-type(4) .organizationBox .organizationImg {
   background: hsla(160deg, 5%, 64%, 0.6);
 }
-.about .sectionCont .aboutCont .inner .aboutSectionCont .organizationWarp .organizationList:nth-of-type(5) .organizationBox .organizationImg {
+.about .sectionCont #organization .inner .aboutSectionCont .organizationWarp .organizationList:nth-of-type(5) .organizationBox .organizationImg {
   background: hsla(207deg, 6%, 61%, 0.6);
 }
-.about .sectionCont .aboutCont .inner .aboutSectionCont .organizationWarp .organizationList::after {
+.about .sectionCont #organization .inner .aboutSectionCont .organizationWarp .organizationList::after {
   position: absolute;
   bottom: 0;
   left: 10%;
@@ -2133,19 +2233,19 @@ about page scss 작업
   height: 1px;
   background: #777777;
 }
-.about .sectionCont .aboutCont .inner .aboutSectionCont .organizationWarp .organizationList:nth-last-child(-n+3) {
+.about .sectionCont #organization .inner .aboutSectionCont .organizationWarp .organizationList:nth-last-child(-n+3) {
   border-top: none;
 }
-.about .sectionCont .aboutCont .inner .aboutSectionCont .organizationWarp .organizationList:nth-of-type(1), .about .sectionCont .aboutCont .inner .aboutSectionCont .organizationWarp .organizationList:nth-of-type(4) {
+.about .sectionCont #organization .inner .aboutSectionCont .organizationWarp .organizationList:nth-of-type(1), .about .sectionCont #organization .inner .aboutSectionCont .organizationWarp .organizationList:nth-of-type(4) {
   border-left: none;
 }
-.about .sectionCont .aboutCont .inner .aboutSectionCont .organizationWarp .organizationList:nth-of-type(3), .about .sectionCont .aboutCont .inner .aboutSectionCont .organizationWarp .organizationList:nth-of-type(6) {
+.about .sectionCont #organization .inner .aboutSectionCont .organizationWarp .organizationList:nth-of-type(3), .about .sectionCont #organization .inner .aboutSectionCont .organizationWarp .organizationList:nth-of-type(6) {
   border-right: none;
 }
-.about .sectionCont .aboutCont .inner .aboutSectionCont .organizationWarp .organizationList.intro .organizationBox {
+.about .sectionCont #organization .inner .aboutSectionCont .organizationWarp .organizationList.intro .organizationBox {
   position: relative;
 }
-.about .sectionCont .aboutCont .inner .aboutSectionCont .organizationWarp .organizationList.intro .organizationBox .organizationTitle {
+.about .sectionCont #organization .inner .aboutSectionCont .organizationWarp .organizationList.intro .organizationBox .organizationTitle {
   font-family: "Aboreto";
   font-size: 40px;
   letter-spacing: -0.56px;
@@ -2155,7 +2255,7 @@ about page scss 작업
   font-weight: 400;
   margin-bottom: 40px;
 }
-.about .sectionCont .aboutCont .inner .aboutSectionCont .organizationWarp .organizationList.intro .organizationBox .organizationSub {
+.about .sectionCont #organization .inner .aboutSectionCont .organizationWarp .organizationList.intro .organizationBox .organizationSub {
   font-family: "Libre+Bodoni";
   font-size: 24px;
   letter-spacing: -0.56px;
@@ -2163,7 +2263,7 @@ about page scss 작업
   color: #333;
   font-weight: 400;
 }
-.about .sectionCont .aboutCont .inner .aboutSectionCont .organizationWarp .organizationList.intro .organizationBox .organizationCaption {
+.about .sectionCont #organization .inner .aboutSectionCont .organizationWarp .organizationList.intro .organizationBox .organizationCaption {
   position: absolute;
   bottom: 0;
   font-family: "S-CoreDream-3Light";
@@ -2172,35 +2272,91 @@ about page scss 작업
   letter-spacing: -0.6px;
   color: #777;
 }
-.about .sectionCont .aboutCont + .aboutCont {
-  margin-top: 30px;
-}
 
+@media screen and (max-width: 1024px) {
+  .about .wrap .subContents .subSection .inner .sectionCont #project .inner .projectWrap .projectLists .projectList .projectBox {
+    height: 400px;
+  }
+  .about .wrap .subContents .subSection .inner .sectionCont #project .inner .projectWrap .projectLists .projectList .projectBox .projectNum {
+    font-family: "Aboreto";
+    font-size: 40px;
+    letter-spacing: -0.56px;
+    line-height: 1;
+    text-transform: uppercase;
+    color: #D9D9CE;
+    font-weight: 400;
+  }
+  .about .wrap .subContents .subSection .inner .sectionCont #project .inner .projectWrap .projectLists .projectList .projectBox .projectExp {
+    width: 20%;
+  }
+  .about .wrap .subContents .subSection .inner .sectionCont #project .inner .projectWrap .projectLists .projectList .projectBox .projectImg {
+    width: 60%;
+    height: 100%;
+  }
+  .about .wrap .subContents .subSection .inner .sectionCont #project .inner .projectWrap .projectLists .projectList .projectBox .projectImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(0.9);
+  }
+  .about .wrap .subContents .subSection .inner .sectionCont #project .inner .projectWrap .projectLists .projectList .projectBox .projectBtn {
+    width: 20%;
+  }
+}
 @media screen and (max-width: 992px) {
-  .about .wrap .subContents .subSection .inner .sectionCont .aboutCont > .inner .aboutSectionCont .organizationWarp .organizationList {
+  .about .wrap .subContents .subSection .inner .sectionCont #organization > .inner .aboutSectionCont .organizationWarp .organizationList {
     width: 50%;
   }
-  .about .wrap .subContents .subSection .inner .sectionCont .aboutCont > .inner .aboutSectionCont .organizationWarp .organizationList:nth-last-child(-n+4) {
+  .about .wrap .subContents .subSection .inner .sectionCont #organization > .inner .aboutSectionCont .organizationWarp .organizationList:nth-last-child(-n+4) {
     border-top: none;
   }
-  .about .wrap .subContents .subSection .inner .sectionCont .aboutCont > .inner .aboutSectionCont .organizationWarp .organizationList:nth-of-type(1), .about .wrap .subContents .subSection .inner .sectionCont .aboutCont > .inner .aboutSectionCont .organizationWarp .organizationList:nth-of-type(4) {
+  .about .wrap .subContents .subSection .inner .sectionCont #organization > .inner .aboutSectionCont .organizationWarp .organizationList:nth-of-type(1), .about .wrap .subContents .subSection .inner .sectionCont #organization > .inner .aboutSectionCont .organizationWarp .organizationList:nth-of-type(4) {
     border-left: 1px solid #777777;
   }
-  .about .wrap .subContents .subSection .inner .sectionCont .aboutCont > .inner .aboutSectionCont .organizationWarp .organizationList:nth-of-type(3), .about .wrap .subContents .subSection .inner .sectionCont .aboutCont > .inner .aboutSectionCont .organizationWarp .organizationList:nth-of-type(6) {
+  .about .wrap .subContents .subSection .inner .sectionCont #organization > .inner .aboutSectionCont .organizationWarp .organizationList:nth-of-type(3), .about .wrap .subContents .subSection .inner .sectionCont #organization > .inner .aboutSectionCont .organizationWarp .organizationList:nth-of-type(6) {
     border-left: 1px solid #777777;
   }
-  .about .wrap .subContents .subSection .inner .sectionCont .aboutCont > .inner .aboutSectionCont .organizationWarp .organizationList:nth-of-type(odd) {
+  .about .wrap .subContents .subSection .inner .sectionCont #organization > .inner .aboutSectionCont .organizationWarp .organizationList:nth-of-type(odd) {
     border-left: none;
   }
-  .about .wrap .subContents .subSection .inner .sectionCont .aboutCont > .inner .aboutSectionCont .organizationWarp .organizationList:nth-of-type(even) {
+  .about .wrap .subContents .subSection .inner .sectionCont #organization > .inner .aboutSectionCont .organizationWarp .organizationList:nth-of-type(even) {
     border-right: none;
   }
 }
 @media screen and (max-width: 778px) {
-  .about .wrap .subContents .subSection .inner .sectionCont .aboutCont > .inner .aboutSectionCont .organizationWarp .organizationList {
+  .about .wrap .subContents .subSection .inner .sectionCont #project .inner .projectWrap .projectLists .projectList .projectBox {
+    flex-direction: column;
     height: 400px;
   }
-  .about .wrap .subContents .subSection .inner .sectionCont .aboutCont > .inner .aboutSectionCont .organizationWarp .organizationList.intro .organizationBox .organizationTitle {
+  .about .wrap .subContents .subSection .inner .sectionCont #project .inner .projectWrap .projectLists .projectList .projectBox .projectNum {
+    font-family: "Aboreto";
+    font-size: 40px;
+    letter-spacing: -0.56px;
+    line-height: 1;
+    text-transform: uppercase;
+    color: #D9D9CE;
+    font-weight: 400;
+  }
+  .about .wrap .subContents .subSection .inner .sectionCont #project .inner .projectWrap .projectLists .projectList .projectBox .projectExp {
+    width: 20%;
+  }
+  .about .wrap .subContents .subSection .inner .sectionCont #project .inner .projectWrap .projectLists .projectList .projectBox .projectImg {
+    width: 60%;
+    height: 100%;
+  }
+  .about .wrap .subContents .subSection .inner .sectionCont #project .inner .projectWrap .projectLists .projectList .projectBox .projectImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(0.9);
+  }
+  .about .wrap .subContents .subSection .inner .sectionCont #project .inner .projectWrap .projectLists .projectList .projectBox .projectBtn {
+    width: 20%;
+  }
+  .about .wrap .subContents .subSection .inner .sectionCont #organization > .inner .aboutSectionCont .organizationWarp .organizationList {
+    height: 400px;
+  }
+  .about .wrap .subContents .subSection .inner .sectionCont #organization > .inner .aboutSectionCont .organizationWarp .organizationList.intro .organizationBox .organizationTitle {
     font-family: "Aboreto";
     font-size: 30px;
     letter-spacing: -0.56px;
@@ -2210,7 +2366,7 @@ about page scss 작업
     font-weight: 400;
     margin-bottom: 30px;
   }
-  .about .wrap .subContents .subSection .inner .sectionCont .aboutCont > .inner .aboutSectionCont .organizationWarp .organizationList.intro .organizationBox .organizationSub {
+  .about .wrap .subContents .subSection .inner .sectionCont #organization > .inner .aboutSectionCont .organizationWarp .organizationList.intro .organizationBox .organizationSub {
     font-family: "Libre+Bodoni";
     font-size: 20px;
     letter-spacing: -0.56px;
@@ -2218,7 +2374,7 @@ about page scss 작업
     color: #333;
     font-weight: 400;
   }
-  .about .wrap .subContents .subSection .inner .sectionCont .aboutCont > .inner .aboutSectionCont .organizationWarp .organizationList.intro .organizationBox .organizationCaption {
+  .about .wrap .subContents .subSection .inner .sectionCont #organization > .inner .aboutSectionCont .organizationWarp .organizationList.intro .organizationBox .organizationCaption {
     position: absolute;
     bottom: 0;
     font-family: "S-CoreDream-3Light";
@@ -2229,17 +2385,17 @@ about page scss 작업
   }
 }
 @media screen and (max-width: 576px) {
-  .about .wrap .subContents .subSection .inner .sectionCont .aboutCont > .inner .aboutSectionCont .organizationWarp .organizationList {
+  .about .wrap .subContents .subSection .inner .sectionCont #organization > .inner .aboutSectionCont .organizationWarp .organizationList {
     width: 100%;
     max-height: 500px;
     border-left: none;
     border-right: none;
     margin-left: 0;
   }
-  .about .wrap .subContents .subSection .inner .sectionCont .aboutCont > .inner .aboutSectionCont .organizationWarp .organizationList::after {
+  .about .wrap .subContents .subSection .inner .sectionCont #organization > .inner .aboutSectionCont .organizationWarp .organizationList::after {
     display: none;
   }
-  .about .wrap .subContents .subSection .inner .sectionCont .aboutCont > .inner .aboutSectionCont .organizationWarp .organizationList.intro .organizationBox .organizationTitle {
+  .about .wrap .subContents .subSection .inner .sectionCont #organization > .inner .aboutSectionCont .organizationWarp .organizationList.intro .organizationBox .organizationTitle {
     font-family: "Aboreto";
     font-size: 40px;
     letter-spacing: -0.56px;
@@ -2249,7 +2405,7 @@ about page scss 작업
     font-weight: 400;
     margin-bottom: 30px;
   }
-  .about .wrap .subContents .subSection .inner .sectionCont .aboutCont > .inner .aboutSectionCont .organizationWarp .organizationList.intro .organizationBox .organizationSub {
+  .about .wrap .subContents .subSection .inner .sectionCont #organization > .inner .aboutSectionCont .organizationWarp .organizationList.intro .organizationBox .organizationSub {
     font-family: "Libre+Bodoni";
     font-size: 24px;
     letter-spacing: -0.56px;
@@ -2257,7 +2413,7 @@ about page scss 작업
     color: #333;
     font-weight: 400;
   }
-  .about .wrap .subContents .subSection .inner .sectionCont .aboutCont > .inner .aboutSectionCont .organizationWarp .organizationList.intro .organizationBox .organizationCaption {
+  .about .wrap .subContents .subSection .inner .sectionCont #organization > .inner .aboutSectionCont .organizationWarp .organizationList.intro .organizationBox .organizationCaption {
     position: absolute;
     bottom: 0;
     font-family: "S-CoreDream-3Light";
@@ -2266,13 +2422,13 @@ about page scss 작업
     letter-spacing: -0.6px;
     color: #777;
   }
-  .about .wrap .subContents .subSection .inner .sectionCont .aboutCont > .inner .aboutSectionCont .organizationWarp .organizationList:nth-last-child(-n+4) {
+  .about .wrap .subContents .subSection .inner .sectionCont #organization > .inner .aboutSectionCont .organizationWarp .organizationList:nth-last-child(-n+4) {
     border-top: 1px solid #777777;
   }
-  .about .wrap .subContents .subSection .inner .sectionCont .aboutCont > .inner .aboutSectionCont .organizationWarp .organizationList:nth-of-type(4) {
+  .about .wrap .subContents .subSection .inner .sectionCont #organization > .inner .aboutSectionCont .organizationWarp .organizationList:nth-of-type(4) {
     border-left: none;
   }
-  .about .wrap .subContents .subSection .inner .sectionCont .aboutCont > .inner .aboutSectionCont .organizationWarp .organizationList:nth-of-type(6) {
+  .about .wrap .subContents .subSection .inner .sectionCont #organization > .inner .aboutSectionCont .organizationWarp .organizationList:nth-of-type(6) {
     border-left: none;
     border-bottom: 1px solid #777777;
   }

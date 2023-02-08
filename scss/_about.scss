@@ -6,7 +6,103 @@ about page scss 작업
 
 .about {
   .sectionCont {
-    .aboutCont {
+    // project css
+    #project {
+      .inner {
+        padding-left: 100px;
+        .projectWrap {
+          .projectLists {
+            border-top: 1px solid $borderColor;
+            .projectList {
+              border-bottom: 1px solid $borderColor;
+              .projectBox {
+                position: relative;
+                width: 100%;
+                height: 500px;
+                display: flex;
+                padding: 30px 0 30px 30px;
+                .projectNum {
+                  position: absolute;
+                  top: 50%;
+                  left: 150px;
+                  z-index: 4;
+                  transform: translateY(-50%);
+                  @include sectionTitle($fontColor: $btnColor);
+                }
+                .projectExp {
+                  width: 25%;
+                  height: 100%;
+                  display: flex;
+                  flex-direction: column;
+                  align-items: flex-start;
+                  justify-content: space-between;
+                  .projectTitle {
+                    @include sectionSubTitle(
+                      $subFz: 24px,
+                      $subLetterS: 1px,
+                      $subFontColor: $borderColor
+                    );
+                    text-transform: uppercase;
+                  }
+                  .projectDate {
+                    position: relative;
+                    @include sectionSubTitle(
+                      $subFz: 20px,
+                      $fontWeight: 300,
+                      $subFontColor: $hoverColor
+                    );
+                    span {
+                      position: absolute;
+                      top: 10px;
+                      left: 60px;
+                      display: inline-block;
+                      font-size: 18px;
+                    }
+                  }
+                }
+                .projectImg {
+                  width: 60%;
+                  height: 100%;
+                  img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    filter: grayscale(0.9);
+                  }
+                }
+                .projectBtn {
+                  width: 15%;
+                  height: 100%;
+                  display: flex;
+                  align-items: flex-end;
+                  justify-content: flex-end;
+                  .projectLink {
+                    display: inline-block;
+                    color: $textColor;
+                    .btnLine {
+                      position: relative;
+                      display: inline-block;
+                      width: 20px;
+                      &::before {
+                        position: absolute;
+                        top: 5px;
+                        margin-top: -50%;
+                        width: 100%;
+                        height: 1px;
+                        background: $borderColor;
+                        content: "";
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    // organization css
+    #organization {
       width: 100%;
       //height: calc(100vh - 80px);
       .inner {
@@ -46,7 +142,7 @@ about page scss 작업
                 }
                 .organizationImg {
                   width: 100%;
-                  height: 86%;
+                  height: 400px;
                   display: flex;
                   align-items: center;
                   justify-content: center;
@@ -56,7 +152,7 @@ about page scss 작업
                     height: 60%;
                     object-fit: cover;
                     filter: grayscale(0.7);
-                    transition: .5s;
+                    transition: 0.5s;
                   }
                   &:hover {
                     img {
@@ -69,43 +165,41 @@ about page scss 작업
                   position: relative;
                   @include sectionText($captionFz: 16px);
                   &::after {
-                    content: '';
+                    content: "";
                     display: block;
                     clear: both;
                   }
                   span {
-                    
                     float: right;
                   }
                 }
-                
               }
               &:nth-of-type(1) .organizationBox .organizationImg {
                 background: rgba(161, 154, 151, 0.6);
               }
-              &:nth-of-type(2) .organizationBox .organizationImg{
+              &:nth-of-type(2) .organizationBox .organizationImg {
                 background: rgba(164, 161, 152, 0.6);
               }
-              &:nth-of-type(3) .organizationBox .organizationImg{
+              &:nth-of-type(3) .organizationBox .organizationImg {
                 background: rgba(160, 161, 151, 0.6);
               }
-              &:nth-of-type(4) .organizationBox .organizationImg{
-                background: hsl(160, 5%, 64%, .6);
+              &:nth-of-type(4) .organizationBox .organizationImg {
+                background: hsl(160, 5%, 64%, 0.6);
               }
-              &:nth-of-type(5) .organizationBox .organizationImg{
-                background: hsl(207, 6%, 61%, .6);
+              &:nth-of-type(5) .organizationBox .organizationImg {
+                background: hsl(207, 6%, 61%, 0.6);
               }
 
               &::after {
                 position: absolute;
                 bottom: 0;
                 left: 10%;
-                content: '';
+                content: "";
                 width: 80%;
                 height: 1px;
                 background: $borderColor;
               }
-              &:nth-last-child(-n+3) {
+              &:nth-last-child(-n + 3) {
                 border-top: none;
               }
               &:nth-of-type(1),
@@ -138,8 +232,56 @@ about page scss 작업
         }
       }
     }
-    .aboutCont + .aboutCont {
-      margin-top: 30px;
+  }
+}
+
+@media screen and (max-width: $sLaptop) {
+  .about {
+    .wrap {
+      .subContents {
+        .subSection {
+          .inner {
+            .sectionCont {
+              // project css
+              #project {
+                .inner {
+                  .projectWrap {
+                    .projectLists {
+                      .projectList {
+                        .projectBox {
+                          height: 400px;
+                          .projectNum {
+                            @include sectionTitle(
+                              $fz: 40px,
+                              $fontColor: $btnColor
+                            );
+                          }
+                          .projectExp {
+                            width: 20%;
+                          }
+                          .projectImg {
+                            width: 60%;
+                            height: 100%;
+                            img {
+                              width: 100%;
+                              height: 100%;
+                              object-fit: cover;
+                              filter: grayscale(0.9);
+                            }
+                          }
+                          .projectBtn {
+                            width: 20%;
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
@@ -152,13 +294,13 @@ about page scss 작업
         .subSection {
           .inner {
             .sectionCont {
-              .aboutCont {
-                >.inner {
+              #organization {
+                > .inner {
                   .aboutSectionCont {
                     .organizationWarp {
                       .organizationList {
                         width: 50%;
-                        &:nth-last-child(-n+4) {
+                        &:nth-last-child(-n + 4) {
                           border-top: none;
                         }
                         &:nth-of-type(1),
@@ -195,8 +337,45 @@ about page scss 작업
         .subSection {
           .inner {
             .sectionCont {
-              .aboutCont {
-                >.inner {
+              // project css
+              #project {
+                .inner {
+                  .projectWrap {
+                    .projectLists {
+                      .projectList {
+                        .projectBox {
+                          flex-direction: column;
+                          height: 400px;
+                          .projectNum {
+                            @include sectionTitle(
+                              $fz: 40px,
+                              $fontColor: $btnColor
+                            );
+                          }
+                          .projectExp {
+                            width: 20%;
+                          }
+                          .projectImg {
+                            width: 60%;
+                            height: 100%;
+                            img {
+                              width: 100%;
+                              height: 100%;
+                              object-fit: cover;
+                              filter: grayscale(0.9);
+                            }
+                          }
+                          .projectBtn {
+                            width: 20%;
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+              #organization {
+                > .inner {
                   .aboutSectionCont {
                     .organizationWarp {
                       .organizationList {
@@ -204,11 +383,17 @@ about page scss 작업
                         &.intro {
                           .organizationBox {
                             .organizationTitle {
-                              @include sectionTitle($fz: 30px, $fontWeight: bold);
+                              @include sectionTitle(
+                                $fz: 30px,
+                                $fontWeight: bold
+                              );
                               margin-bottom: 30px;
                             }
                             .organizationSub {
-                              @include sectionSubTitle($subFz: 20px, $fontWeight: 400);
+                              @include sectionSubTitle(
+                                $subFz: 20px,
+                                $fontWeight: 400
+                              );
                             }
                             .organizationCaption {
                               position: absolute;
@@ -237,8 +422,8 @@ about page scss 작업
         .subSection {
           .inner {
             .sectionCont {
-              .aboutCont {
-                >.inner {
+              #organization {
+                > .inner {
                   .aboutSectionCont {
                     .organizationWarp {
                       .organizationList {
@@ -254,11 +439,17 @@ about page scss 작업
                         &.intro {
                           .organizationBox {
                             .organizationTitle {
-                              @include sectionTitle($fz: 40px, $fontWeight: bold);
+                              @include sectionTitle(
+                                $fz: 40px,
+                                $fontWeight: bold
+                              );
                               margin-bottom: 30px;
                             }
                             .organizationSub {
-                              @include sectionSubTitle($subFz: 24px, $fontWeight: 400);
+                              @include sectionSubTitle(
+                                $subFz: 24px,
+                                $fontWeight: 400
+                              );
                             }
                             .organizationCaption {
                               position: absolute;
@@ -267,7 +458,7 @@ about page scss 작업
                             }
                           }
                         }
-                        &:nth-last-child(-n+4) {
+                        &:nth-last-child(-n + 4) {
                           border-top: 1px solid $borderColor;
                         }
                         &:nth-of-type(4) {

@@ -391,20 +391,20 @@
           .boardMoBtn {
             width: 100px;
             &:hover {
-              .boarLink{
+              .boarLink {
                 font-size: 14px;
-                color: #9DA592;
+                color: #9da592;
                 .theArrow {
                   &.left {
                     .shaft {
                       width: 50px;
                       transition-delay: 0.1s;
-                      background-color: #9DA592;
+                      background-color: #9da592;
                       &::before,
                       &::after {
                         width: 8px;
                         transition-delay: 0.1s;
-                        background-color: #9DA592;
+                        background-color: #9da592;
                       }
                       &::before {
                         transform: rotate(40deg);
@@ -444,7 +444,7 @@
               }
             }
           }
-          
+
           .boarLink {
             position: relative;
             display: inline-block;
@@ -463,17 +463,17 @@
                 .shaft {
                   width: 0;
                   background-color: #333;
-                  
+
                   &::before,
                   &::after {
                     width: 0;
                     background-color: #333;
                   }
-            
+
                   &::before {
                     transform: rotate(0);
                   }
-            
+
                   &::after {
                     transform: rotate(0);
                   }
@@ -484,16 +484,16 @@
                   width: 1px;
                   transition-delay: 0.2s;
                   &::before,
-                  &::after { 
+                  &::after {
                     width: 8px;
                     transition-delay: 0.3s;
                     transition: all 0.5s;
                   }
-                  
+
                   &::before {
                     transform: rotate(40deg);
                   }
-                  
+
                   &::after {
                     transform: rotate(-40deg);
                   }
@@ -502,7 +502,7 @@
               .shaft {
                 background-color: #333;
                 display: block;
-                height:1px;
+                height: 1px;
                 position: relative;
                 transition: all 0.2s;
                 transition-delay: 0;
@@ -510,7 +510,7 @@
                 &:before,
                 &:after {
                   background-color: #333;
-                  content: '';
+                  content: "";
                   display: block;
                   height: 1px;
                   position: absolute;
@@ -531,7 +531,7 @@
               display: flex;
               align-items: center;
               transition: all 0.2s;
-              
+
               .text {
                 width: 60px;
                 margin-right: 50px;
@@ -540,9 +540,7 @@
                 position: relative;
               }
             }
-            
           }
-          
 
           .boardBox {
             position: relative;
@@ -583,9 +581,6 @@
               }
             }
             .boardBtn {
-              display: flex;
-              align-items: center;
-              justify-content: center;
               width: 150px;
               height: 150px;
               border-radius: 50%;
@@ -593,6 +588,11 @@
               background: #d9d9ce;
               cursor: pointer;
               .boardBtnText {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                height: 100%;
                 font-size: 16px;
                 color: #333;
               }

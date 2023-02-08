@@ -10,7 +10,7 @@ const topBtn = document.querySelector(".topBtn");
 window.addEventListener("scroll", () => {
   let scroll = window.scrollY;
 
-  console.log(scroll);
+  //console.log(scroll);
   
 
   if (scroll >= 300) {
