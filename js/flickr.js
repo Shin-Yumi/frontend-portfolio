@@ -20,7 +20,6 @@ fetch(url)
   })
   .then((json) => {
     let items = json.photos.photo;
-    console.log(items);
 
     let htmls = "";
 
@@ -31,9 +30,9 @@ fetch(url)
 
       htmls += `
       <li class="item">
-        <div>
-          <a href="${imgSrcBig}"><img src="${imgSrc}" alt=""></a>
-          <p>${el.title}</p>
+        <div class="itemBox">
+          <a class="galleryImg" href="${imgSrcBig}"><img src="${imgSrc}" alt=""></a>
+          <p class="galleryTitle">${el.title}</p>
         </div>
       </li>
       `;

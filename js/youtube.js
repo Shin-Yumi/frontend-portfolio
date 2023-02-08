@@ -20,7 +20,6 @@ fetch(url)
   .then((json) => {
     let items = json.items;
     let result = "";
-    console.log(items);
 
     items.map((el) => {
       let title = el.snippet.title;

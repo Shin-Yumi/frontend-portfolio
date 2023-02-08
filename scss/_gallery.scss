@@ -86,23 +86,23 @@
                     display: block;
                     clear: both;
                   }
-                  li {
-                    width: calc(100% / 2);
+                  >.item {
+                    width: calc(100% / 3);
                     float: left;
                     padding: 5px;
 
-                    div {
+                    .itemBox {
                       width: 100%;
                       padding: 20px;
                       border: 1px solid $borderColor;
                       box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
-                      a {
+                      .galleryImg {
                         img {
                           width: 100%;
                           filter: grayscale(100%);
                         }
                       }
-                      p {
+                      .galleryTitle {
                         font: 12px/1.2;
                         color: $textColor;
                         margin-top: 10px;
@@ -193,6 +193,17 @@ figure.pop {
         .subSection {
           .inner {
             .sectionCont {
+              #flickr {
+                .wrap {
+                  #list {
+                    >.item {
+                      width: calc(100% / 2);
+                      float: left;
+                      padding: 5px;
+                    }
+                  }
+                }
+              }
             }
           }
         }
@@ -235,6 +246,17 @@ figure.pop {
                         $captionFz: 12px,
                         $captionFontColor: $hoverColor
                       );
+                    }
+                  }
+                }
+              }
+              #flickr {
+                .wrap {
+                  #list {
+                    >.item {
+                      width: 100%;
+                      float: left;
+                      padding: 5px;
                     }
                   }
                 }
