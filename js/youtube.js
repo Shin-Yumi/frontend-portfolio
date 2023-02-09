@@ -6,11 +6,8 @@ const num = 10;
 const url = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&key=${key}&playlistId=${playlistId}&maxResults=${num}`;
 
 
-window.addEventListener("scroll", () => {
-  let scroll = window.scrollY;
-  if (scroll > 30) {
-    youtubeList.classList.add("on");
-  }
+window.addEventListener("load", () => {
+  youtubeList.classList.add("on");
 });
 
 fetch(url)
@@ -45,7 +42,7 @@ fetch(url)
     youtubeList.innerHTML = result;
   });
 
-//이벤트 위임
+//이벤트 위임 클릭시 pop 모달생성
 youtubeList.addEventListener("click", (e) => {
   e.preventDefault();
 
@@ -65,6 +62,7 @@ youtubeList.addEventListener("click", (e) => {
   youtubeList.append(pop);
 });
 
+//pop 모달생성 후 close 버튼 이벤트
 youtubeList.addEventListener("click", (e) => {
   const pop = youtubeList.querySelector(".pop");
   if (pop) {
@@ -72,3 +70,4 @@ youtubeList.addEventListener("click", (e) => {
     if (e.target === close) pop.remove();
   }
 });
+

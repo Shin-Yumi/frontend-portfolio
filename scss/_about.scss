@@ -6,102 +6,6 @@ about page scss 작업
 
 .about {
   .sectionCont {
-    // project css
-    #project {
-      .inner {
-        padding-left: 100px;
-        .projectWrap {
-          .projectLists {
-            border-top: 1px solid $borderColor;
-            .projectList {
-              border-bottom: 1px solid $borderColor;
-              .projectBox {
-                position: relative;
-                width: 100%;
-                height: 500px;
-                display: flex;
-                padding: 30px 0 30px 30px;
-                .projectNum {
-                  position: absolute;
-                  top: 50%;
-                  left: 150px;
-                  z-index: 4;
-                  transform: translateY(-50%);
-                  @include sectionTitle($fontColor: $borderColor);
-                }
-                .projectExp {
-                  width: 20%;
-                  height: 100%;
-                  display: flex;
-                  flex-direction: column;
-                  align-items: flex-start;
-                  justify-content: space-between;
-                  .projectTitle {
-                    @include sectionSubTitle(
-                      $subFz: 24px,
-                      $subLetterS: 1px,
-                      $subFontColor: $borderColor
-                    );
-                    text-transform: uppercase;
-                  }
-                  .projectDate {
-                    position: relative;
-                    @include sectionSubTitle(
-                      $subFz: 20px,
-                      $fontWeight: 300,
-                      $subFontColor: $hoverColor
-                    );
-                    span {
-                      position: absolute;
-                      top: 10px;
-                      left: 60px;
-                      display: inline-block;
-                      font-size: 18px;
-                    }
-                  }
-                }
-                .projectImg {
-                  width: 60%;
-                  height: 100%;
-                  img {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                    filter: grayscale(0.9);
-                  }
-                }
-                .projectBtn {
-                  width: 20%;
-                  height: 100%;
-                  display: flex;
-                  align-items: flex-end;
-                  justify-content: flex-end;
-                  .projectLink {
-                    display: inline-block;
-                    color: $borderColor;
-                    font-size: 14px;
-                    .btnLine {
-                      position: relative;
-                      display: inline-block;
-                      width: 20px;
-                      &::before {
-                        position: absolute;
-                        top: 5px;
-                        margin-top: -50%;
-                        width: 100%;
-                        height: 1px;
-                        background: $borderColor;
-                        content: "";
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }
     // organization css
     #organization {
       width: 100%;
@@ -234,52 +138,216 @@ about page scss 작업
         }
       }
     }
-  }
-}
-
-@media screen and (max-width: $sLaptop) {
-  .about {
-    .wrap {
-      .subContents {
-        .subSection {
-          .inner {
-            .sectionCont {
-              // project css
-              #project {
-                .inner {
-                  .projectWrap {
-                    .projectLists {
-                      .projectList {
-                        .projectBox {
-                          height: 400px;
-                          .projectNum {
-                            @include sectionTitle(
-                              $fz: 40px,
-                              $fontColor: $btnColor
-                            );
-                          }
-                          .projectExp {
-                            width: 20%;
-                          }
-                          .projectImg {
-                            width: 60%;
-                            height: 100%;
-                            img {
-                              width: 100%;
-                              height: 100%;
-                              object-fit: cover;
-                              filter: grayscale(0.9);
-                            }
-                          }
-                          .projectBtn {
-                            width: 20%;
-                          }
-                        }
-                      }
+    #location {
+      padding-left: 50px;
+      margin-right: -30px;
+      #map {
+        width: 100%;
+        height: 400px;
+        border: 1px solid $borderColor;
+        border-right: 0;
+        filter: sepia(20%) grayscale(50%);
+      }
+      .mapTxt {
+        width: 60%;
+        margin-top: 20px;
+        p {
+          @include sectionText;
+        }
+      }
+      .mapBtn {
+        display: flex;
+        align-items: flex-start;
+        margin-top: 30px;
+        .mapBtnTitle {
+          width: 20%;
+          @include sectionText($captionFz: 16px, $captionFontColor: $textColor);
+        }
+        .mapBtnLists {
+          width: 80%;
+          display: flex;
+          align-items: center;
+          flex-wrap: wrap;
+          padding-right: 50px;
+          .mapBtnList {
+            width: 49%;
+            margin-right: 2%;
+            padding: 20px 0;
+            border-top: 2px solid $hoverColor;
+            margin-bottom: 10px;
+            .listBox {
+              .listTitle {
+                @include sectionText(
+                  $captionFz: 14px,
+                  $captionFontColor: $textColor
+                );
+                margin-bottom: 30px;
+              }
+              .traffic {
+                display: flex;
+                align-items: center;
+                .trafficList {
+                  position: relative;
+                  transition: 0.5s;
+                  &::after {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    width: 0;
+                    height: 1px;
+                    background-color: $borderColor;
+                    transition: 0.5s;
+                  }
+                  a {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    @include sectionText(
+                      $captionFz: 12px,
+                      $captionFontColor: $textColor
+                    );
+                  }
+                  &:hover {
+                    &::after {
+                      width: 100%;
+                      background-color: $hoverColor;
+                    }
+                    a {
+                      @include sectionText(
+                        $captionFz: 12px,
+                        $captionFontColor: $hoverColor
+                      );
+                    }
+                  }
+                  &.on {
+                    &::after {
+                      width: 100%;
+                      background-color: $hoverColor;
+                    }
+                    a {
+                      @include sectionText(
+                        $captionFz: 12px,
+                        $captionFontColor: $hoverColor
+                      );
                     }
                   }
                 }
+                .trafficList + .trafficList {
+                  margin-left: 20px;
+                }
               }
+              .roadView {
+                display: flex;
+                align-items: center;
+                .roadViewList {
+                  position: relative;
+                  transition: 0.5s;
+                  &::after {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    width: 0;
+                    height: 1px;
+                    background-color: $borderColor;
+                    transition: 0.5s;
+                  }
+                  a {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    @include sectionText(
+                      $captionFz: 12px,
+                      $captionFontColor: $textColor
+                    );
+                  }
+                  &:hover {
+                    &::after {
+                      width: 100%;
+                      background-color: $hoverColor;
+                    }
+                    a {
+                      @include sectionText(
+                        $captionFz: 12px,
+                        $captionFontColor: $hoverColor
+                      );
+                    }
+                  }
+                  &.on {
+                    &::after {
+                      width: 100%;
+                      background-color: $hoverColor;
+                    }
+                    a {
+                      @include sectionText(
+                        $captionFz: 12px,
+                        $captionFontColor: $hoverColor
+                      );
+                    }
+                  }
+                }
+                .roadViewList + .roadViewList {
+                  margin-left: 20px;
+                }
+              }
+              .favLocation {
+                display: flex;
+                align-items: center;
+                .locaList {
+                  position: relative;
+                  transition: 0.5s;
+                  &::after {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    width: 0;
+                    height: 1px;
+                    background-color: $borderColor;
+                    transition: 0.5s;
+                  }
+                  a {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    @include sectionText(
+                      $captionFz: 12px,
+                      $captionFontColor: $textColor
+                    );
+                  }
+                  &:hover {
+                    &::after {
+                      width: 100%;
+                      background-color: $hoverColor;
+                    }
+                    a {
+                      @include sectionText(
+                        $captionFz: 12px,
+                        $captionFontColor: $hoverColor
+                      );
+                    }
+                  }
+                  &.on {
+                    &::after {
+                      width: 100%;
+                      background-color: $hoverColor;
+                    }
+                    a {
+                      @include sectionText(
+                        $captionFz: 12px,
+                        $captionFontColor: $hoverColor
+                      );
+                    }
+                  }
+                }
+                .locaList + .locaList {
+                  margin-left: 20px;
+                }
+              }
+            }
+            &:nth-of-type(even) {
+              margin-right: 0;
             }
           }
         }
@@ -296,76 +364,13 @@ about page scss 작업
         .subSection {
           .inner {
             .sectionCont {
-              // project css
-              #project {
-                .inner {
-                  .projectWrap {
-                    .projectLists {
-                      .projectList {
-                        .projectBox {
-                          height: 300px;
-                          .projectNum {
-                            position: absolute;
-                            top: 50%;
-                            left: 100px;
-                            z-index: 4;
-                            transform: translateY(-50%);
-                            @include sectionTitle(
-                              $fz: 40px,
-                              $fontColor: $borderColor
-                            );
-                          }
-                          .projectExp {
-                            width: 20%;
-                            .projectTitle {
-                              @include sectionSubTitle(
-                                $subFz: 20px,
-                                $subLetterS: 1px,
-                                $subFontColor: $borderColor
-                              );
-                            }
-                            .projectDate {
-                              @include sectionSubTitle(
-                                $subFz: 16px,
-                                $fontWeight: 300,
-                                $subFontColor: $hoverColor
-                              );
-                            }
-                          }
-                          .projectImg {
-                            width: 60%;
-                            height: 100%;
-                            img {
-                              width: 100%;
-                              height: 100%;
-                              object-fit: cover;
-                              filter: grayscale(0.9);
-                            }
-                          }
-                          .projectBtn {
-                            width: 20%;
-
-                            .projectLink {
-                              .btnLine {
-                                width: 10px;
-                                &::before {
-                                  top: 0;
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
               #organization {
                 > .inner {
                   .aboutSectionCont {
                     .organizationWarp {
                       .organizationList {
                         width: 50%;
+
                         &:nth-last-child(-n + 4) {
                           border-top: none;
                         }
@@ -388,6 +393,37 @@ about page scss 작업
                   }
                 }
               }
+              #location {
+                #map {
+                }
+                .mapTxt {
+                  width: 60%;
+                  margin-top: 20px;
+                  p {
+                    @include sectionText;
+                  }
+                }
+                .mapBtn {
+                  display: flex;
+                  align-items: flex-start;
+                  margin-top: 30px;
+                  .mapBtnTitle {
+                  }
+                  .mapBtnLists {
+                    width: 80%;
+                    display: flex;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    padding-right: 50px;
+                    .mapBtnList {
+                      &:nth-of-type(3) {
+                        width: 100%;
+                        margin-right: 0;
+                      }
+                    }
+                  }
+                }
+              }
             }
           }
         }
@@ -403,56 +439,12 @@ about page scss 작업
         .subSection {
           .inner {
             .sectionCont {
-              // project css
-              #project {
-                .inner {
-                  padding-left: 0;
-                  .projectWrap {
-                    .projectLists {
-                      .projectList {
-                        .projectBox {
-                          padding: 30px 0;
-                          flex-direction: column;
-                          height: 500px;
-                          .projectNum {
-                            left: 50%;
-                            transform: translate(-50%, -50%);
-                          }
-                          .projectExp {
-                            width: 100%;
-                            flex-direction: row;
-                            .projectDate {
-                              span {
-                                position: inherit;
-                                top: auto;
-                                left: auto;
-                              }
-                            }
-                          }
-                          .projectImg {
-                            width: 100%;
-                            height: 80%;
-                            img {
-                              width: 100%;
-                              height: 100%;
-                              object-fit: cover;
-                              filter: grayscale(0.9);
-                            }
-                          }
-                          .projectBtn {
-                            width: 100%;
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
               #organization {
                 > .inner {
                   .aboutSectionCont {
                     .organizationWarp {
                       .organizationList {
+                        height: 400px;
                         &.intro {
                           .organizationBox {
                             .organizationTitle {
@@ -475,6 +467,34 @@ about page scss 작업
                   }
                 }
               }
+              #location {
+                padding-left: 0;
+                margin-left: -30px;
+                margin-right: -30px;
+                #map {
+                  width: 100%;
+                  height: 300px;
+                  border-left: 0;
+                }
+                .mapTxt {
+                  padding-left: 30px;
+                  width: 60%;
+                  margin-top: 20px;
+                  p {
+                    @include sectionText;
+                  }
+                }
+                .mapBtn {
+                  padding-left: 30px;
+                  .mapBtnLists {
+                    padding-right: 30px;
+                    .mapBtnList {
+                      width: 100%;
+                      margin-right: 0;
+                    }
+                  }
+                }
+              }
             }
           }
         }
@@ -490,61 +510,13 @@ about page scss 작업
         .subSection {
           .inner {
             .sectionCont {
-              // project css
-              #project {
-                .inner {
-                  padding-left: 0;
-                  .projectWrap {
-                    .projectLists {
-                      .projectList {
-                        .projectBox {
-                          padding: 20px 0;
-                          flex-direction: column;
-                          height: 300px;
-                          .projectExp {
-                            width: 100%;
-                            flex-direction: row;
-                            .projectTitle {
-                              @include sectionSubTitle(
-                                $subFz: 16px,
-                                $subLetterS: 1px,
-                                $subFontColor: $borderColor
-                              );
-                            }
-                            .projectDate {
-                              @include sectionSubTitle(
-                                $subFz: 14px,
-                                $fontWeight: 300,
-                                $subFontColor: $hoverColor
-                              );
-                            }
-                          }
-                          .projectImg {
-                            width: 100%;
-                            height: 80%;
-                            img {
-                              width: 100%;
-                              height: 100%;
-                              object-fit: cover;
-                              filter: grayscale(0.9);
-                            }
-                          }
-                          .projectBtn {
-                            width: 100%;
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
               #organization {
                 > .inner {
                   .aboutSectionCont {
                     .organizationWarp {
                       .organizationList {
                         width: 100%;
-                        height: 400px;
+                        height: 500px;
                         border-left: none;
                         border-right: none;
                         padding: 20px;
@@ -583,6 +555,44 @@ about page scss 작업
                           border-left: none;
                           border-bottom: 1px solid $borderColor;
                         }
+                      }
+                    }
+                  }
+                }
+              }
+              #location {
+                .mapBtn {
+                  flex-direction: column;
+                  .mapBtnTitle {
+                    width: 100%;
+                    margin-bottom: 20px;
+                  }
+                  .mapBtnLists {
+                    width: 100%;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+//$mobile : 425px;
+@media screen and (max-width: $sMobile) {
+  .about {
+    .wrap {
+      .subContents {
+        .subSection {
+          .inner {
+            .sectionCont {
+              #organization {
+                > .inner {
+                  .aboutSectionCont {
+                    .organizationWarp {
+                      .organizationList {
+                        height: 400px;
                       }
                     }
                   }
