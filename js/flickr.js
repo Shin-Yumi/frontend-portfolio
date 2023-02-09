@@ -8,6 +8,8 @@
 
 const frame = document.querySelector("#list");
 const loading = document.querySelector(".loading");
+const input = document.querySelector("#search");
+const btn = document.querySelector(".btnSearch");
 
 // api base url
 const base = "https://www.flickr.com/services/rest/?";
@@ -24,24 +26,65 @@ const per_page = 100;
 
 //api
 const url = `${base}method=${method}&api_key=${key}&per_page=${per_page}&format=json&nojsoncallback=1`;
+const url2 = `${base}method=${method2}&api_key=${key}&per_page=${per_page}&format=json&nojsoncallback=1&tags=바다&privacy_filter=1`;
 
+callData(url2);
 
-fetch(url)
-  .then((data) => {
-    let result = data.json();
-    return result;
-  })
-  .then((json) => {
-    let items = json.photos.photo;
+btn.addEventListener("click", () => {
+  let tag = input.value;
+  tag = tag.trim();
+  const url = `${base}method=${method2}&api_key=${key}&per_page=${per_page}&format=json&nojsoncallback=1&tags=${tag}&privacy_filter=1`;
+  
 
-    let htmls = "";
+  if(tag !== '') {
+    callData(url);
+  } else {
+    alert('검색어를 입력하세요')
+  }
+});
 
-    items.map((el, index) => {
-      let imgSrcBig = `https://live.staticflickr.com/${el.server}/${el.id}_${el.secret}_m.jpg`;
+//input 요소에 엔터키를 누르면
+input.addEventListener("keypress", (e) => {
+  if (e.keyCode == 13) {
+    let tag = input.value;
+    const url = `${base}method=${method2}&api_key=${key}&per_page=${per_page}&format=json&nojsoncallback=1&tags=${tag}&privacy_filter=1`;
+    callData(url);
+  }
+});
 
-      let imgSrc = `https://live.staticflickr.com/${el.server}/${el.id}_${el.secret}_b.jpg`;
+function callData(url) {
+  //기존의 html을 모두 제거
+  frame.innerHTML = '';
+  loading.classList.remove('off');
+  frame.classList.remove('on');
+  fetch(url)
+    .then((data) => {
+      let result = data.json();
+      return result;
+    })
+    .then((json) => {
+      let items = json.photos.photo;
 
-      htmls += `
+      if(items.length > 0) {
+        createList(items);
+        delay();
+      } else {
+        alert('검색하신 이미지의 데이터가 없습니다');
+      }
+
+    });
+}
+
+function createList(items) {
+  let htmls = "";
+
+  items.map((el, index) => {
+    //큰 이미지 주소를 변수로 담음
+    let imgSrcBig = `https://live.staticflickr.com/${el.server}/${el.id}_${el.secret}_b.jpg`;
+
+    let imgSrc = `https://live.staticflickr.com/${el.server}/${el.id}_${el.secret}_m.jpg`;
+
+    htmls += `
       <li class="item">
         <div class="itemBox">
           <a class="galleryImg" href="${imgSrcBig}"><img src="${imgSrc}" alt=""></a>
@@ -49,21 +92,30 @@ fetch(url)
         </div>
       </li>
       `;
-    });
-    frame.innerHTML = htmls;
-
-
-		const imgs = frame.querySelectorAll('img');
-		const len = imgs.length;
-
-		let count = 0;
-		for (let el of imgs) {
-			el.addEventListener('load', () => {
-				count++;
-				if (count == len) isoLayout();
-			});
-		}
   });
+
+  frame.innerHTML = htmls;
+}
+
+function delay() {
+  const imgs = frame.querySelectorAll("img");
+  const len = imgs.length;
+
+  let count = 0;
+  for (let el of imgs) {
+    el.addEventListener("load", () => {
+      count++;
+      if (count == len) isoLayout();
+    });
+
+    el.addEventListener("error", () => {
+      e.currentTarget
+        .closest(".item")
+        .querySelector("img")
+        .setAttribute("src", "img/notFound.jpeg");
+    });
+  }
+}
 
 //isotope 플러그인 함수
 function isoLayout() {
