@@ -4,9 +4,6 @@ const btnSubmit = form.querySelector('input[type=submit]');
 btnSubmit.addEventListener('click', (e) => {
 	if (!isTxt('userid', 5)) e.preventDefault();
 	if (!isTxt('name', 2)) e.preventDefault();
-  //todo: year 출력 안됌!!!!!ㅜㅜ
-	if (!isTxt('year', 4)) e.preventDefault();
-	if (!isTxt('date', 1)) e.preventDefault();
 	if (!isTxt('comments', 20)) e.preventDefault();
 
 
@@ -14,7 +11,7 @@ btnSubmit.addEventListener('click', (e) => {
 	if (!isCheck('gender')) e.preventDefault();
 	if (!isCheck('favorite')) e.preventDefault();
 
-  if (!isSelect('birth')) e.preventDefault();
+  if (!isSelect('edu')) e.preventDefault();
 
 	if (!isPwd('pwd1', 'pwd2', 5)) e.preventDefault();
 });

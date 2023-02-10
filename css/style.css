@@ -3130,17 +3130,6 @@ join scss 작업
 .join .wrap .subContents .subSection .sectionCont .joinCont > .inner .joinWrap .joinListWrap .joinList .joinBox .joinInput {
   width: 80%;
 }
-.join .wrap .subContents .subSection .sectionCont .joinCont > .inner .joinWrap .joinListWrap .joinList .joinBox .joinInput .birthBox {
-  display: flex;
-  align-items: center;
-  border: 0;
-}
-.join .wrap .subContents .subSection .sectionCont .joinCont > .inner .joinWrap .joinListWrap .joinList .joinBox .joinInput .birthBox input[type=text] {
-  width: 33.3333333333%;
-}
-.join .wrap .subContents .subSection .sectionCont .joinCont > .inner .joinWrap .joinListWrap .joinList .joinBox .joinInput .birthBox .birthList {
-  width: 33.3333333333%;
-}
 .join .wrap .subContents .subSection .sectionCont .joinCont > .inner .joinWrap .joinListWrap .joinList .joinBox .joinInput .radioBox {
   display: flex;
   align-items: center;
@@ -3221,11 +3210,23 @@ join scss 작업
   border: 1px solid #777777;
 }
 .join .wrap .subContents .subSection .sectionCont .joinCont > .inner .joinWrap .joinListWrap .joinList .joinBox .joinInput input[type=radio]:checked {
-  background-color: #777777;
+  position: relative;
+  background-color: transparent;
   border: 1px solid #777777;
 }
+.join .wrap .subContents .subSection .sectionCont .joinCont > .inner .joinWrap .joinListWrap .joinList .joinBox .joinInput input[type=radio]:checked::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 12px;
+  background: #777777;
+  border-radius: 50%;
+}
 .join .wrap .subContents .subSection .sectionCont .joinCont > .inner .joinWrap .joinListWrap .joinList .joinBox .joinInput select {
-  margin: 0 20px;
+  width: 100%;
   padding: 10px;
   background: transparent;
   color: #777777;

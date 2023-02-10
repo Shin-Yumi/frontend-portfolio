@@ -117,7 +117,7 @@ function createList(items) {
     htmls += `
       <li class="item">
         <div class="itemBox">
-          <a class="galleryImg" href="${imgSrcBig}"><img class="thumb" src="${imgSrc}" alt=""></a>
+          <a class="galleryImg" href="${imgSrcBig}"><img class="thumb" src="${imgSrcBig}" alt=""></a>
           <p class="galleryTitle">${el.title}</p>
         </div>
       </li>
