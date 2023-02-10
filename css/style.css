@@ -2430,6 +2430,12 @@ about page scss 작업
   margin-right: 0;
 }
 
+@media screen and (max-width: 1024px) {
+  .about .wrap .subContents .subSection .inner .sectionCont #location .mapBtn .mapBtnLists .mapBtnList:nth-of-type(3) {
+    width: 100%;
+    margin-right: 0;
+  }
+}
 @media screen and (max-width: 992px) {
   .about .wrap .subContents .subSection .inner .sectionCont #organization > .inner .aboutSectionCont .organizationWarp .organizationList {
     width: 50%;
@@ -2593,6 +2599,18 @@ about page scss 작업
 @media screen and (max-width: 425px) {
   .about .wrap .subContents .subSection .inner .sectionCont #organization > .inner .aboutSectionCont .organizationWarp .organizationList {
     height: 400px;
+  }
+  .about .wrap .subContents .subSection .inner .sectionCont #location .mapBtn .mapBtnLists .mapBtnList .listBox .favLocation {
+    flex-wrap: wrap;
+  }
+  .about .wrap .subContents .subSection .inner .sectionCont #location .mapBtn .mapBtnLists .mapBtnList .listBox .favLocation .locaList {
+    margin-bottom: 10px;
+  }
+  .about .wrap .subContents .subSection .inner .sectionCont #location .mapBtn .mapBtnLists .mapBtnList .listBox .favLocation .locaList + .locaList {
+    margin-left: 20px;
+  }
+  .about .wrap .subContents .subSection .inner .sectionCont #location .mapBtn .mapBtnLists .mapBtnList .listBox .favLocation .locaList:last-child {
+    margin-left: 0;
   }
 }
 /**
@@ -2815,6 +2833,27 @@ $mobile : 576px;
 .gallery .wrap .subContents .subSection .inner .sectionCont #youtube .youtubeCont:nth-of-type(even) {
   margin-right: 0;
 }
+.gallery .wrap .subContents .subSection .inner .sectionCont #youtube figure.pop {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5vw;
+  overflow: hidden;
+}
+.gallery .wrap .subContents .subSection .inner .sectionCont #youtube figure.pop .btnClose {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  color: #fff;
+  cursor: pointer;
+}
 .gallery .wrap .subContents .subSection .inner .sectionCont #flickr .searchBox {
   width: 100%;
   padding: 0 30px;
@@ -2951,25 +2990,25 @@ $mobile : 576px;
 .gallery .wrap .subContents .subSection .inner .sectionCont #flickr .wrap .loading.off {
   opacity: 0;
 }
-
-figure.pop {
+.gallery .wrap .subContents .subSection .inner .sectionCont #flickr aside {
   width: 100%;
   height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
   position: fixed;
   left: 0;
   top: 0;
-  z-index: 9999;
-  background: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 5vw;
-  overflow: hidden;
 }
-figure.pop .btnClose {
+.gallery .wrap .subContents .subSection .inner .sectionCont #flickr aside img {
+  height: 100%;
+}
+.gallery .wrap .subContents .subSection .inner .sectionCont #flickr aside span {
   position: absolute;
-  top: 50px;
-  right: 50px;
+  top: 20px;
+  right: 20px;
   color: #fff;
   cursor: pointer;
 }

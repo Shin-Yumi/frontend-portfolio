@@ -356,6 +356,33 @@ about page scss 작업
   }
 }
 
+//$Ltablet: 1024px;
+@media screen and (max-width: $sLaptop) {
+  .about {
+    .wrap {
+      .subContents {
+        .subSection {
+          .inner {
+            .sectionCont {
+              #location {
+                .mapBtn {
+                  .mapBtnLists {
+                    .mapBtnList {
+                      &:nth-of-type(3) {
+                        width: 100%;
+                        margin-right: 0;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
 //$Ltablet: 992px;
 @media screen and (max-width: $Ltablet) {
   .about {
@@ -593,6 +620,28 @@ about page scss 작업
                     .organizationWarp {
                       .organizationList {
                         height: 400px;
+                      }
+                    }
+                  }
+                }
+              }
+              #location {
+                .mapBtn {
+                  .mapBtnLists {
+                    .mapBtnList {
+                      .listBox {
+                        .favLocation {
+                          flex-wrap: wrap;
+                          .locaList {
+                            margin-bottom: 10px;
+                          }
+                          .locaList + .locaList {
+                            margin-left: 20px;
+                          }
+                          .locaList:last-child {
+                            margin-left: 0;
+                          }
+                        }
                       }
                     }
                   }
