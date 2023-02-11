@@ -468,12 +468,15 @@ fieldset {
   width: 300px;
   height: 50px;
   border: 1px solid #777;
+}
+#main .wrap .contents .inner .contBtn .btnText {
+  display: block;
+  width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-}
-#main .wrap .contents .inner .contBtn .btnText {
   font-size: 14px;
   color: #777;
 }
@@ -3034,7 +3037,6 @@ $mobile : 576px;
   .gallery .wrap .subContents .subSection .inner .sectionCont #flickr .wrap #list > .item {
     width: 50%;
     float: left;
-    padding: 5px;
   }
 }
 @media screen and (max-width: 576px) {
@@ -3069,10 +3071,15 @@ $mobile : 576px;
     letter-spacing: -0.6px;
     color: #9DA592;
   }
+  .gallery .wrap .subContents .subSection .inner .sectionCont #flickr .searchBox input[type=text] {
+    width: 70%;
+  }
+  .gallery .wrap .subContents .subSection .inner .sectionCont #flickr .searchBox .btnSearch {
+    width: 29%;
+    margin-left: 1%;
+  }
   .gallery .wrap .subContents .subSection .inner .sectionCont #flickr .wrap #list > .item {
     width: 100%;
-    float: left;
-    padding: 5px;
   }
 }
 @keyframes wave {

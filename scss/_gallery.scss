@@ -148,7 +148,6 @@
                     width: calc(100% / 3);
                     float: left;
                     padding: 5px;
-
                     .itemBox {
                       width: 100%;
                       padding: 20px;
@@ -297,7 +296,6 @@
                     > .item {
                       width: calc(100% / 2);
                       float: left;
-                      padding: 5px;
                     }
                   }
                 }
@@ -349,12 +347,19 @@
                 }
               }
               #flickr {
+                .searchBox {
+                  input[type="text"] {
+                    width: 70%;
+                  }
+                  .btnSearch {
+                    width: 29%;
+                    margin-left: 1%;
+                  }
+                }
                 .wrap {
                   #list {
                     > .item {
                       width: 100%;
-                      float: left;
-                      padding: 5px;
                     }
                   }
                 }
