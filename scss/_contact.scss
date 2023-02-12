@@ -101,3 +101,67 @@
 
 }
 
+@media screen and (max-width: $tablet) {
+  .contact {
+    .wrap {
+      .subContents {
+        .subSection {
+          .sectionCont {
+  
+            #contact {
+              flex-direction: column;
+              height: 100%;
+              .contactImg {
+                width: 100%;
+                height: 300px;
+                border-right: 0;
+                border-bottom: 1px solid $borderColor;
+              }
+              .contactBox {
+                width: 100%;
+                #contactForm {
+                  .formBox {
+                    input[type="submit"] {
+                      width: 200px;
+                    }
+                  }
+                }
+              }
+            
+            }
+          }
+        }
+      }
+    }
+  
+  }
+}
+@media screen and (max-width: $mobile) {
+  .contact {
+    .wrap {
+      .subContents {
+        .subSection {
+          .sectionCont {
+  
+            #contact {
+              .contactImg {
+                height: 200px;
+              }
+              .contactBox {
+                #contactForm {
+                  .formBox {
+                    input[type="submit"] {
+                      width: 100%;
+                    }
+                  }
+                }
+              }
+            
+            }
+          }
+        }
+      }
+    }
+  
+  }
+}
