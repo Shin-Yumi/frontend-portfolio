@@ -16,16 +16,14 @@
     <!-- css 연결 -->
     <link rel="stylesheet" href="css/style.css" />
 
-    <!-- swiper 연결 -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-
     <!-- font-awesome -->
     <script
       src="https://kit.fontawesome.com/0e44ab1f63.js"
       crossorigin="anonymous"></script>
+    <!-- email.js  -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"></script>
+    <script defer src="js/contact.js"></script>
+
     <script defer src="js/main.js"></script>
   </head>
   <body>
@@ -151,7 +149,53 @@
                   accusamus, illo voluptas iure nihil?
                 </p>
               </div>
-              <div class="sectionCont">서브 페이지 컨텐츠 영역입니다</div>
+              <div class="sectionCont">
+                <section id="contact">
+                  <div class="contactImg"></div>
+                  <div class="contactBox">
+                    <form method="post" id="contactForm">
+                      <div class="formBox">
+                        <label for="contactName">Your name</label>
+                        <input
+                          name="contactName"
+                          id="contactName"
+                          type="text"
+                          placeholder="name" />
+                      </div>
+                      <div class="formBox">
+                        <label for="contactName">Your Phone</label>
+                        <input
+                          name="contactPhone"
+                          id="contactPhone"
+                          type="text"
+                          placeholder="Phone-number" />
+                      </div>
+                      <div class="formBox">
+                        <label for="contactName">Your Email</label>
+                        <input
+                          class="contactEmail"
+                          name="contactEmail"
+                          id="contactEmail"
+                          type="email"
+                          placeholder="Email" />
+                      </div>
+                      <div class="formBox">
+                        <label for="contactName">Your Message</label>
+                        <textarea
+                          class="contactMsg"
+                          name="contactMsg"
+                          id="contactMsg"
+                          cols="5"
+                          rows="5"
+                          placeholder="Your Message"></textarea>
+                      </div>
+                      <div class="formBox">
+                        <input class="submit" value="submit" type="submit" />
+                      </div>
+                    </form>
+                  </div>
+                </section>
+              </div>
             </div>
           </section>
         </div>
