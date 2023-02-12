@@ -3,16 +3,12 @@ const main = document.querySelector("#main");
 // tablet 부터 적용되는 서브메뉴바를 위한 변수
 const hamMenu = document.querySelector(".hamMenu");
 const menuMo = document.querySelector("#menuMo");
-
 const topBtn = document.querySelector(".topBtn");
-
 
 window.addEventListener("scroll", () => {
   let scroll = window.scrollY;
 
   //console.log(scroll);
-  
-
   if (scroll >= 300) {
     topBtn.classList.add("on");
   } else {
@@ -22,7 +18,7 @@ window.addEventListener("scroll", () => {
 
 topBtn.addEventListener("click", (e) => {
   e.preventDefault();
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+  window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
 // 서브 메뉴바
@@ -38,6 +34,16 @@ function subMenu(val) {
 }
 
 if (document.querySelector("#main") !== null) {
+  const board = main.querySelector(".boardCont");
+  const boardTextArea = board.querySelector(".boardTextArea");
+  const boardTop = board.offsetTop;
+
+  //console.log(boardTop);
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > boardTop) {
+      boardTextArea.classList.add("on");
+    }
+  });
   // gallery section에 적용되는 슬라이더, 탭메뉴를 위한 변수
   const gallerySection = document.querySelector(".galleryCont");
   const galleryTabs = gallerySection.querySelectorAll(".galleryTab");

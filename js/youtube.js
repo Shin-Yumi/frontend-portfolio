@@ -1,10 +1,10 @@
+const youtube = document.querySelector(".youtube");
 const youtubeList = document.querySelector("#youtube");
 const key = "AIzaSyA6RtwwaDd7lctAx_sccqFQtFnSErCl-jc";
 const playlistId = "PLzCu2b6-wIU-bhiFEskx9kppoLyJS-l5G";
 const num = 10;
 
 const url = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&key=${key}&playlistId=${playlistId}&maxResults=${num}`;
-
 
 window.addEventListener("load", () => {
   youtubeList.classList.add("on");
@@ -59,15 +59,14 @@ youtubeList.addEventListener("click", (e) => {
       <iframe src="https://www.youtube.com/embed/${vidId}" frameborder="0" width='100%' height='100%' allowfullscreen></iframe>
       <span class='btnClose'>close</span>
     `;
-  youtubeList.append(pop);
+  youtube.append(pop);
 });
 
 //pop 모달생성 후 close 버튼 이벤트
-youtubeList.addEventListener("click", (e) => {
-  const pop = youtubeList.querySelector(".pop");
+youtube.addEventListener("click", (e) => {
+  const pop = youtube.querySelector(".pop");
   if (pop) {
     const close = pop.querySelector(".btnClose");
     if (e.target === close) pop.remove();
   }
 });
-

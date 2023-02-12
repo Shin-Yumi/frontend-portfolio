@@ -13,10 +13,10 @@ function sendEmail() {
   console.log(templateParams);
   emailjs.send("service_a67ezzs", "template_g0rfbw9", templateParams).then(
     function () {
-      console.log("SUCCESS!");
+      alert("SUCCESS!");
     },
     function (error) {
-      console.log("FAILED...", error);
+      alert("FAILED...", error);
     }
   );
 }

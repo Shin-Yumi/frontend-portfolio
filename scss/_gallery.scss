@@ -12,78 +12,83 @@
             padding: 0 30px 60px 30px;
           }
           .sectionCont {
-            //youtube scss
-            #youtube {
-              padding: 0 20px;
-              display: flex;
-              align-items: center;
-              flex-wrap: wrap;
-              opacity: 0;
-              transform: translateY(100px);
-              transition: 1s;
-              &.on {
-                opacity: 1;
-                transform: translateY(0);
-              }
-              .youtubeCont {
-                width: 49.5%;
-                padding: 20px;
-                border: 1px solid $borderColor;
-                margin-right: 1%;
-                margin-top: 1%;
-                box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
-                .pic {
-                  width: 100%;
-                  display: block;
-                  margin-bottom: 20px;
-                  img {
+            .youtube {
+              //youtube scss
+              #youtube {
+                padding: 0 20px;
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                opacity: 0;
+                transform: translateY(100px);
+                transition: 1s;
+                &.on {
+                  opacity: 1;
+                  transform: translateY(0);
+                }
+                .youtubeCont {
+                  width: 49.5%;
+                  padding: 20px;
+                  border: 1px solid $borderColor;
+                  margin-right: 1%;
+                  margin-top: 1%;
+                  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+                  .pic {
                     width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                    filter: grayscale(0.8);
+                    display: block;
+                    margin-bottom: 20px;
+                    img {
+                      width: 100%;
+                      height: 100%;
+                      object-fit: cover;
+                      filter: grayscale(0.8);
+                    }
                   }
-                }
-                .con {
-                  > h2 {
-                    @include sectionText(
-                      $captionFz: 18px,
-                      $captionFontColor: $textColor
-                    );
-                    margin-bottom: 8px;
-                  }
+                  .con {
+                    > h2 {
+                      @include sectionText(
+                        $captionFz: 18px,
+                        $captionFontColor: $textColor
+                      );
+                      margin-bottom: 8px;
+                    }
 
-                  > span {
-                    @include sectionText(
-                      $captionFz: 16px,
-                      $captionFontColor: $hoverColor
-                    );
+                    > span {
+                      @include sectionText(
+                        $captionFz: 16px,
+                        $captionFontColor: $hoverColor
+                      );
+                    }
                   }
-                }
-                &:nth-of-type(-n + 2) {
-                  margin-top: 0;
-                }
-                &:nth-of-type(even) {
-                  margin-right: 0;
+                  &:nth-of-type(-n + 2) {
+                    margin-top: 0;
+                  }
+                  &:nth-of-type(even) {
+                    margin-right: 0;
+                  }
                 }
               }
               figure.pop {
-                width: 100%;
-                height: 100vh;
-
                 position: fixed;
                 left: 0;
                 top: 0;
-                z-index: 9999;
+                z-index: 100;
+                width: 100%;
+                height: 100vh;
                 background: rgba(0, 0, 0, 0.8);
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                padding: 5vw;
+                padding: 10vh;
                 overflow: hidden;
+                iframe{
+                  width: 100%;
+                  height: 90%;
+                }
                 .btnClose {
                   position: absolute;
-                  top: 50px;
-                  right: 50px;
+                  top: 20px;
+                  right: 20px;
                   color: #fff;
                   cursor: pointer;
                 }
@@ -225,12 +230,15 @@
                 position: fixed;
                 left: 0;
                 top: 0;
-                z-index: 1000;
+                z-index: 100;
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                padding: 10vh;
                 img {
+                  width: 100%;
                   height: 100%;
+                  object-fit: cover;
                 }
                 span {
                   position: absolute;
@@ -255,26 +263,29 @@
         .subSection {
           .inner {
             .sectionCont {
-              #youtube {
-                .youtubeCont {
-                  .con {
-                    > h2 {
-                      @include sectionText(
-                        $captionFz: 16px,
-                        $captionFontColor: $textColor
-                      );
-                      margin-bottom: 8px;
-                    }
-
-                    > span {
-                      @include sectionText(
-                        $captionFz: 14px,
-                        $captionFontColor: $hoverColor
-                      );
+              .youtube {
+                #youtube {
+                  .youtubeCont {
+                    .con {
+                      > h2 {
+                        @include sectionText(
+                          $captionFz: 16px,
+                          $captionFontColor: $textColor
+                        );
+                        margin-bottom: 8px;
+                      }
+  
+                      > span {
+                        @include sectionText(
+                          $captionFz: 14px,
+                          $captionFontColor: $hoverColor
+                        );
+                      }
                     }
                   }
                 }
               }
+              
             }
           }
         }
@@ -290,7 +301,28 @@
         .subSection {
           .inner {
             .sectionCont {
+              .youtube {
+                figure.pop {
+                  padding: 7vh;
+                  iframe{
+                    height: 80%;
+                  }
+                  .btnClose {
+                    position: absolute;
+                    top: 20px;
+                    right: 20px;
+                    color: #fff;
+                    cursor: pointer;
+                  }
+                }
+              }
               #flickr {
+                aside {
+                  padding: 7vh;
+                  img {
+                    height: 80%;
+                  }
+                }
                 .wrap {
                   #list {
                     > .item {
@@ -317,35 +349,51 @@
               padding: 0 30px 30px 30px;
             }
             .sectionCont {
-              #youtube {
-                flex-direction: column;
-                .youtubeCont {
-                  width: 100%;
-                  margin-right: 0;
-                  .pic {
-                    margin-bottom: 10px;
+              .youtube {
+                figure.pop {
+                  padding: 5vh;
+                  iframe{
+                    height: 50%;
                   }
-                  &:nth-of-type(n + 2) {
-                    margin-top: 1%;
+                  .btnClose {
+                    position: absolute;
+                    top: 20px;
+                    right: 20px;
+                    color: #fff;
+                    cursor: pointer;
                   }
-                  .con {
-                    > h2 {
-                      @include sectionText(
-                        $captionFz: 14px,
-                        $captionFontColor: $textColor
-                      );
-                      margin-bottom: 8px;
+                }
+                #youtube {
+                  flex-direction: column;
+                  .youtubeCont {
+                    width: 100%;
+                    margin-right: 0;
+                    .pic {
+                      margin-bottom: 10px;
                     }
-
-                    > span {
-                      @include sectionText(
-                        $captionFz: 12px,
-                        $captionFontColor: $hoverColor
-                      );
+                    &:nth-of-type(n + 2) {
+                      margin-top: 1%;
+                    }
+                    .con {
+                      > h2 {
+                        @include sectionText(
+                          $captionFz: 14px,
+                          $captionFontColor: $textColor
+                        );
+                        margin-bottom: 8px;
+                      }
+  
+                      > span {
+                        @include sectionText(
+                          $captionFz: 12px,
+                          $captionFontColor: $hoverColor
+                        );
+                      }
                     }
                   }
                 }
               }
+              
               #flickr {
                 .searchBox {
                   input[type="text"] {
@@ -361,6 +409,47 @@
                     > .item {
                       width: 100%;
                     }
+                  }
+                }
+                aside {
+                  padding: 5vh;
+                  img {
+                    height: 60%;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: $sMobile) {
+  .gallery {
+    .wrap {
+      .subContents {
+        .subSection {
+          .inner {
+            .sectionExp {
+              padding: 0 30px 30px 30px;
+            }
+            .sectionCont {
+              .youtube {
+                figure.pop {
+                  padding: 3vh;
+                  iframe{
+                    height: 30%;
+                  }
+                }
+
+              }
+              
+              #flickr {
+                aside {
+                  padding: 3vh;
+                  img {
+                    height: 40%;
                   }
                 }
               }
