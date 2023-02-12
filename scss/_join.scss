@@ -41,6 +41,9 @@ join scss 작업
                       }
                       .joinInput {
                         width: 80%;
+                        .eduBox {
+                          width: 100%;
+                        }
                         .radioBox {
                           display: flex;
                           align-items: center;
@@ -242,9 +245,6 @@ join scss 작업
                         }
                         .joinInput {
                           width: 70%;
-                          select {
-                            margin: 0 10px;
-                          }
                           input[type="submit"] {
                             width: 100%;
                             height: 50px;
@@ -310,23 +310,7 @@ join scss 작업
                         }
                         .joinInput {
                           width: 70%;
-                          .birthBox {
-                            width: 100%;
-                            display: flex;
-                            align-items: center;
-                            flex-direction: column;
-                            border: 0;
-                            .birthList {
-                              width: 100%;
-                            }
-                            .birthList + .birthList {
-                              margin-top: 10px;
-                            }
-                          }
 
-                          select {
-                            margin: 0 10px;
-                          }
                           input[type="submit"] {
                             width: 100%;
                             height: 50px;

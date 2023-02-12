@@ -388,6 +388,32 @@ fieldset {
   display: block;
 }
 
+.contBtn {
+  width: 300px;
+  height: 50px;
+  border: 1px solid #777;
+}
+.contBtn .btnText {
+  display: block;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 14px;
+  color: #777;
+}
+.contBtn .btnText span {
+  text-transform: uppercase;
+}
+.contBtn:hover {
+  background-color: #9da592;
+}
+.contBtn:hover .btnText {
+  color: #fff;
+}
+
 @media screen and (max-width: 992px) {
   .topBtn {
     width: 40px;
@@ -398,6 +424,10 @@ fieldset {
     left: 12px;
     width: 15px;
     height: 15px;
+  }
+  .contBtn {
+    width: 200px;
+    height: 40px;
   }
 }
 @media screen and (max-width: 576px) {
@@ -410,6 +440,9 @@ fieldset {
     left: 10px;
     width: 10px;
     height: 10px;
+  }
+  .contBtn {
+    width: 100%;
   }
 }
 /**
@@ -463,31 +496,6 @@ fieldset {
   text-transform: uppercase;
   color: #333;
   font-weight: 400;
-}
-#main .wrap .contents .inner .contBtn {
-  width: 300px;
-  height: 50px;
-  border: 1px solid #777;
-}
-#main .wrap .contents .inner .contBtn .btnText {
-  display: block;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  font-size: 14px;
-  color: #777;
-}
-#main .wrap .contents .inner .contBtn .btnText span {
-  text-transform: uppercase;
-}
-#main .wrap .contents .inner .contBtn:hover {
-  background-color: #9da592;
-}
-#main .wrap .contents .inner .contBtn:hover .btnText {
-  color: #fff;
 }
 #main .wrap .mainCont {
   width: 100%;
@@ -642,25 +650,6 @@ fieldset {
 }
 #main .wrap .galleryCont .inner .galleryTextCont .contBtn {
   width: 100%;
-  height: 50px;
-  border: 1px solid #777;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-}
-#main .wrap .galleryCont .inner .galleryTextCont .contBtn .btnText {
-  font-size: 14px;
-  color: #777;
-}
-#main .wrap .galleryCont .inner .galleryTextCont .contBtn .btnText span {
-  text-transform: uppercase;
-}
-#main .wrap .galleryCont .inner .galleryTextCont .contBtn:hover {
-  background-color: #9da592;
-}
-#main .wrap .galleryCont .inner .galleryTextCont .contBtn:hover .btnText {
-  color: #fff;
 }
 #main .wrap .galleryCont .inner .galleryTabCont {
   width: 70%;
@@ -1148,10 +1137,6 @@ fieldset {
     color: #333;
     font-weight: 400;
   }
-  #main .wrap .contents .inner .contBtn {
-    width: 200px;
-    height: 40px;
-  }
   #main .wrap .mainCont .visualCont .visualImgBox {
     width: 300px;
     height: 400px;
@@ -1253,10 +1238,6 @@ fieldset {
     text-transform: uppercase;
     color: #333;
     font-weight: 400;
-  }
-  #main .wrap .contents .inner .contBtn {
-    width: 200px;
-    height: 40px;
   }
   #main .wrap .mainCont .visualCont .visualImgBox {
     width: 200px;
@@ -1400,9 +1381,6 @@ fieldset {
     text-transform: uppercase;
     color: #333;
     font-weight: 400;
-  }
-  #main .wrap .contents .inner .contBtn {
-    width: 100%;
   }
   #main .wrap .mainCont .visualCont .visualImgBox {
     width: 100%;
@@ -2214,14 +2192,12 @@ about page scss 작업
   color: #777;
 }
 .about .sectionCont #location {
-  padding-left: 50px;
-  margin-right: -30px;
+  width: 80%;
+  margin-left: 20%;
 }
 .about .sectionCont #location #map {
-  width: 100%;
   height: 400px;
   border: 1px solid #777777;
-  border-right: 0;
   filter: sepia(20%) grayscale(50%);
 }
 .about .sectionCont #location .mapTxt {
@@ -2241,7 +2217,7 @@ about page scss 작업
   margin-top: 30px;
 }
 .about .sectionCont #location .mapBtn .mapBtnTitle {
-  width: 20%;
+  width: 15%;
   font-family: "S-CoreDream-3Light";
   font-size: 16px;
   line-height: 1.3;
@@ -2249,11 +2225,10 @@ about page scss 작업
   color: #333333;
 }
 .about .sectionCont #location .mapBtn .mapBtnLists {
-  width: 80%;
+  width: 85%;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  padding-right: 50px;
 }
 .about .sectionCont #location .mapBtn .mapBtnLists .mapBtnList {
   width: 49%;
@@ -2432,11 +2407,15 @@ about page scss 작업
 .about .sectionCont #location .mapBtn .mapBtnLists .mapBtnList:nth-of-type(even) {
   margin-right: 0;
 }
+.about .sectionCont #location .mapBtn .mapBtnLists .mapBtnList:nth-of-type(3) {
+  width: 100%;
+  margin-right: 0;
+}
 
 @media screen and (max-width: 1024px) {
-  .about .wrap .subContents .subSection .inner .sectionCont #location .mapBtn .mapBtnLists .mapBtnList:nth-of-type(3) {
-    width: 100%;
-    margin-right: 0;
+  .about .wrap .subContents .subSection .inner .sectionCont #location {
+    width: 90%;
+    margin-left: 10%;
   }
 }
 @media screen and (max-width: 992px) {
@@ -2475,11 +2454,10 @@ about page scss 작업
     margin-top: 30px;
   }
   .about .wrap .subContents .subSection .inner .sectionCont #location .mapBtn .mapBtnLists {
-    width: 80%;
+    width: 85%;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    padding-right: 50px;
   }
   .about .wrap .subContents .subSection .inner .sectionCont #location .mapBtn .mapBtnLists .mapBtnList:nth-of-type(3) {
     width: 100%;
@@ -2509,18 +2487,15 @@ about page scss 작업
     font-weight: 400;
   }
   .about .wrap .subContents .subSection .inner .sectionCont #location {
-    padding-left: 0;
-    margin-left: -30px;
-    margin-right: -30px;
+    width: 100%;
+    margin-left: 0;
   }
   .about .wrap .subContents .subSection .inner .sectionCont #location #map {
     width: 100%;
     height: 300px;
-    border-left: 0;
   }
   .about .wrap .subContents .subSection .inner .sectionCont #location .mapTxt {
-    padding-left: 30px;
-    width: 60%;
+    width: 70%;
     margin-top: 20px;
   }
   .about .wrap .subContents .subSection .inner .sectionCont #location .mapTxt p {
@@ -2531,10 +2506,14 @@ about page scss 작업
     color: #777;
   }
   .about .wrap .subContents .subSection .inner .sectionCont #location .mapBtn {
-    padding-left: 30px;
+    flex-direction: column;
+  }
+  .about .wrap .subContents .subSection .inner .sectionCont #location .mapBtn .mapBtnTitle {
+    width: 100%;
+    margin-bottom: 30px;
   }
   .about .wrap .subContents .subSection .inner .sectionCont #location .mapBtn .mapBtnLists {
-    padding-right: 30px;
+    width: 100%;
   }
   .about .wrap .subContents .subSection .inner .sectionCont #location .mapBtn .mapBtnLists .mapBtnList {
     width: 100%;
@@ -2588,15 +2567,8 @@ about page scss 작업
     border-left: none;
     border-bottom: 1px solid #777777;
   }
-  .about .wrap .subContents .subSection .inner .sectionCont #location .mapBtn {
-    flex-direction: column;
-  }
-  .about .wrap .subContents .subSection .inner .sectionCont #location .mapBtn .mapBtnTitle {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-  .about .wrap .subContents .subSection .inner .sectionCont #location .mapBtn .mapBtnLists {
-    width: 100%;
+  .about .wrap .subContents .subSection .inner .sectionCont #location .mapTxt {
+    width: 80%;
   }
 }
 @media screen and (max-width: 425px) {
@@ -3137,6 +3109,9 @@ join scss 작업
 .join .wrap .subContents .subSection .sectionCont .joinCont > .inner .joinWrap .joinListWrap .joinList .joinBox .joinInput {
   width: 80%;
 }
+.join .wrap .subContents .subSection .sectionCont .joinCont > .inner .joinWrap .joinListWrap .joinList .joinBox .joinInput .eduBox {
+  width: 100%;
+}
 .join .wrap .subContents .subSection .sectionCont .joinCont > .inner .joinWrap .joinListWrap .joinList .joinBox .joinInput .radioBox {
   display: flex;
   align-items: center;
@@ -3305,9 +3280,6 @@ join scss 작업
   .join .wrap .subContents .subSection .sectionCont .joinCont > .inner .joinWrap .joinListWrap .joinList .joinBox .joinInput {
     width: 70%;
   }
-  .join .wrap .subContents .subSection .sectionCont .joinCont > .inner .joinWrap .joinListWrap .joinList .joinBox .joinInput select {
-    margin: 0 10px;
-  }
   .join .wrap .subContents .subSection .sectionCont .joinCont > .inner .joinWrap .joinListWrap .joinList .joinBox .joinInput input[type=submit] {
     width: 100%;
     height: 50px;
@@ -3347,22 +3319,6 @@ join scss 작업
   }
   .join .wrap .subContents .subSection .sectionCont .joinCont > .inner .joinWrap .joinListWrap .joinList .joinBox .joinInput {
     width: 70%;
-  }
-  .join .wrap .subContents .subSection .sectionCont .joinCont > .inner .joinWrap .joinListWrap .joinList .joinBox .joinInput .birthBox {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    border: 0;
-  }
-  .join .wrap .subContents .subSection .sectionCont .joinCont > .inner .joinWrap .joinListWrap .joinList .joinBox .joinInput .birthBox .birthList {
-    width: 100%;
-  }
-  .join .wrap .subContents .subSection .sectionCont .joinCont > .inner .joinWrap .joinListWrap .joinList .joinBox .joinInput .birthBox .birthList + .birthList {
-    margin-top: 10px;
-  }
-  .join .wrap .subContents .subSection .sectionCont .joinCont > .inner .joinWrap .joinListWrap .joinList .joinBox .joinInput select {
-    margin: 0 10px;
   }
   .join .wrap .subContents .subSection .sectionCont .joinCont > .inner .joinWrap .joinListWrap .joinList .joinBox .joinInput input[type=submit] {
     width: 100%;

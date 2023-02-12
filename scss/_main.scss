@@ -38,33 +38,7 @@
         .contentsTitle {
           @include sectionTitle;
         }
-        // button css
-        .contBtn {
-          width: 300px;
-          height: 50px;
-          border: 1px solid #777;
-
-          .btnText {
-            display: block;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            font-size: 14px;
-            color: #777;
-            span {
-              text-transform: uppercase;
-            }
-          }
-          &:hover {
-            background-color: #9da592;
-            .btnText {
-              color: #fff;
-            }
-          }
-        }
+        
       }
     }
     //mainCont 영역
@@ -210,29 +184,10 @@
           .contentsText {
             padding-left: 20px;
             margin-top: 30px;
-          }
-          .contBtn {
-            width: 100%;
-            height: 50px;
-            border: 1px solid #777;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            .btnText {
-              font-size: 14px;
-              color: #777;
-              span {
-                text-transform: uppercase;
-              }
-            }
-            &:hover {
-              background-color: #9da592;
-              .btnText {
-                color: #fff;
-              }
-            }
-          }
+          }// button css
+        .contBtn {
+          width: 100%;
+        }
         }
         .galleryTabCont {
           width: 70%;
@@ -756,10 +711,7 @@
           .contentsTitle {
             @include sectionTitle($fz: 40px);
           }
-          .contBtn {
-            width: 200px;
-            height: 40px;
-          }
+          
         }
       }
 
@@ -881,10 +833,6 @@
           width: 100%;
           .contentsTitle {
             @include sectionTitle($fz: 30px);
-          }
-          .contBtn {
-            width: 200px;
-            height: 40px;
           }
         }
       }
@@ -1075,10 +1023,7 @@
           .contentsTitle {
             @include sectionTitle($fz: 24px);
           }
-          // button css
-          .contBtn {
-            width: 100%;
-          }
+
         }
       }
       //mainCont 영역
