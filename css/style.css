@@ -258,22 +258,12 @@
   margin-top: 4px;
   margin-bottom: 20px;
 }
-#footer > .inner .footerTop .footerEmail .emailBtn {
-  width: 100%;
-  height: 30px;
-  border: 1px solid #777777;
+#footer > .inner .footerTop .footerEmail .contBtn {
+  width: 50%;
+  height: 40px;
 }
-#footer > .inner .footerTop .footerEmail .emailBtn .emalBtnText {
-  display: block;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: "Aboreto";
+#footer > .inner .footerTop .footerEmail .contBtn .btnText {
   font-size: 12px;
-  text-transform: uppercase;
-  color: #777;
 }
 #footer > .inner .footerTop .footerSns .snsWrap {
   margin-top: 4px;
@@ -304,7 +294,7 @@
   font-weight: normal;
   color: #777;
 }
-#footer > .inner .footerBottom .contactEmail {
+#footer > .inner .footerBottom .copyright {
   font-size: 14px;
   line-height: 1;
   letter-spacing: normal;
@@ -1333,16 +1323,6 @@ fieldset {
     font-size: 12px;
     margin-bottom: 10px;
   }
-  #main .wrap #footer .inner .footerTop .footerEmail .emailSendBox .emailForm .emailInput {
-    width: 150px;
-  }
-  #main .wrap #footer .inner .footerTop .footerEmail .emailSendBox .emailForm .emailBtn {
-    width: 50px;
-    height: 20px;
-  }
-  #main .wrap #footer .inner .footerTop .footerEmail .emailSendBox .emailForm .emailBtn .emalBtnText {
-    font-size: 10px;
-  }
   #main .wrap #footer .inner .footerTop .footerSns .snsWrap .snsList .snsLink {
     font-size: 12px;
   }
@@ -1567,15 +1547,8 @@ fieldset {
     font-size: 10px;
     margin-bottom: 10px;
   }
-  #main .wrap #footer .inner .footerTop .footerEmail .emailSendBox .emailForm .emailInput {
-    width: 150px;
-  }
-  #main .wrap #footer .inner .footerTop .footerEmail .emailSendBox .emailForm .emailBtn {
-    width: 50px;
-    height: 20px;
-  }
-  #main .wrap #footer .inner .footerTop .footerEmail .emailSendBox .emailForm .emailBtn .emalBtnText {
-    font-size: 10px;
+  #main .wrap #footer .inner .footerTop .footerEmail .contBtn {
+    height: 30px;
   }
   #main .wrap #footer .inner .footerTop .footerSns .snsWrap {
     display: flex;
@@ -1927,16 +1900,6 @@ sub section scss 작업
     font-size: 12px;
     margin-bottom: 10px;
   }
-  .subPage .wrap #footer .inner .footerTop .footerEmail .emailSendBox .emailForm .emailInput {
-    width: 150px;
-  }
-  .subPage .wrap #footer .inner .footerTop .footerEmail .emailSendBox .emailForm .emailBtn {
-    width: 50px;
-    height: 20px;
-  }
-  .subPage .wrap #footer .inner .footerTop .footerEmail .emailSendBox .emailForm .emailBtn .emalBtnText {
-    font-size: 10px;
-  }
   .subPage .wrap #footer .inner .footerTop .footerSns .snsWrap .snsList .snsLink {
     font-size: 12px;
   }
@@ -2017,15 +1980,8 @@ sub section scss 작업
     font-size: 10px;
     margin-bottom: 10px;
   }
-  .subPage .wrap #footer .inner .footerTop .footerEmail .emailSendBox .emailForm .emailInput {
-    width: 150px;
-  }
-  .subPage .wrap #footer .inner .footerTop .footerEmail .emailSendBox .emailForm .emailBtn {
-    width: 50px;
-    height: 20px;
-  }
-  .subPage .wrap #footer .inner .footerTop .footerEmail .emailSendBox .emailForm .emailBtn .emalBtnText {
-    font-size: 10px;
+  .subPage .wrap #footer .inner .footerTop .footerEmail .contBtn {
+    height: 30px;
   }
   .subPage .wrap #footer .inner .footerTop .footerSns .snsWrap {
     display: flex;

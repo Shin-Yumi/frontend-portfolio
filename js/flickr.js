@@ -23,7 +23,7 @@ const method2 = "flickr.photos.search";
 const key = "aa8b086c0a30b1699395af33dd844533";
 
 //api 가져올 요소 수
-const per_page = 100;
+const per_page = 30;
 
 //api
 const url = `${base}method=${method}&api_key=${key}&per_page=${per_page}&format=json&nojsoncallback=1`;
