@@ -14,7 +14,7 @@
   width: 100%;
   height: 80px;
   line-height: 80px;
-  background: #ECECE3;
+  background: #ecece3;
   z-index: 30;
 }
 #header .inner {
@@ -26,7 +26,7 @@
   align-items: center;
   justify-content: space-between;
   border: 1px solid #777;
-  background: #ECECE3;
+  background: #ecece3;
 }
 #header .inner .logo .headerLogo a {
   display: block;
@@ -138,32 +138,32 @@
   letter-spacing: -0.56px;
   line-height: 1;
   text-transform: uppercase;
-  color: #ECECE3;
+  color: #ecece3;
   font-weight: 400;
   padding-bottom: 30px;
-  border-bottom: 1px solid #ECECE3;
+  border-bottom: 1px solid #ecece3;
 }
 #header .inner #menuMo > .inner .mobileMenu .mMenuWrap {
   width: 100%;
 }
 #header .inner #menuMo > .inner .mobileMenu .mMenuWrap .mMenuList {
   line-height: 20px;
-  border-bottom: 1px solid #ECECE3;
+  border-bottom: 1px solid #ecece3;
   padding: 10px 0;
 }
 #header .inner #menuMo > .inner .mobileMenu .mMenuWrap .mMenuList .mMenuTitle {
   font-size: 16px;
-  color: #ECECE3;
+  color: #ecece3;
 }
 #header .inner #menuMo > .inner .mobileMenu .mMenuWrap .mMenuList > ul {
   padding: 5px 0 0 20px;
 }
 #header .inner #menuMo > .inner .mobileMenu .mMenuWrap .mMenuList > ul > li a {
   font-size: 14px;
-  color: #ECECE3;
+  color: #ecece3;
 }
 #header .inner #menuMo > .inner .mobileMenu .mMenuWrap .mMenuList > ul > li:hover a {
-  color: #9DA592;
+  color: #9da592;
 }
 #header .inner #menuMo > .inner .mobileMenu .mMenuFooter {
   display: flex;
@@ -182,7 +182,7 @@
   align-items: center;
   justify-content: center;
   font-size: 20px;
-  color: #ECECE3;
+  color: #ecece3;
 }
 #header .inner #menuMo > .inner .mobileMenu .mMenuFooter .mMenuFooterList a .notion-icon {
   width: 20px;
@@ -302,6 +302,111 @@
   color: #777;
 }
 
+@media screen and (max-width: 1024px) {
+  #header {
+    height: 60px;
+    line-height: 60px;
+  }
+  #header .inner {
+    width: 100%;
+  }
+  #header .inner .logo .headerLogo a {
+    font-size: 26px;
+  }
+  #header .inner #menuPC .menuWrap .menuList .menuLink {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 778px) {
+  #header {
+    height: 60px;
+    line-height: 60px;
+  }
+  #header .inner {
+    width: 100%;
+  }
+  #header .inner .logo .headerLogo a {
+    font-size: 26px;
+  }
+  #header .inner #menuPC {
+    display: none;
+  }
+  #header .inner .hamMenu {
+    display: block;
+  }
+  #header .inner #menuMo {
+    display: block;
+  }
+  #footer .inner .footerTop {
+    flex-direction: column;
+    align-items: center;
+  }
+  #footer .inner .footerTop .footerLogo {
+    margin-bottom: 30px;
+  }
+  #footer .inner .footerTop .footerLogo .logo .logoText .logoTitle {
+    font-family: "Aboreto";
+    font-size: 24px;
+    letter-spacing: -0.56px;
+    line-height: 1;
+    text-transform: uppercase;
+    color: #333;
+    font-weight: 400;
+  }
+  #footer .inner .footerTop .footerLogo .logo .logoText .logoSub {
+    font-size: 10px;
+  }
+  #footer .inner .footerTop .footerContTitle {
+    font-size: 14px;
+  }
+  #footer .inner .footerTop .footerContent {
+    flex-direction: column;
+  }
+  #footer .inner .footerTop .footerEmail {
+    text-align: center;
+    margin-right: 0;
+    margin-bottom: 12px;
+  }
+  #footer .inner .footerTop .footerEmail .emailText {
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+  #footer .inner .footerTop .footerEmail .contBtn {
+    width: 100%;
+    height: 30px;
+  }
+  #footer .inner .footerTop .footerSns {
+    margin-top: 20px;
+    text-align: center;
+    width: 100%;
+  }
+  #footer .inner .footerTop .footerSns .snsWrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #footer .inner .footerTop .footerSns .snsWrap .snsList {
+    margin-right: 6px;
+  }
+  #footer .inner .footerTop .footerSns .snsWrap .snsList .snsLink {
+    font-size: 12px;
+  }
+  #footer .inner .footerBottom {
+    flex-direction: column;
+  }
+  #footer .inner .footerBottom .footerLink {
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+  #footer .inner .footerBottom .copyright {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 576px) {
+  #header .inner .logo .headerLogo a {
+    font-size: 20px;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -1096,19 +1201,6 @@ fieldset {
   #main .wrap {
     padding-top: 60px;
   }
-  #main .wrap #header {
-    height: 60px;
-    line-height: 60px;
-  }
-  #main .wrap #header .inner {
-    width: 100%;
-  }
-  #main .wrap #header .inner .logo .headerLogo a {
-    font-size: 26px;
-  }
-  #main .wrap #header .inner #menuPC .menuWrap .menuList .menuLink {
-    font-size: 14px;
-  }
   #main .wrap .contents {
     height: calc(100vh - 60px);
   }
@@ -1195,25 +1287,6 @@ fieldset {
   #main .wrap {
     padding-top: 60px;
   }
-  #main .wrap #header {
-    height: 60px;
-    line-height: 60px;
-  }
-  #main .wrap #header .inner {
-    width: 100%;
-  }
-  #main .wrap #header .inner .logo .headerLogo a {
-    font-size: 26px;
-  }
-  #main .wrap #header .inner #menuPC {
-    display: none;
-  }
-  #main .wrap #header .inner .hamMenu {
-    display: block;
-  }
-  #main .wrap #header .inner #menuMo {
-    display: block;
-  }
   #main .wrap .contents .inner {
     width: 100%;
   }
@@ -1298,45 +1371,8 @@ fieldset {
     color: #333;
     font-weight: 400;
   }
-  #main .wrap #footer .inner .footerTop {
-    padding: 20px 50px 20px 20px;
-  }
-  #main .wrap #footer .inner .footerTop .footerLogo .logo .logoText .logoTitle {
-    font-family: "Aboreto";
-    font-size: 24px;
-    letter-spacing: -0.56px;
-    line-height: 1;
-    text-transform: uppercase;
-    color: #333;
-    font-weight: 400;
-  }
-  #main .wrap #footer .inner .footerTop .footerLogo .logo .logoText .logoSub {
-    font-size: 10px;
-  }
-  #main .wrap #footer .inner .footerTop .footerContTitle {
-    font-size: 14px;
-  }
-  #main .wrap #footer .inner .footerTop .footerEmail {
-    margin-right: 50px;
-  }
-  #main .wrap #footer .inner .footerTop .footerEmail .emailText {
-    font-size: 12px;
-    margin-bottom: 10px;
-  }
-  #main .wrap #footer .inner .footerTop .footerSns .snsWrap .snsList .snsLink {
-    font-size: 12px;
-  }
-  #main .wrap #footer .inner .footerBottom .footerLink {
-    font-size: 12px;
-  }
-  #main .wrap #footer .inner .footerBottom .contactEmail {
-    font-size: 12px;
-  }
 }
 @media screen and (max-width: 576px) {
-  #main .wrap #header .inner .logo .headerLogo a {
-    font-size: 20px;
-  }
   #main .wrap .contents {
     height: calc(100vh - 60px);
   }
@@ -1525,47 +1561,6 @@ fieldset {
   }
   #main .wrap .boardCont .inner .boardInfo .sectionAccodion .tab label h3 {
     font-size: 16px;
-  }
-  #main .wrap #footer .inner .footerTop {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  #main .wrap #footer .inner .footerTop .footerLogo {
-    margin-bottom: 30px;
-  }
-  #main .wrap #footer .inner .footerTop .footerContTitle {
-    font-size: 12px;
-  }
-  #main .wrap #footer .inner .footerTop .footerContent {
-    flex-direction: column;
-  }
-  #main .wrap #footer .inner .footerTop .footerEmail {
-    margin-right: 0;
-    margin-bottom: 12px;
-  }
-  #main .wrap #footer .inner .footerTop .footerEmail .emailText {
-    font-size: 10px;
-    margin-bottom: 10px;
-  }
-  #main .wrap #footer .inner .footerTop .footerEmail .contBtn {
-    height: 30px;
-  }
-  #main .wrap #footer .inner .footerTop .footerSns .snsWrap {
-    display: flex;
-    align-items: center;
-  }
-  #main .wrap #footer .inner .footerTop .footerSns .snsWrap .snsList {
-    padding-bottom: 0;
-    padding-right: 5px;
-  }
-  #main .wrap #footer .inner .footerTop .footerSns .snsWrap .snsList .snsLink {
-    font-size: 12px;
-  }
-  #main .wrap #footer .inner .footerBottom .footerLink {
-    font-size: 12px;
-  }
-  #main .wrap #footer .inner .footerBottom .contactEmail {
-    font-size: 12px;
   }
 }
 @keyframes rotating {
@@ -1800,25 +1795,6 @@ sub section scss 작업
   .subPage .wrap {
     padding-top: 60px;
   }
-  .subPage .wrap #header {
-    height: 60px;
-    line-height: 60px;
-  }
-  .subPage .wrap #header .inner {
-    width: 100%;
-  }
-  .subPage .wrap #header .inner .logo .headerLogo a {
-    font-size: 26px;
-  }
-  .subPage .wrap #header .inner #menuPC {
-    display: none;
-  }
-  .subPage .wrap #header .inner .hamMenu {
-    display: block;
-  }
-  .subPage .wrap #header .inner #menuMo {
-    display: block;
-  }
   .subPage .wrap .subContents {
     padding: 0 30px;
     border: 1px solid #777777;
@@ -1875,45 +1851,8 @@ sub section scss 작업
     letter-spacing: -0.6px;
     color: #777;
   }
-  .subPage .wrap #footer .inner .footerTop {
-    padding: 20px 50px 20px 20px;
-  }
-  .subPage .wrap #footer .inner .footerTop .footerLogo .logo .logoText .logoTitle {
-    font-family: "Aboreto";
-    font-size: 24px;
-    letter-spacing: -0.56px;
-    line-height: 1;
-    text-transform: uppercase;
-    color: #333;
-    font-weight: 400;
-  }
-  .subPage .wrap #footer .inner .footerTop .footerLogo .logo .logoText .logoSub {
-    font-size: 10px;
-  }
-  .subPage .wrap #footer .inner .footerTop .footerContTitle {
-    font-size: 14px;
-  }
-  .subPage .wrap #footer .inner .footerTop .footerEmail {
-    margin-right: 50px;
-  }
-  .subPage .wrap #footer .inner .footerTop .footerEmail .emailText {
-    font-size: 12px;
-    margin-bottom: 10px;
-  }
-  .subPage .wrap #footer .inner .footerTop .footerSns .snsWrap .snsList .snsLink {
-    font-size: 12px;
-  }
-  .subPage .wrap #footer .inner .footerBottom .footerLink {
-    font-size: 12px;
-  }
-  .subPage .wrap #footer .inner .footerBottom .contactEmail {
-    font-size: 12px;
-  }
 }
 @media screen and (max-width: 576px) {
-  .subPage .wrap #header .inner .logo .headerLogo a {
-    font-size: 20px;
-  }
   .subPage .wrap .subContents .subHeader > .inner {
     padding: 50px 0 0 0;
   }
@@ -1958,47 +1897,6 @@ sub section scss 작업
     line-height: 1.3;
     letter-spacing: -0.6px;
     color: #777;
-  }
-  .subPage .wrap #footer .inner .footerTop {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .subPage .wrap #footer .inner .footerTop .footerLogo {
-    margin-bottom: 30px;
-  }
-  .subPage .wrap #footer .inner .footerTop .footerContTitle {
-    font-size: 12px;
-  }
-  .subPage .wrap #footer .inner .footerTop .footerContent {
-    flex-direction: column;
-  }
-  .subPage .wrap #footer .inner .footerTop .footerEmail {
-    margin-right: 0;
-    margin-bottom: 12px;
-  }
-  .subPage .wrap #footer .inner .footerTop .footerEmail .emailText {
-    font-size: 10px;
-    margin-bottom: 10px;
-  }
-  .subPage .wrap #footer .inner .footerTop .footerEmail .contBtn {
-    height: 30px;
-  }
-  .subPage .wrap #footer .inner .footerTop .footerSns .snsWrap {
-    display: flex;
-    align-items: center;
-  }
-  .subPage .wrap #footer .inner .footerTop .footerSns .snsWrap .snsList {
-    padding-bottom: 0;
-    padding-right: 5px;
-  }
-  .subPage .wrap #footer .inner .footerTop .footerSns .snsWrap .snsList .snsLink {
-    font-size: 12px;
-  }
-  .subPage .wrap #footer .inner .footerBottom .footerLink {
-    font-size: 12px;
-  }
-  .subPage .wrap #footer .inner .footerBottom .contactEmail {
-    font-size: 12px;
   }
 }
 /**

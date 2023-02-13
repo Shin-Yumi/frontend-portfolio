@@ -175,29 +175,6 @@ sub section scss 작업
   .subPage {
     .wrap {
       padding-top: 60px;
-      #header {
-        height: 60px;
-        line-height: 60px;
-        .inner {
-          width: 100%;
-          .logo {
-            .headerLogo {
-              a {
-                font-size: 26px;
-              }
-            }
-          }
-          #menuPC {
-            display: none;
-          }
-          .hamMenu {
-            display: block;
-          }
-          #menuMo {
-            display: block;
-          }
-        }
-      }
       .subContents {
         padding: 0 30px;
         border: 1px solid $borderColor;
@@ -242,53 +219,6 @@ sub section scss 작업
           }
         }
       }
-
-      #footer {
-        .inner {
-          .footerTop {
-            padding: 20px 50px 20px 20px;
-            .footerLogo {
-              .logo {
-                .logoText {
-                  .logoTitle {
-                    @include sectionTitle($fz: 24px);
-                  }
-                  .logoSub {
-                    font-size: 10px;
-                  }
-                }
-              }
-            }
-            .footerContTitle {
-              font-size: 14px;
-            }
-            .footerEmail {
-              margin-right: 50px;
-              .emailText {
-                font-size: 12px;
-                margin-bottom: 10px;
-              }
-            }
-            .footerSns {
-              .snsWrap {
-                .snsList {
-                  .snsLink {
-                    font-size: 12px;
-                  }
-                }
-              }
-            }
-          }
-          .footerBottom {
-            .footerLink {
-              font-size: 12px;
-            }
-            .contactEmail {
-              font-size: 12px;
-            }
-          }
-        }
-      }
     }
   }
 }
@@ -296,17 +226,6 @@ sub section scss 작업
 @media screen and (max-width: $mobile) {
   .subPage {
     .wrap {
-      #header {
-        .inner {
-          .logo {
-            .headerLogo {
-              a {
-                font-size: 20px;
-              }
-            }
-          }
-        }
-      }
       .subContents {
         .subHeader {
           > .inner {
@@ -351,56 +270,6 @@ sub section scss 작업
             }
             .expCaption {
               @include sectionText($captionFz: 14px);
-            }
-          }
-        }
-      }
-
-      #footer {
-        .inner {
-          .footerTop {
-            flex-direction: column;
-            align-items: flex-start;
-            .footerLogo {
-              margin-bottom: 30px;
-            }
-            .footerContTitle {
-              font-size: 12px;
-            }
-            .footerContent {
-              flex-direction: column;
-            }
-            .footerEmail {
-              margin-right: 0;
-              margin-bottom: 12px;
-              .emailText {
-                font-size: 10px;
-                margin-bottom: 10px;
-              }
-              .contBtn {
-                height: 30px;
-              }
-            }
-            .footerSns {
-              .snsWrap {
-                display: flex;
-                align-items: center;
-                .snsList {
-                  padding-bottom: 0;
-                  padding-right: 5px;
-                  .snsLink {
-                    font-size: 12px;
-                  }
-                }
-              }
-            }
-          }
-          .footerBottom {
-            .footerLink {
-              font-size: 12px;
-            }
-            .contactEmail {
-              font-size: 12px;
             }
           }
         }
