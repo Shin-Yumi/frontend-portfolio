@@ -29,8 +29,6 @@ const per_page = 30;
 const url = `${base}method=${method}&api_key=${key}&per_page=${per_page}&format=json&nojsoncallback=1`;
 const url2 = `${base}method=${method2}&api_key=${key}&per_page=${per_page}&format=json&nojsoncallback=1&tags=바다&privacy_filter=1`;
 
-callData(url2);
-
 btn.addEventListener("click", () => {
   let tag = input.value;
   tag = tag.trim();
